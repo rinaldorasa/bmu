@@ -1,0 +1,120 @@
+
+
+/**********************
+|
+| AGENDA-stile-ext.css
+|
+**********************/
+
+/*  ListaY         */ 
+/* Utilizza jQuery */
+/**********************************
+| td span 1th child ===> coloreYYYY
+| 
+| table layout fixed !!!
+| risulta molto importante
+| width 100%
+|	
+|	
+|
+*************************************/
+table {   
+table-layout: fixed;
+width: 100%;
+/*
+white-space: nowrap; 
+*/
+}
+
+/************************************
+| text al centro dato table layout fixed 100%
+|
+*************************************/
+
+td { 
+margin-left:0rem;
+margin-right:0rem;
+
+padding-left:0rem;
+padding-right:0rem;
+
+background-color:red;
+background-color:transparent;
+text-align:center;
+
+border-radius:0.4rem;
+border:solid .5rem transparent; 
+/* border:solid .5rem teal;  */
+}
+ 
+td.elencoY>
+span:nth-child(1) {
+
+padding-left:1rem;
+padding-right:1rem;
+
+font-size:1.5rem;
+
+width:auto; height:auto;
+
+
+
+/* border:solid .1rem lime; */
+
+}
+/**********************************
+|	
+|	
+|	
+|	
+|	
+|	
+|
+*************************************/
+td.elencoY>
+span:nth-child(1) >
+a { 
+padding-left:.4rem;
+padding-right:.4rem;
+font-size:2rem;
+
+
+border-radius:0rem;
+background-color:white; 
+background-color:rgba(255,255,255,.5); 
+color:black; 
+
+}
+/**********************************
+|	
+|	qui per cambiare il font size
+|	
+|	
+|	
+|	
+|
+*************************************/
+.contrasto_al_testo_itemY {
+font-size:2rem;
+font-size:1.5rem;
+
+}
+/**********************************
+| qui lo scambio tra pari e dispari
+|	
+| class no suggerimento impedisce
+| la visualizzazione del calendario	
+| caveat: se messo in un css esterno
+| qualche problema nel cambiare
+| il settaggio da none a block
+|
+|
+*************************************/
+.uno, .due 
+{ background-color:orange; 
+background-color:rgba(255,165,0,.5);
+color:black; }
+
+.no_suggerimento { display:none; } 
+
+
