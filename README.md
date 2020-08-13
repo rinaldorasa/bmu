@@ -47,6 +47,41 @@ orzando una ricerca sempre nuova al memento della richiesta.
  |
  |
 
+ Passando o tap ? si attiva un dropdown menu con alcune 
+ informazioni supplementari
+ |
+ |________________________________________
+ | O grigio
+ |
+ | ListaY parte 1 §nselezionato
+ |
+ |________________________________________
+ |
+ |
+ |________________________________________
+ | O verde
+ |
+ | ListaY parte 2 §nselezionato
+ |
+ |________________________________________
+ |
+ |
+ |
+ |
+ In questo esempio (vedi bmu.html) le parti sono due
+ reciprocamente indipendenti in quanto navigazione.
+ Si può selezionare un elemento di ListaY1. In questo caso
+ in Iframe compare il file selezionato. IL problema sorge quando
+ ci si sposta e si seleziona un elemento ListaY2 in quanto
+ viene visualizzato il file di User in Iframe mentre rimane
+ evidenziato come selezionato il precedente in ListaY1.
+ Si è così incerti a quale parte ListaY corrisponda il file 
+ visualizzato in Iframe. Per è presente un semaforo con
+ un dot verde segnalante la attuale finestra attiva quindi
+ il file visualizzato. Nell'esempio quando si clicca su un
+ elemento della ListaY2 avviene un mutamento nel dischetto
+ che passata al colore verde nella ListaY2 e diventa grigio
+ nella ListaY1.
  
  
  3) Iframe con target.
