@@ -1,6 +1,6 @@
 # bmu
 <pre>
-IL bmu è stato pensato come un livello medio per accedere ai contenuti di file esterni già confezionati.
+<p style="color:green;">IL bmu è stato pensato come un livello medio per accedere ai contenuti di file esterni già confezionati.</p>
 
 Dipendenze CND: material-icons, jquery, fontawesome in 'head'.
 IN "head" sono poi richiamati altri file.css e file.js esterni tramite file javascript di aiuto upload. Si è fatto ricorso a javascript invece del normale "link href" "script src" in quanto si è evidenziato un problema nell'aggiornamento dei contenuti file .css e .js . 
