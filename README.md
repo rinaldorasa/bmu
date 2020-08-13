@@ -1,4 +1,5 @@
 # bmu
+<pre>
 IL bmu è stato pensato come un livello medio per accedere ai contenuti di file esterni già confezionati.
 
 Dipendenze CND: material-icons, jquery, fontawesome in 'head'.
@@ -9,7 +10,8 @@ Utilizzando javascript si ovvia all'inconveniente aggiungendo ?numero_random for
  1) Testata fissata top0 left0 height 3rem.
  |
  |---progress bar (utility)
- |---spinner (utility)
+ |---spinner (utility) nel body attesa()
+ |
  |---announcement icona (dialog box)
  |...|---X chiudi dialog box
  |...|---? tooltip
@@ -18,3 +20,4 @@ Utilizzando javascript si ovvia all'inconveniente aggiungendo ?numero_random for
  3) Iframe con target.
  
  
+</pre>
