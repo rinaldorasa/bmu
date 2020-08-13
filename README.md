@@ -7,6 +7,13 @@ Utilizzando javascript si ovvia all'inconveniente aggiungendo ?numero_random for
   
  FONDAMENTALMENTE la schermata è suddivisa in
  1) Testata fissata top0 left0 height 3rem.
+ |
+ |---progress bar (utility)
+ |---spinner (utility)
+ |---announcement icona (dialog box)
+ |...|---X chiudi dialog box
+ |...|---? tooltip
+ 
  2) Dialog box icona announcement.
  3) Iframe con target.
  
