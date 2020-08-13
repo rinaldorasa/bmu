@@ -55,7 +55,7 @@ orzando una ricerca sempre nuova al memento della richiesta.
  |________________________________________
  | O grigio
  |
- | ListaY parte 1 §nselezionato
+ | ListaY parte 1 §selezionato
  |
  |________________________________________
  |
@@ -63,7 +63,7 @@ orzando una ricerca sempre nuova al memento della richiesta.
  |________________________________________
  | O verde
  |
- | ListaY parte 2 §nselezionato
+ | ListaY parte 2 §selezionato
  |
  |________________________________________
  |
