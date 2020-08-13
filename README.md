@@ -1,2 +1,2 @@
 # bmu
-This a minimalistic project.
+IL bmu è stato pensato come un livello medio per accedere ai contenuti di file esterni già confezionati.
