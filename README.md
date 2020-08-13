@@ -22,7 +22,9 @@ orzando una ricerca sempre nuova al memento della richiesta.
  |...|---X chiudi dialog box
  |...|---? tooltip
  
- 2) Dialog box icona announcement.
+ 2) Dialog box icona announcement. Genericamente
+ ListaY suddivisibile in ListaY1, ListaY2, etc.
+ 
  | X            ?     !  <== testata pos absolute
  |.....................
  |.....................
@@ -69,22 +71,35 @@ orzando una ricerca sempre nuova al memento della richiesta.
  |
  |
  In questo esempio (vedi bmu.html) le parti sono due
- reciprocamente indipendenti in quanto navigazione.
- Si può selezionare un elemento di ListaY1. In questo caso
- in Iframe compare il file selezionato. IL problema sorge quando
- ci si sposta e si seleziona un elemento ListaY2 in quanto
+ reciprocamente indipendenti in quanto a navigazione.
+ 
+ Si può selezionare un elemento di ListaY1. 
+ 
+ In questo caso
+ in Iframe compare il file selezionato, sorge un problema quando
+ ci si sposta selezionando un elemento ListaY2 poichè
  viene visualizzato il file di User in Iframe mentre rimane
- evidenziato come selezionato il precedente in ListaY1.
+ evidenziato come selezionato anche il precedente in ListaY1.
  Si è così incerti a quale parte ListaY corrisponda il file 
- visualizzato in Iframe. Per è presente un semaforo con
- un dot verde segnalante la attuale finestra attiva quindi
- il file visualizzato. Nell'esempio quando si clicca su un
+ visualizzato in Iframe. 
+ 
+ Perciò è presente un semaforo con
+ un dot verde segnalatore della attuale finestra attiva e
+ relativo file visualizzato. 
+ Nell'esempio quando si clicca su un
  elemento della ListaY2 avviene un mutamento nel dischetto
- che passata al colore verde nella ListaY2 e diventa grigio
+ che passa al colore verde nella ListaY2 e diventa grigio
  nella ListaY1.
  
  
  3) Iframe con target.
+ Iframe contiene il file desiderato e cliccato in dialog box ListaY
+ Quando la ListaY (modal box tendina) si sovrappone a Iframe
+ avviene un eventuale nascondimento del sottostante contenuto per
+ ovviare si usano colori di sfondo ListaY con opacity .2 molto bassa
+ in modo da garantire un effetto di trasparenza. Qui occorre vedere
+ nella pratica quale rgba risulta più adatto.
+ 
  
  
 </pre>
