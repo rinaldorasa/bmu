@@ -11,7 +11,8 @@ nell'aggiornamento dei contenuti file .css e .js .
 Utilizzando javascript si ovvia all'inconveniente aggiungendo ?numero_random 
 orzando una ricerca sempre nuova al memento della richiesta.
   
- FONDAMENTALMENTE la schermata è suddivisa in
+ FONDAMENTALMENTE la schermata è suddivisa in tre parti:
+ 
  1) Testata fissata top0 left0 height 3rem.
  |
  |---progress bar (utility)
@@ -22,6 +23,32 @@ orzando una ricerca sempre nuova al memento della richiesta.
  |...|---? tooltip
  
  2) Dialog box icona announcement.
+ | X            ?     !  <== testata pos absolute
+ |.....................
+ |.....................
+ |..................... cliccando ! scende la ListaY
+ |..................... appaiono  X  e  ?
+ |.....................
+ |
+ |
+ |
+ 
+ La presenza di X icona close è necessaria per permettere
+ la chiusura del dialog box
+ 
+ | X            ?     !  <== testata pos absolute
+ |^             ^
+ |.             .
+ |.             .       
+ |..................... cliccando X nasconde la ListaY
+ |                      e le icone X ?
+ |
+ |
+ |
+ |
+
+ 
+ 
  3) Iframe con target.
  
  
