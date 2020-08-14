@@ -1,0 +1,98 @@
+<!--  *  file (a)sincroni  *  ini  *    -->
+
+<div id="debug" class="debug"><span class="material-icons">
+bug_report
+</span></div>
+<script>
+/******************************************
+| questo stile base offre il modo di
+| vedere il calendario icona data_range
+| il drawback del file esterno viene
+| ovviato dallo script in maniera da
+| tenere sempre aggiornato upload style
+|
+| aggiungere stile aforall fa sparire
+| il calendario (anche da agenda)
+|
+| i file javascript sono legati a
+| jQuery alter agenda ListaY
+| evidenziano per ogni lista l'elemento
+| selezionato per ultimo
+|
+| etichette circolari permette di
+| indicare tramite un dot verde quale
+| delle sezioni del modal box
+| risulta al momento attivata e quindi
+| quale risulta essere il collegamento
+| tra file nel iframe e selezioni
+|
+******************************************/
+
+
+var casuale = Math.random();
+var esteso = casuale.toString();
+esteso ="?"+esteso;
+
+
+/* */
+var link_css_01 = document.createElement( "link" );
+var nome_link_css_01 ="http://edoraandiamo.altervista.org/bmu/cssjs/base-stile.css";
+nome_link_css_01 = nome_link_css_01+esteso;
+link_css_01.href = nome_link_css_01 ;
+link_css_01.type = "text/css";
+link_css_01.rel = "stylesheet";
+document.getElementsByTagName( "head" )[0].appendChild( link_css_01 );
+
+/* */
+
+var link_css_02 = document.createElement( "link" );
+var nome_link_css_02 ="http://edoraandiamo.altervista.org/bmu/cssjs/aforall-stile-ext.css";
+nome_link_css_02 = nome_link_css_02+esteso;
+link_css_02.href = nome_link_css_02 ;
+link_css_02.type = "text/css";
+link_css_02.rel = "stylesheet";
+document.getElementsByTagName( "head" )[0].appendChild( link_css_02 );
+
+/* */
+
+var link_css_03 = document.createElement( "link" );
+var nome_link_css_03 ="http://edoraandiamo.altervista.org/bmu/cssjs/agenda-stile-ext.css";
+nome_link_css_03 = nome_link_css_03+esteso;
+link_css_03.href = nome_link_css_03 ;
+link_css_03.type = "text/css";
+link_css_03.rel = "stylesheet";
+document.getElementsByTagName( "head" )[0].appendChild( link_css_03 );
+
+
+
+var link_js_01 = document.createElement( "script" );
+var nome_link_js_01 ="http://edoraandiamo.altervista.org/bmu/cssjs/aforall-jscript.js";
+nome_link_js_01 = nome_link_js_01+esteso;
+link_js_01.src = nome_link_js_01 ;
+document.getElementsByTagName( "head" )[0].appendChild( link_js_01 );
+
+
+
+var link_js_02 = document.createElement( "script" );
+var nome_link_js_02 ="http://edoraandiamo.altervista.org/bmu/cssjs/agenda-script.js";
+nome_link_js_02 = nome_link_js_02+esteso;
+link_js_02.src = nome_link_js_02 ;
+document.getElementsByTagName( "head" )[0].appendChild( link_js_02 );
+
+
+
+var link_js_03 = document.createElement( "script" );
+var nome_link_js_03 ="http://edoraandiamo.altervista.org/bmu/cssjs/etichette-circolari.js";
+nome_link_js_03 = nome_link_js_03+esteso;
+link_js_03.src = nome_link_js_03 ;
+document.getElementsByTagName( "head" )[0].appendChild( link_js_03 );
+
+
+
+debug=document.getElementById("debug");
+debug.innerHTML=nome_link_js_03;
+
+</script> 
+
+<!--  *  file (a)sincroni  *  fin  *    -->
+

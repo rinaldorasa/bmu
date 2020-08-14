@@ -1,0 +1,36 @@
+
+<style>
+ /* spinner*/
+/**********************************
+| 
+| 
+| 
+| 
+| 
+| 
+|
+*************************************/ 
+ .posizione_spinner {
+ position:absolute; top:0; left:0;
+ background-color:transparent;
+ color:orange;
+ z-index:-1;
+ }
+</style>
+
+<!-- spinner attesa ini -->
+<div id="spinnerattivo" class="posizione_spinner">
+<span class="fa fa-spinner fa-pulse"></span>
+</div>
+
+<script>
+function attesa() { 
+if (document.all) { }
+else if (document.getElementById) {
+document.getElementById("spinnerattivo").style.visibility="hidden";
+ }
+}
+
+</script>
+<!-- spinner attesa fin -->
+

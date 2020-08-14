@@ -1,0 +1,16 @@
+<!-- /* progress bar ini */ -->
+ <div class="indicatore_container" > 
+ <div class="indicatore_bar" id="indicatore" > 
+ </div> 
+ </div>
+<script> 
+window.scroll=function() { indicatore() };
+
+function indicatore() {
+ var winSCROLL = document.body.scrollTop || document.documentElement.scrollTop;
+ var HEIGHT = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+ var SCROLLED = (winSCROLL / HEIGHT) * 100;
+ document.getElementById("indicatore").style.width = scrolled + "%";
+}
+</script> 
+<!-- /* progress bar fin */ -->
