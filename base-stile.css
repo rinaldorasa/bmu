@@ -1,0 +1,682 @@
+
+
+/********************
+|
+| base-stile.css
+|
+*********************/
+
+
+/*
+
+202008120915
+
+*/
+
+/* globali */
+
+/*************************************** 
+COLORI STANDARD 
+aqua black blue fuchsia gray green 
+lime maroon navy olive orange purple 
+red silver teal white yellow 
+
+teal => #008080 (0,128,128) 
+background-color:rgba(0,128,128,1);
+
+navy => #000080  (0,0,128)
+background-color:rgba(0,0,128,1);
+
+orange => #FFA500 (255,165,0)
+background-color:rgba(255,165,0,1);
+
+
+COLORI ACCETTATI 
+background-color:burlywood;
+background-color:rgba(222,184,135,0.5);
+background-color:dodgerblue; 
+background-color:rgba(30,144,255,1); 
+background-color:oldlace; 
+background-color:rgba(253,245,230,0.5);
+
+
+ICONE MATERIAL-ICONS
+announcement help close wysiwyg 
+
+***************************************/
+
+
+/***************************************
+|	html asterisco
+|	e i combinatori greaterthan 
+|	non funzionano bene insieme
+|	piu (vedi BLACKOUT )
+|	
+|	
+|
+************************************** */
+
+	html * {
+	font-size:1rem; font-family:monospace;
+	background-color:rgba(253,245,230,0);
+	}
+
+
+/****************************************
+|	body main section etc sono settati
+|	a zindex 0 per non interferire con
+|	il layer modal , in generale lo
+|	zindex funziona se il block ha il
+|	position relative
+************************************** */
+
+	body, main, section, article { z-index:0; }
+
+
+
+
+
+
+	/* BODY MAIN SECTION ARTICLE */
+
+/*************************************
+|	body fissato in alto a sinistra
+|	width height usano magic numbers
+|
+| in questo contesto i magic numbers
+| sono delle patches che risolvono
+| problemi altrimenti complessi ma
+| occorre tenere a mente appunto la
+| loro funzione stilistica
+|
+|
+|	centrare il body con un magic 
+|	number margin left in rem 
+|	risulta poco avveduto in quanto 
+|	lo schema in genere risulta flex
+|	
+|	
+|	qui viene settato lo sfondo oldace
+|	
+|	settato pure il border utile per
+|	il debugging il quale viene poi
+|	mantenuto o rimosso in BLACKOUT
+|	
+|	teoria dei border dotted per gli
+|	elementi maggiormente esterni
+|	poi dashed e infine solid per 
+|	quelli maggiormente interni
+| i border width .2rem
+|
+*********************************** */
+
+	body {
+	position:fixed; top:0; left:0;
+	width:98%; height:97%;
+	margin-left:1.25rem;
+	/* background-color:navy;  */
+	background-color:oldlace; 
+
+	border:dotted .2rem purple;
+	}
+
+/**************************************
+|	selector combinatore greaterthan gt
+|	il quale definisce child del
+|	parent con position absolute 
+|	funzionante come fixed , width
+|	height sono settati con magic
+|	
+| cercare di affinare uso combinatori
+| utilizzando anche + ~
+|
+|
+************************************ */
+
+	body > main { 
+	position:absolute; top:0; left:0;
+	width:100%; height:100%;
+	width:99.5%; height:99.5%;
+
+	border:dotted .2rem red; }
+
+/**********************************
+|	settaggi con magic numbers
+|	
+*********************************** */
+
+	body > main > 
+	section { 
+	position:absolute; top:0rem; left:0;
+	width:98.5%; height:98%;
+	border:dotted .4rem orange;}
+	
+/************************************
+|	inizia un border dashed
+************************************* */
+	
+	body > main > 
+	section >
+	article {
+	position:absolute; top:3rem; left:0;
+	width:99%; height:95%;
+
+	overflow:auto;
+	border:dashed .2rem green;
+	}
+
+/*	************************************** 
+|	settagio di iframe risulta
+|	molto importante in quanto accoglie
+|	il file html esterno prodotto
+|	da user
+|	
+|	la sequenza body main section article
+|	iframe utilizza magic numbers
+|	
+|	
+|	
+|	
+|	
+|	
+************************************* */
+
+	body > main > 
+	section > article > 
+	iframe {
+	width:99%; width:100%; 
+	height:99%;
+	border:dashed .2rem fuchsia;
+	}
+
+
+
+
+
+/* ***** */
+/* START */
+/* m0t   */
+/*   non attivato    */
+
+.m0t { pointer-events:none; opacity:0; }
+.m0t:target { pointer-events:auto; opacity:1; }
+.m0t_start_box { 
+position:fixed; bottom:0%; right:0%; 
+color:navy;
+border:groove 0rem silver; }
+.m0t_start_box > span {
+}
+
+
+
+
+
+
+
+
+
+
+/* ************* */
+/* MODAL BOX m1t */
+/* in header     */
+
+
+/*********************************
+|	il modal box risulta compreso
+|	nel tag header con zindex 1000
+|
+|	combinator body main section 
+|	header position absolute per
+|	accettare zindex top left
+|	left ha un magic number (?)
+|	height ha 3rem per permettere
+|	di avere un header fissato
+|	below il quale si presenta
+|	il frame , height 3rem diventa
+|	in tal modo un valore di
+|	rilievo per tutti i componenti
+|	successivi interagenti con
+|	questo portale
+|
+|	per la prima volta appare un
+|	border solid (in genere i 
+|	border hanno width .2rem)
+|
+|
+ ****************************** */
+
+ header {  }
+ header { z-index:1000; }
+
+body > main > section > 
+header {
+position:absolute; 
+top:0; left:0.1%;
+margin:0 auto; text-align:center;
+width:99%; height:3rem;
+
+
+border:solid .2rem blue;
+}
+
+
+
+/*************************************
+|	il modal box viene attivato dalla
+|	icona announcement material icons
+|	di dimensioni 2rem il link al ID
+|	m1t permette questa funzione
+|
+|
+*********************************** */
+body > main > section > 
+header > a#m1t_announcement {
+position:absolute; right:0.4rem;
+font-size:2rem;
+border:solid .2rem green;
+}
+
+
+/*************************************
+|	m1t e m1t colon target sono i
+|	due componenti base del modal
+|	#m1t
+|	|^^^
+|	|
+|	|===> id m1t class m1t
+|
+| lo schema preso in considerazione
+| risulta minimalista class m1t
+| pointer-events none opacity 0 --->first
+| pointer-events auto opacity 1 --->second
+|
+|
+|
+|
+*************************************/
+.m1t {
+pointer-events:none;
+opacity:0;
+}
+
+.m1t:target {
+pointer-events:auto;
+opacity:1;
+}
+
+body > main > section > 
+header > div#m1t {
+
+border:solid .2rem red;
+}
+
+/*************************************
+|...........idclass m1t...........    
+|	
+|_____contenitore
+|
+|
+|
+|________contenuto
+|	
+|	
+|
+*************************************/
+body > main > section > 
+header > div#m1t >
+div#m1t_contenitore {
+position:absolute; top:3rem; left:0;
+margin-top:-3rem;
+width:100%;
+
+background-color:rgba(0,128,128,0.1);
+background-color:rgba(253,245,230,0.5);
+border:solid .1rem black;
+}
+/**********************************
+| icona close diventa essenziale
+| nel modal box in quanto senza 
+| la pagina risulta bloccata da none zero
+| unica maniera per uscire 	
+| rimane chiudere finestra e riavviare
+| il browser
+|
+
+*************************************/
+body>main>section>header>div#m1t>div#m1t_contenitore>a#m1t_close {
+position:absolute; top:0; left:0; 
+font-size:2rem;
+border:solid .1rem teal;
+}
+/**********************************
+| il contenuto ha un magic number in width
+| mentre height ha bisogno della misura vh
+| per gestire height della window
+| impedendo che si perda un certo quantitativo
+| di informazioni, in particolare se la
+| window viene resize il contenuto ha
+| una salita in modo da salvare i dati
+|
+| il margin left viene calibrato sul
+| magic number 100 - 99 = 1 = .5 + .5
+|
+| overflow
+|
+|
+*************************************/
+body>main>section>header>div#m1t>div#m1t_contenitore>
+div#m1t_contenuto {
+position:absolute; top:0;
+width:99%; height:50vh;
+
+margin-top:3rem;
+margin-left:.5%;
+
+background-color:rgba(0,128,128,.1);
+
+text-align:left;
+
+overflow:auto;
+border:solid .1rem lime;
+}
+
+
+	/****************/
+	/* m1t tooltip  */
+/**********************************
+| tooltip rende l'idea del drodown menu
+| con div:hover div che agisce come
+| attivatore della discesa della tendina
+|	
+|	
+|	
+|
+*************************************/
+	body>main>section>header>div#m1t>
+	div#m1t_contenitore>
+	div.m1t_tooltip_contenitore 
+	{
+	position:absolute; right:4rem;
+	width:2rem; 
+
+	margin-top:0rem;
+	margin-right:1rem;
+
+	background-color:transparent;
+	border:solid .1rem brown;
+	}
+
+/**********************************
+| posizionamento icona help size 2rem
+|	
+|	
+|	
+|	
+|	
+|
+*************************************/
+
+	body>main>section>header>
+	div#m1t>div#m1t_contenitore>
+	div.m1t_tooltip_contenitore>
+	span.m1t_help 
+	{
+	margin-left:0.1rem;
+	color:green;
+	font-size:2rem;
+	background-color:oldlace;
+	border:solid .1rem brown;
+	}
+
+/**********************************
+| none hover block
+| zindex 1000 per dare precedenza
+| alla tendina del tooltip	
+|	
+|	
+|	
+|
+*************************************/
+	.m1t_tooltip_contenuto {
+	display:none;
+	}
+
+	.m1t_tooltip_contenitore:hover 
+	.m1t_tooltip_contenuto {
+	position:relative;
+	width:800%;
+	height:50vh;
+	/* margin-left:-800%; */
+	margin-left:-13rem;
+	background-color:orange;
+	border-radius:.4rem;
+	overflow:auto;
+	display:block;
+	z-index:1000;
+	border:solid .4rem brown;
+	}
+
+
+
+
+/********************************
+|
+| titolo della listaY generica
+|
+********************************/
+
+.BLOCKQUOTE_titolo { 
+margin:0 auto; text-align:center;
+background-color:rgba(128,0,0,.125);
+color:black;
+
+font-size:1.75rem; font-family:monospace;
+border-radius:.4rem;
+border:solid .2rem maroon; 
+border:solid 0rem rgba(128,0,0,.25); 
+}
+
+/***********************************
+| queste label circolari sono
+| necessario in quanto 
+| risulta presente un solo frame
+| mentre ci sono un numero maggiore
+| di pannelli di attivazione frame
+| il mutamento viene gestito da
+| jQuery addClass removeClass
+|
+***********************************/
+
+ .green.empty.circular.label {
+ height: 0.5rem;
+ width: 0.5rem;
+ background-color: green;
+ border-radius: 50%;
+ display: inline-block;
+ }
+ 
+ .grey.empty.circular.label {
+ height: .5rem;
+ width: .5rem;
+ background-color: gray;
+ border-radius: 50%;
+ display: inline-block;
+ } 
+
+ .gray.empty.circular.label {
+ height: 0.5rem;
+ width: 0.5rem;
+ background-color: gray;
+ border-radius: 50%;
+ display: inline-block;
+ } 
+
+
+
+
+
+
+/******************************
+| bootstrap pre-confezionati
+| offrono vantaggi ma sono
+| intrusivi...
+|
+| patch per semantic ui
+|
+*******************************/
+blockquote>span {
+margin:.2rem;
+padding:.2rem;
+
+font-size:1.5rem;
+text-transform:uppercase;
+
+border:solid 0rem maroon;
+}
+
+/*******************************
+|
+| class patch evita un effetto
+| estetico indesiderato in firefox
+|
+*******************************/
+
+.ATITOLO_LISTAY { 
+background-color:transparent !important; 
+}
+
+
+
+
+
+/********************************
+|
+| word-wrap break-word
+| aggiusta il text quando supera
+| i limiti dei bordi
+|
+|
+| aggiustamenti soprattutto
+| margin padding
+| wbr break word inline block
+|
+*******************************/
+
+.contrasto_al_testo_itemY {
+margin:.2rem;
+padding:.4rem;
+font-size:1.25rem !important;
+font-weight:bold;
+border-radius:.4rem;
+background-color:teal !important;
+background-color:rgba(0,128,128,0.4) !important;
+color:white;
+border:solid .1rem rgba(0,0,0,0.8);
+word-wrap:break-word;
+display: inline-block;
+
+}
+
+
+	
+/**********************************
+| qui lo scambio tra pari e dispari
+| ma class uno == class due
+| 
+| 
+| class no suggerimento impedisce
+| la visualizzazione del calendario 
+| caveat: se messo in un css esterno
+| qualche problema nel cambiare
+| il settaggio da none a block
+|
+|
+*************************************/
+.uno, .due 
+{ background-color:orange; 
+background-color:rgba(255,165,0,.5);
+color:black; }
+
+
+/* non utilizzato */
+.no_suggerimento { display:none; } 
+
+
+ /* spinner*/
+/**********************************
+| 
+| 
+| 
+| 
+| 
+| 
+|
+*************************************/ 
+ .posizione_spinner {
+ position:absolute; top:0; left:0;
+ background-color:transparent;
+ color:orange;
+ z-index:-1;
+ }
+ 
+ 
+ /* progress bar */
+/**********************************
+| ===================== 
+| in combinazione con javascript
+| 
+| 
+| 
+| 
+|
+*************************************/ 
+ .indicatore_container { 
+ position:fixed;top:0;left:0; 
+ width: 100%; 
+ height: 0.5rem; 
+ background-color: burlywood !important; 
+ } 
+ .indicatore_bar { 
+ width:0rem;
+ height: 0.5em; 
+ background-color: maroon !important; 
+ } 
+
+
+/* BLACKOUT */ 
+/**********************************
+| 
+| vengono tolti tutti i bordi
+| 
+| 
+| 
+| 
+|
+*************************************/
+body, 
+body>main, 
+body>main>section,
+body>main>section>header,
+body>main>section>header>a#m1t_announcement,
+body>main>section>header>div#m1t,
+body>main>section>header>div#m1t>div#m1t_contenitore,
+body>main>section>header>div#m1t>div#m1t_contenitore>a#m1t_close,
+body>main>section>header>div#m1t>div#m1t_contenitore>span#m1t_help,
+body>main>section>header>div#m1t>div#m1t_contenitore>div#m1t_contenuto,
+body>main>section>header>div#m1t>div#m1t_contenitore>div.m1t_tooltip_contenitore,
+body>main>section>header>div#m1t>div#m1t_contenitore>div.m1t_tooltip_contenitore>span.m1t_help,
+body>main>section>header>div#m1t>div#m1t_contenitore>div.m1t_tooltip_contenitore>div.m1t_tooltip_contenuto,
+
+body>main>section>article,
+body>main>section>article>iframe,
+
+td,
+td.elencoY>
+span:nth-child(1)
+{
+/* */
+border:solid 0rem transparent;
+/* */
+
+}
+
