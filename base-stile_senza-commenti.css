@@ -1,0 +1,311 @@
+/*************************************** 
+COLORI STANDARD 
+aqua black blue fuchsia gray green 
+lime maroon navy olive orange purple 
+red silver teal white yellow 
+
+teal => #008080 (0,128,128) 
+background-color:rgba(0,128,128,1);
+
+navy => #000080  (0,0,128)
+background-color:rgba(0,0,128,1);
+
+orange => #FFA500 (255,165,0)
+background-color:rgba(255,165,0,1);
+
+
+COLORI ACCETTATI 
+background-color:burlywood;
+background-color:rgba(222,184,135,0.5);
+background-color:dodgerblue; 
+background-color:rgba(30,144,255,1); 
+background-color:oldlace; 
+background-color:rgba(253,245,230,0.5);
+
+
+ICONE MATERIAL-ICONS
+announcement help close wysiwyg 
+
+***************************************/
+
+
+ html * {
+ font-size:1rem; font-family:monospace;
+ background-color:rgba(253,245,230,0);
+ }
+
+ body, main, section, article { z-index:0; }
+
+
+
+
+ 
+/**************************** 
+*
+*  margine sinistro ha
+*  il magic number
+*
+****************************/
+ 
+ body {
+ position:fixed; top:0; left:0;
+ width:98%; height:97%;
+ margin-left:1.25rem;
+ background-color:oldlace; 
+ border:dotted .25rem purple;
+ }
+
+
+
+
+ 
+ body > main { 
+ position:absolute; top:0; left:0;
+ width:100%; height:100%;
+ width:99.5%; height:99.5%;
+ border:dotted .2rem red; } 
+
+ 
+ body > main > 
+ section { 
+ position:absolute; top:0rem; left:0;
+ width:98.5%; height:98%;
+ border:dotted .4rem orange;}
+
+
+ body > main > 
+ section >
+ article {
+ position:absolute; top:3rem; left:0;
+ width:99%; height:95%;
+ overflow:auto;
+ border:dashed .2rem green;
+ }
+
+ body > main > 
+ section > article > 
+ iframe {
+ width:99%; width:100%; 
+ height:99%;
+ border:dashed .2rem fuchsia;
+ }
+
+
+ header { }
+ header { z-index:1000; }
+
+body > main > section > 
+header {
+position:absolute; 
+top:0; left:0.1%;
+margin:0 auto; text-align:center;
+width:99%; height:3rem;
+border:solid .2rem blue;
+}
+
+body > main > section > 
+header > a#m1t_announcement {
+position:absolute; right:0.4rem;
+font-size:2rem;
+border:solid .2rem green;
+}
+
+
+.m1t {
+pointer-events:none;
+opacity:0;
+}
+
+
+.m1t:target {
+pointer-events:auto;
+opacity:1;
+}
+
+
+body > main > section > 
+header > div#m1t {
+border:solid .2rem red;
+}
+
+
+
+
+
+
+/**********************************
+|
+| normalizza con i magic numbers
+|
+**********************************/
+body > main > section > 
+header > div#m1t >
+div#m1t_contenitore {
+position:absolute; top:3rem; left:0;
+margin-top:-3rem;
+width:100%;
+background-color:rgba(253,245,230,0.5);
+border:solid .1rem black;
+}
+
+
+
+
+body>main>section>header>div#m1t>div#m1t_contenitore>a#m1t_close {
+position:absolute; top:0; left:0; 
+font-size:2rem;
+border:solid .1rem teal;
+}
+
+body>main>section>header>div#m1t>div#m1t_contenitore>
+div#m1t_contenuto {
+position:absolute; top:0;
+width:99%; height:50vh;
+margin-top:3rem;
+margin-left:.5%;
+background-color:rgba(0,128,128,.1);
+text-align:left;
+overflow:auto;
+border:solid .1rem lime;
+}
+
+ 
+/*  destabilizza  */
+
+ body>main>section>header>div#m1t>
+ div#m1t_contenitore>
+ div.m1t_tooltip_contenitore 
+ {
+ position:absolute; right:4rem;
+ width:2rem; 
+ margin-top:0rem;
+ margin-right:1rem;
+ background-color:transparent;
+ border:solid .1rem brown;
+ }
+
+/*  normalizza  */
+
+ body>main>section>header>
+ div#m1t>div#m1t_contenitore>
+ div.m1t_tooltip_contenitore>
+ span.m1t_help 
+ {
+ margin-left:0.1rem;
+ color:green;
+ font-size:2rem;
+ background-color:oldlace;
+ border:solid .1rem brown;
+ }
+
+	.m1t_tooltip_contenuto {
+	display:none;
+	}
+
+ .m1t_tooltip_contenitore:hover 
+ .m1t_tooltip_contenuto {
+ position:relative;
+ width:800%;
+ height:50vh;
+ margin-left:-13rem;
+ background-color:orange;
+ border-radius:.4rem;
+ overflow:auto;
+ display:block;
+ z-index:1000;
+ border:solid .4rem brown;
+ }
+
+
+
+
+.BLOCKQUOTE_titolo { 
+margin:0 auto; text-align:center;
+background-color:rgba(128,0,0,.125);
+color:black;
+font-size:1.75rem; font-family:monospace;
+border-radius:.4rem;
+border:solid 0rem rgba(128,0,0,.25); 
+}
+
+
+
+
+ .green.empty.circular.label {
+ height: 0.5rem;
+ width: 0.5rem;
+ background-color: green;
+ border-radius: 50%;
+ display: inline-block;
+ }
+ 
+ .grey.empty.circular.label {
+ height: .5rem;
+ width: .5rem;
+ background-color: gray;
+ border-radius: 50%;
+ display: inline-block;
+ } 
+
+ .gray.empty.circular.label {
+ height: 0.5rem;
+ width: 0.5rem;
+ background-color: gray;
+ border-radius: 50%;
+ display: inline-block;
+ } 
+
+
+blockquote>span {
+margin:.2rem;
+padding:.2rem;
+font-size:1.5rem;
+text-transform:uppercase;
+border:solid 0rem maroon;
+}
+
+.ATITOLO_LISTAY { 
+background-color:transparent !important; 
+}
+
+.contrasto_al_testo_itemY {
+margin:.2rem;
+padding:.4rem;
+font-size:1.25rem !important;
+font-weight:bold;
+border-radius:.4rem;
+background-color:teal !important;
+background-color:rgba(0,128,128,0.4) !important;
+color:white;
+border:solid .1rem rgba(0,0,0,0.8);
+word-wrap:break-word;
+display: inline-block;
+
+}
+
+.uno, .due 
+{ 
+background-color:orange; 
+background-color:rgba(255,165,0,.5);
+color:black; 
+}
+ 
+
+ .posizione_spinner {
+ position:absolute; top:0; left:0;
+ background-color:transparent;
+ color:orange;
+ z-index:-1;
+ }
+
+ .indicatore_container { 
+ position:fixed;top:0;left:0; 
+ width: 100%; 
+ height: 0.5rem; 
+ background-color: burlywood !important; 
+ } 
+ .indicatore_bar { 
+ width:0rem;
+ height: 0.5em; 
+ background-color: maroon !important; 
+ } 

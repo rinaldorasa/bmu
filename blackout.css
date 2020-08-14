@@ -1,0 +1,34 @@
+/*************
+| BLACKOUT 
+*************/ 
+/*************************************
+| 
+| tolti tutti i bordi
+| 
+*************************************/
+body, 
+body>main, 
+body>main>section,
+body>main>section>header,
+body>main>section>header>a#m1t_announcement,
+body>main>section>header>div#m1t,
+body>main>section>header>div#m1t>div#m1t_contenitore,
+body>main>section>header>div#m1t>div#m1t_contenitore>a#m1t_close,
+body>main>section>header>div#m1t>div#m1t_contenitore>span#m1t_help,
+body>main>section>header>div#m1t>div#m1t_contenitore>div#m1t_contenuto,
+body>main>section>header>div#m1t>div#m1t_contenitore>div.m1t_tooltip_contenitore,
+body>main>section>header>div#m1t>div#m1t_contenitore>div.m1t_tooltip_contenitore>span.m1t_help,
+body>main>section>header>div#m1t>div#m1t_contenitore>div.m1t_tooltip_contenitore>div.m1t_tooltip_contenuto,
+
+body>main>section>article,
+body>main>section>article>iframe,
+
+td,
+td.elencoY>
+span:nth-child(1)
+{
+/* */
+border:solid 0rem transparent;
+/* */
+
+}
