@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset="utf-8">
+ <meta name="generator" content="AlterVista - Editor HTML"/>
+ <title>
+ 
+ 0810
+ bmuj ok spinner step 05
+ 20200817
+ 
+ </title>
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ 
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+ 
+ <script src="https://use.fontawesome.com/2d0876dd08.js"></script>
+ 
+ <style> 
+ html * { background-color:oldlace; font-size:1rem; 
+ font-family:monospace; }
+ </style>
+  
+ </head>
+
+ <body onload="attesaX()">
+
+    <main id="bmuj_main">
+        <span class="material-icons">
+        bug_report
+        </span> 
+    </main>
+
+<script>
+
+ POS_SPINNER=1.5;
+
+ var bmuj_main = document.getElementById("bmuj_main");
+ bmuj_main.innerHTML=
+ ' TEST SPINNER '+
+ ' '+
+ ' <div id="spinnerattivo" '+
+ ' class="posizione_spinner">'+ 
+ ' <span class="fa fa-spinner fa-pulse">'+
+ ' '+
+ ' </span>'+
+ ' </div>'+
+
+ ' '+
+ ' '+
+ ' '+
+ ' '+
+ ' '+
+ ' '+
+ 
+ '';
+
+
+ function attesaX(){ 
+ if (document.all) { }
+ else if (document.getElementById) {
+ document.getElementById("spinnerattivo").style.visibility="hidden";
+ }
+
+
+ }; </script>
+
+ </body>
+</html>
