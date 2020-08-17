@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="AlterVista - Editor HTML"/>
+  <title>
+  
+  1020
+  bmuj step 05
+  20200817
+  
+  </title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+  
+<script src="https://use.fontawesome.com/2d0876dd08.js"></script>
+   
+<style> 
+html * { background-color:oldlace; }
+</style>
+   
+  
+</head>
+<body onload="attesa()">
+
+
+<main id="bmuj_main">
+  <span class="material-icons">
+  bug_report
+  </span>  
+</main>
+  
+ <!--  -->
+<script>
+/********************************
+| quando si fa resize della
+| finestra viene eseguita la
+| funzione script bmuj_main
+| contenente tutto il programma
+| e relativo dinamismo
+|
+********************************/
+
+/*  */
+  window.onresize=attesa;
+  window.onload=attesa;
+/*  */  
+  
+  function attesa(){ 
+
+/*******************************
+| rilevate le misure effettive
+|
+|
+*******************************/
+
+  larghezza=window.innerWidth;
+  altezza=window.innerHeight;
+
+/***************************
+| i numeri sono del tipo
+| magic numbers 
+| misura in px
+|
+***************************/
+
+  LARGHEZZA_WINDOW=larghezza / 1.05 ;	 
+  ALTEZZA_WINDOW=altezza / 1.05 ;  		
+
+  LARGHEZZA_WINDOW_FRAME=larghezza / 1.055 ; 
+  ALTEZZA_WINDOW_FRAME=altezza / 1.14 ;  	
+
+
+/**********************************
+| intestazione risulta la parte
+| dove ci sono le icona del modal
+| dialog box misura in rem
+|
+**********************************/
+
+ INTESTAZIONE_ALTEZZA=3; 
+ INTESTAZIONE_ALTEZZA_MARGIN_TOP_OFFSET=-3;
+ 
+ INTESTAZIONE_DIM_ICONE=2;
+ 
+  
+ 
+ POS_ANNOUNCEMENT_RIGHT=1;
+ POS_ANNOUNCEMENT_TOP=0.25;
+ 
+ LISTAY_LARGHEZZA=larghezza / 1.05 ;
+ LISTAY_LARGHEZZA_CONTENITORE=LISTAY_LARGHEZZA;
+ LISTAY_LARGHEZZA_CONTENUTO=LISTAY_LARGHEZZA;
+ 
+ LISTAY_ALTEZZA=altezza * 0.5;
+ LISTAY_ALTEZZA_CONTENITORE=LISTAY_ALTEZZA;
+ LISTAY_ALTEZZA_CONTENUTO=LISTAY_ALTEZZA; 
+
+ 
+ POS_HELPC_RIGHT=4;
+ POS_HELPC_TOP=0.25;
+ TOOLTIP_LARGHEZZA= LARGHEZZA_WINDOW / 3 ;
+ TOOLTIP_ALTEZZA= ALTEZZA_WINDOW / 3 ;
+ TOOLTIP_BORDER_RADIUS=0.4;
+
+ POS_CLOSE_LEFT=2;
+ POS_CLOSE_TOP=0.25;
+
+ POS_SPINNER=1.5;  
+ 
+
+/**********************************
+| bordo usato per debugging va
+| rimosso alla fine misura in rem
+|
+**********************************/
+
+ BORDER_WIDTH = .2;
+ 
+
+
+ var bmuj_main = document.getElementById("bmuj_main");
+  bmuj_main.innerHTML=
+  ' '+  
+  ' <style>'+
+  ' body, main, section, article { z-index:0; } '+
+  ' header { z-index:1000; } '+
+  ' '+
+  ' section { '+
+  ' position:relative;'+
+  ' margin:0 auto; text-align:center; '+    
+  ' width:'+ LARGHEZZA_WINDOW +'px'+' ; '+
+  ' height:'+ ALTEZZA_WINDOW +'px'+ ' ; '+  
+  ' border:solid '+  BORDER_WIDTH+'rem'+'  '+
+  ' green;'+ 
+  ' } '+     
+  ' '+  
+  ' aside>iframe {'+  
+  ' position:absolute; top:'+INTESTAZIONE_ALTEZZA+'rem; left:0; '+
+  ' width:'+ LARGHEZZA_WINDOW_FRAME +'px'+' ; '+
+  ' height:'+ ALTEZZA_WINDOW_FRAME +'px'+ ' ; '+  
+  ' border:solid '+  BORDER_WIDTH  +'rem'+'  '+
+  ' fuchsia;'+   
+  ' '+  
+  ' }'+  
+  ' '+
+  ' '+  
+  ' a#m1t_announcement  { '+ 
+  ' '+  
+  ' font-size:'+INTESTAZIONE_DIM_ICONE+'rem; '+
+  ' position:absolute; '+
+  ' top:'+POS_ANNOUNCEMENT_TOP+'rem'+';'+  
+  ' right:'+POS_ANNOUNCEMENT_RIGHT+'rem'+';'+  
+  ' '+  
+  ' } '+
+  ' '+
+  ' '+  
+  ' a#m1t_close  { '+ 
+  ' '+  
+  ' font-size:'+INTESTAZIONE_DIM_ICONE+'rem; '+
+  ' position:absolute; '+
+  ' top:'+POS_CLOSE_TOP+'rem'+';'+  
+  ' left:'+POS_CLOSE_LEFT+'rem'+';'+  
+  ' margin-top:'+INTESTAZIONE_ALTEZZA_MARGIN_TOP_OFFSET+'rem;'+
+  ' '+  
+  ' } '+
+  ' '+  
+  ' '+
+  ' '+ 
+  ' .m1t { '+
+  ' pointer-events:none; '+
+  ' opacity:0; '+
+  ' } '+
+  ' '+
+  ' .m1t:target { '+
+  ' pointer-events:auto; '+
+  ' opacity:1; '+
+  ' } '+
+  ' '+
+  ' '+
+  ' '+  
+  ' '+
+  ' '+  
+  ' '+  
+  ' '+
+  'div#m1t_contenitore { '+ 
+  'position:absolute; '+
+  'top:'+INTESTAZIONE_ALTEZZA+'rem; '+
+  ' '+ 
+  'width:'+LISTAY_LARGHEZZA+'px; '+ 
+  'height:'+LISTAY_ALTEZZA+'px;'+
+  ' '+ 
+  'background-color:rgba(0,128,128,0.1); '+ 
+  'background-color:rgba(253,245,230,0.5); '+ 
+  'border:solid '+BORDER_WIDTH+'rem black; '+ 
+  ' z-index:2000;'+
+  '}   '+ 
+  ' '+  
+  ' '+  
+  ' '+
+  ' '+  
+  ' '+  
+  ' '+  
+  ' '+
+  ' '+  
+  ' '+  
+  ' '+
+  ' '+
+'div#m1t_contenuto { '+ 
+'position:absolute; '+
+'top:'+INTESTAZIONE_ALTEZZA+'rem; '+
+'width:'+LISTAY_LARGHEZZA+'px; '+ 
+'height:'+LISTAY_ALTEZZA+'px;'+
+' '+ 
+' '+ 
+'background-color:rgba(0,128,128,.1);'+ 
+' '+ 
+'text-align:left;'+ 
+' '+ 
+'overflow:auto;'+ 
+'border:solid '+BORDER_WIDTH+' lime;'+ 
+'}'+ 
+  
+  ' '+  
+  ' '+
+  ' '+
+  ' '+  
+  ' '+  
+  ' '+
+  ' '+  
+  ' '+  
+  ' '+
+  ' '+  
+  ' '+  
+  ' '+  
+  ' span#m1t_help  { '+  
+  ' position:absolute;'+
+  ' top:'+POS_HELPC_TOP+'rem; '+
+  ' right:'+POS_HELPC_RIGHT+'rem; '+
+  ' margin-top:'+INTESTAZIONE_ALTEZZA_MARGIN_TOP_OFFSET+'rem;'+
+  ' border:dotted '+BORDER_WIDTH+'rem red;'+
+  ' } '+  
+  ' '+  
+  ' '+
+  ' .m1t_tooltip_contenuto {'+ 
+  '	display:none;'+ 
+  '	}'+ 
+  ' '+ 
+  '	.m1t_tooltip_contenitore:hover'+  
+  '	.m1t_tooltip_contenuto {'+ 
+  '	position:absolute;'+
+  ' top:'+POS_HELPC_TOP+'rem; '+   
+  ' right:'+POS_HELPC_RIGHT+'rem; '+  
+  ' margin-top:'+INTESTAZIONE_ALTEZZA_MARGIN_TOP_OFFSET+'rem;'+ 
+  ' width:'+TOOLTIP_LARGHEZZA+'px; '+
+  ' height:'+TOOLTIP_ALTEZZA+'px; '+
+  '	 '+ 
+  '	background-color:orange;'+ 
+  '	border-radius:'+TOOLTIP_BORDER_RADIUS+'rem;'+ 
+  '	overflow:auto;'+ 
+  '	display:block;'+ 
+  '	z-index:1000;'+ 
+  '	border:solid '+BORDER_WIDTH+'rem brown;'+ 
+  '	}'+ 
+  ' '+  
+  ' '+  
+  ' '+  
+  ' '+
+  ' .posizione_spinner {  '+
+  ' position:absolute; '+
+  ' top:'+POS_SPINNER+'rem ; left:0; '+
+  ' color:orange;'+
+  '  } '+
+  ' '+  
+  ' '+  
+  ' '+
+  ' '+  
+  ' '+  
+  ' '+
+  ' '+  
+  ' '+  
+  ' '+
+  ' </style>'+  
+  ' '+
+  ' '+ 
+  ' '+
+  ' '+
+  ' '+    
+  ' <main style="'+
+  ' margin:0 auto; text-align:center; '+  
+  ' '+
+  ' '+
+  ' '+    
+  ' background-color:orange; '+  
+  ' width:'+ LARGHEZZA_WINDOW +'px'+';'+
+  ' height:'+ ALTEZZA_WINDOW +'px'+';'+
+  ' '+  
+  ' '+
+  ' '+
+  ' '+  
+  ' ">'+
+  ' <section>'+ 
+  ' <header> '+  
+  ' '+
+  ' <a id="m1t_announcement" href="#m1t" '+
+  ' class="material-icons">'+
+  ' announcement'+
+  ' </a> '+ 
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' <div id="m1t" class="m1t">'+
+  ' <div id="m1t_contenitore">'+ 
+  ' '+
+  ' <a id="m1t_close" href="#" '+
+  ' class="material-icons"> '+
+  ' close'+
+  ' </a>  '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+  
+  ' <div id="m1t_tooltip_contenitore" '+ 
+  ' class="m1t_tooltip_contenitore">'+
+  ' '+
+  ' <span id="m1t_help" '+
+  ' class="m1t_help material-icons">'+
+  ' help_center'+
+  ' </span>'+
+  ' '+  
+  ' <div id="m1t_tooltip_contenuto"  '+
+  ' class="m1t_tooltip_contenuto">'+
+  ' TOOLTIP!'+
+  ' <hr/>'+
+  ' <a href="javascript:location.reload(true)">'+
+  ' <span class="material-icons">'+
+  ' autorenew'+
+  ' </span>'+
+  ' </a>'+
+  ' <hr/>'+
+  ' <a href="http://odlanir.altervista.org/logoutagenda.php">'+
+  ' <span class="material-icons">'+
+  ' exit_to_app'+
+  ' </span>'+
+  ' </a>'+
+  ' <hr/>'+
+  ' <a href="https://twitter.com/odlanir">'+
+  ' <span class="fa fa-twitter"></span>'+
+  ' </a>'+
+  ' <hr/>'+
+  ' <p style="text-align:left; ">'+
+  ' </p>'+
+  ' <p>'+
+  ' </p>'+
+  ' '+
+  ' </div>'+
+  ' </div>'+  
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' <div id="m1t_contenuto" '+
+  ' class="m1t_contenuto"> '+
+  ' '+
+  ' <article>'+
+  ' '+
+  ' '+
+  ' <blockquote class="BLOCKQUOTE_titolo"> '+ 
+  ' <span  id="ALTER_TITOLO"></span> '+ 
+  ' <span>Altervista</span> '+ 
+  ' </blockquote> '+  
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' </article> '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' <article>'+
+  ' '+
+  ' '+
+  '<blockquote class="BLOCKQUOTE_titolo">'+
+  '<span  id="AGENDA_TITOLO"></span>'+
+  '<span>Agenda 1989-2010</span>'+
+  '</blockquote>'+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' </article> '+
+  
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' '+
+  ' </div> '+  
+  ' </div> '+
+  ' </div> '+  
+  ' </header> '+  
+  ' '+
+  ' '+  
+  '<aside>'+
+  '<iframe src="http://edoraandiamo.altervista.org/" name="odlanir">'+
+  '</iframe>'+
+  '</aside>'+
+
+  '</section> '+
+  ' </main>'+
+  ' '+
+  ' '+ 
+  ' '+  
+  ' '+
+  ' '+ 
+  ' '+
+  ' '+
+  ' '+
+  ' '+ 
+  ' '+    
+  ' '+
+  ' '+ 
+  ' '+
+  ' '+
+  ' '+
+  ' '+ 
+  ' '+  
+  ' '+
+  ' '+ 
+  ' '+
+  ' '+
+  ' '+
+  ' '+ 
+  ' '+  
+  ' <div id="spinnerattivo" '+
+  ' class="posizione_spinner">'+ 
+  ' <span class="fa fa-spinner fa-pulse">'+
+  ' </span>'+
+  ' </div>'+
+  ' '+ 
+  ' '+
+  ' '+
+  ' '+
+  ' '+ 
+  ' '+  
+  
+  ' '
+  ;   
+  
+  
+/*  */
+
+if (document.all) { }
+else if (document.getElementById) {
+document.getElementById("spinnerattivoX").style.visibility="hidden";
+ }
+  
+/*  */
+
+  
+  }; </script>
+<!--  -->
+
+
+
+</body>
+</html>
