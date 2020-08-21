@@ -1,0 +1,39 @@
+
+/***********************************
+| queste label circolari sono
+| necessario in quanto 
+| risulta presente un solo frame
+| mentre ci sono un numero maggiore
+| di pannelli di attivazione frame
+| il mutamento viene gestito da
+| jQuery removeClass addClass 
+|
+| bordo bianco centro verde
+|
+***********************************/
+
+ .green.empty.circular.label {
+ height: 0.5rem;
+ width: 0.5rem;
+ background-color: green;
+ border:solid 0.1rem white;
+ border-radius: 50%;
+ display: inline-block;
+ }
+ 
+ .grey.empty.circular.label {
+ height: .5rem;
+ width: .5rem;
+ background-color: gray;
+ border-radius: 50%;
+ display: inline-block;
+ } 
+
+ .gray.empty.circular.label {
+ height: 0.5rem;
+ width: 0.5rem;
+ background-color: gray;
+ border-radius: 50%;
+ display: inline-block;
+ } 
+

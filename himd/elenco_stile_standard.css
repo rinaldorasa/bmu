@@ -1,0 +1,47 @@
+/*************************************
+| class comuni alle liste [costanti]
+|
+| TITOLO_BLOCKQUOTE
+| TABLE_ELENCO
+| TD_ELENCO
+| ITEM_ANCHOR_TAG
+| ITEM_CONTRASTO
+| UNO
+|
+| id [variabili]
+| 
+| articolo_alter [article]
+| titolo_alter [span]
+| table-elenco-alter [table]
+| item_selezionato_alter_ [span]
+|
+|
+|
+|
+|
+*************************************/
+
+
+
+
+.uno, .UNO  { background-color:orange; border:solid 0.4rem orange; }
+
+article#articolo_alter { border:dashed 0.1rem red; text-align:center;  }
+article#articolo_agenda { border:dashed 0.1rem red; text-align:center;  }
+
+span#titolo_alter + span  {  color:maroon; }
+span#titolo_agenda + span  {  color:maroon; }
+
+table { 
+/**************************
+permette un distanziamento
+uniforme tra i td
+**************************/
+
+table-layout: fixed;
+width: 100%;
+
+/*
+white-space: nowrap; 
+*/
+}
