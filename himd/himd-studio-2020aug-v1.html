@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="AlterVista - Editor HTML"/>
+  <title>
+  1425
+  jQuery studio apps
+  20200824
+  hhmm
+  html
+  yyyymmdd
+  
+  </title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+  
+<script src="https://use.fontawesome.com/2d0876dd08.js"></script>
+   
+<style> 
+html * { font-size:1.25rem; 
+font-family:monospace; 
+font-family:sans-serif;  }
+body  { background-color:oldlace; }
+</style>
+
+<style>
+aside { overflow:auto; }
+article#A001, article#A002 { position:relative; 
+border:dashed .1rem brown; overflow:auto; z-index:100; }
+
+blockquote 
+{ 
+margin-bottom:0rem;
+text-align:center; border:dotted .1rem red; 
+}
+
+blockquote>span {background-color:silver;
+color:white; border-radius:0.2rem; }
+
+blockquote>span:nth-child(3)  {
+ display:none; 
+ border-radius:0.2rem; }
+
+
+td>a, td>a:link, td>a:visited
+{
+
+padding:0.1rem;
+background-color:rgba(128,0,0,0.1);
+color:white;
+text-decoration: none;
+border-radius:0.2rem; 
+border:solid 0rem black;
+overflow:auto; 
+}
+
+table { table-layout:fixed; width:100%; border:solid 0.1rem red; }
+td {
+height:2rem;
+background-color:black; color:white;
+text-align:center; border:solid 0.1rem fuchsia; 
+overflow:auto;
+}
+
+iframe { position:fixed; top:3rem; border:none;  z-index:0; }
+</style>
+
+
+<style>
+
+
+
+.grigio { border:solid 0.5rem gray;  }
+
+
+.selezionato { 
+    border-radius: 0.4rem;
+    background-color:rgb(255,165,0,.5)  !important;
+    color: oldlace !important;
+    color: white !important;	
+    border:solid 0.4rem orange;  }
+
+.selezionato a { color:white; }
+
+.NULLA001, .NULLA002 
+{
+background-color:rgba(0,128,128,0.25);
+background-color:rgba(255,255,255,0.25);
+
+}
+
+
+.semaforo_verde { 
+/*
+ padding-top:0.25rem;padding-bottom:0.25rem; 
+ padding-left:0.25rem;padding-right:0.25rem;
+*/
+ height: 0.5rem;
+ width: 0.5rem;
+ background-color: green;
+ border:solid 0.2em white;
+ border-radius: 50%; 
+ display: inline-block;
+ }
+ 
+.semaforo_grigio { 
+ height: 0.5rem;
+ width: 0.5rem;
+ background-color: gray;
+ border:solid 0.1rem white;
+ border-radius: 50%;
+ display: inline-block;
+ }
+ 
+ 
+ 
+ 
+/*  */
+.m1t, .m1t_announcement, .m1t_contenitore, 
+.m1t_close, .m1t_contenuto { z-index:100; }
+
+.m1t {
+ pointer-events:none;
+ opacity:0;
+ }
+
+ .m1t:target {
+ pointer-events:auto;
+ opacity:1;
+ }
+
+ 
+ .m1t_announcement, .m1t_close {
+ position:fixed; top:0.3rem; font-size:2rem;
+ }
+ .m1t_announcement { right:0.3rem; }
+ .m1t_close { left:0.3rem; }
+ 
+ .m1t_contenitore {
+ position:fixed; top:3rem; left:50%;
+ margin-left:-50%;
+ width:100%;  height: 80%;  
+ background-color:rgba(0,128,128,0.25);
+  
+ overflow:auto;
+
+  border:solid .1rem blue;   
+ }
+
+ .m1t_contenuto {
+ background-color:rgba(0,128,128,0.25);
+  
+ border:dotted .1rem blue; 
+  
+ }
+
+
+ .m1t_tooltip { position:relative; z-index:110; }
+ .m1t_tooltip_contenitore { display:none; }
+ .m1t_tooltip:hover .m1t_tooltip_contenitore { 
+  position:fixed; top:0.3rem; right:6rem;
+  width: 30%; height: 30%;
+  background-color:orange; 
+  text-align:center;
+  border-radius:0.2rem;
+  border:solid 0.2rem blue; 
+  display:block; z-index:110; }
+ 
+ .m1t_tooltip_icona { position:fixed; top:0.3rem; right:6rem; }  
+ .m1t_tooltip_contenuto>span { 
+   font-size:1rem; overflow: auto ; z-index:110;}
+ 
+  
+ 
+/**********
+html, body, iframe { width:80%;  height: 80%; 
+left:50%; margin-left:-40%;
+} */
+
+html> body> iframe { width:80%;  height: 80%; 
+left:50%; margin-left:-40%;
+}
+
+
+.piedipagina { 
+position:fixed; bottom:0; left:0;
+width:100%; height:2.5%;
+background-color:oldlace; 
+color:gray; 
+font-size:small; font-family:monospace; 
+text-align:center;
+
+border-top:solid 0.05rem gray; }
+
+
+/* BLACKOUT */
+
+article, table, td, blockquote, .m1t_tooltip_contenitore, .m1t_contenitore, .m1t_contenuto
+ {  border-color: transparent !important;}
+
+</style>
+  
+</head>
+<body>
+<div class="piedipagina">
+2020 webdesign
+</div>
+
+<main>
+
+
+
+<section>
+<a href="#m1t" class="m1t_announcement material-icons">announcement</a>
+
+
+<div id="m1t" class="m1t m1t_contenitore">
+<a href="#" class="m1t_close material-icons">close</a>
+
+
+<div class="m1t_tooltip">
+  <div class="m1t_tooltip_icona material-icons">help_center</div>
+  <div class="m1t_tooltip_contenitore">
+  <div class="m1t_tooltip_contenuto">
+    <span>TOOLTIP!</span>
+    <hr/>
+ <a href="javascript:location.reload(true)">
+ <span class="material-icons">
+ autorenew
+ </span>
+ </a>
+ <hr/>
+ <a href="http://odlanir.altervista.org/logoutagenda.php">
+ <span class="material-icons">
+ exit_to_app
+ </span>
+ </a>
+ <hr/>
+ <a href="https://twitter.com/odlanir">
+ <span class="fa fa-twitter"></span>
+ </a>
+  </div>
+  </div>
+  </div>
+
+<div class="m1t_contenuto">
+
+
+<aside>
+
+
+<article id="A001">
+  <blockquote>
+    <span id="semaforo_A001"></span>
+	<span>Alter</span>
+	<span>A001</span>
+  </blockquote>
+
+<table>
+
+<tr>
+<td id="A001_001" class="NULLA001"><a href="http://edoraandiamo.altervista.org" target="odlanir">uno</a></td>
+<td id="A001_002" class="NULLA001"><a href="http://edoraandiamo.altervista.org/bmu/base/paginavuota.html" target="odlanir">due</a></td>
+<td id="A001_003"  class="NULLA001"><a href="http://edoraandiamo.altervista.org/bmu/base/paginavuota.html" target="odlanir">tre</a></td>
+<td id="A001_004" class="NULLA001"><a href="http://edoraandiamo.altervista.org/bmu/base/paginavuota.html" target="odlanir">quattro</a></td>
+</tr>
+
+<tr>
+<td id="A001_005" class="NULLA001"><a href="http://edoraandiamo.altervista.org" target="odlanir">uno</a></td>
+<td id="A001_006" class="NULLA001"><a href="http://edoraandiamo.altervista.org/bmu/base/paginavuota.html" target="odlanir">due</a></td>
+<td id="A001_007"  class="NULLA001"><a href="http://edoraandiamo.altervista.org/bmu/base/paginavuota.html" target="odlanir">tre</a></td>
+<td id="A001_008" class="NULLA001"><a href="http://edoraandiamo.altervista.org/bmu/base/paginavuota.html" target="odlanir">quattro</a></td>
+</tr>
+
+</table>
+
+<script>
+jQuery('#A001_001').click( function() {
+jQuery('.NULLA001').removeClass('selezionato');
+jQuery('#A001_001').addClass('selezionato');
+});
+
+jQuery('#A001_002').click( function() {
+jQuery('.NULLA001').removeClass('selezionato');
+jQuery('#A001_002').addClass('selezionato');
+});
+
+jQuery('#A001_003').click( function() {
+jQuery('.NULLA001').removeClass('selezionato');
+jQuery('#A001_003').addClass('selezionato');
+});
+
+jQuery('#A001_004').click( function() {
+jQuery('.NULLA001').removeClass('selezionato');
+jQuery('#A001_004').addClass('selezionato');
+});
+
+jQuery('#A001_005').click( function() {
+jQuery('.NULLA001').removeClass('selezionato');
+jQuery('#A001_005').addClass('selezionato');
+});
+
+jQuery('#A001_006').click( function() {
+jQuery('.NULLA001').removeClass('selezionato');
+jQuery('#A001_006').addClass('selezionato');
+});
+
+jQuery('#A001_007').click( function() {
+jQuery('.NULLA001').removeClass('selezionato');
+jQuery('#A001_007').addClass('selezionato');
+});
+
+jQuery('#A001_008').click( function() {
+jQuery('.NULLA001').removeClass('selezionato');
+jQuery('#A001_008').addClass('selezionato');
+});
+
+</script>
+
+<script>
+$('.NULLA001').click( function(){
+$('#semaforo_A001').addClass('semaforo_verde');
+$('#semaforo_A002').removeClass('semaforo_verde');
+}
+);
+
+</script>
+
+</article>
+
+
+<article id="A002">
+  <blockquote>
+    <span id="semaforo_A002"></span>
+	<span>Agenda</span>
+	<span>A002</span>
+  </blockquote>
+
+<table>
+
+<tr>
+<td id="A002_001" class="NULLA002"><a href="http://edoraandiamo.altervista.org" target="odlanir">uno</a></td>
+<td id="A002_002" class="NULLA002"><a href="http://edoraandiamo.altervista.org/bmu/base/paginavuota.html" target="odlanir">due</a></td>
+<td id="A002_003"  class="NULLA002"><a href="http://edoraandiamo.altervista.org/bmu/base/paginavuota.html" target="odlanir">tre</a></td>
+<td id="A002_004" class="NULLA002"><a href="http://edoraandiamo.altervista.org/bmu/base/paginavuota.html" target="odlanir">quattro</a></td>
+</tr>
+
+<tr>
+<td id="A002_005" class="NULLA002"><a href="http://edoraandiamo.altervista.org" target="odlanir">uno</a></td>
+<td id="A002_006" class="NULLA002"><a href="http://edoraandiamo.altervista.org/bmu/base/paginavuota.html" target="odlanir">due</a></td>
+<td id="A002_007"  class="NULLA002"><a href="http://edoraandiamo.altervista.org/bmu/base/paginavuota.html" target="odlanir">tre</a></td>
+<td id="A002_008" class="NULLA002"><a href="http://edoraandiamo.altervista.org/bmu/base/paginavuota.html" target="odlanir">quattro</a></td>
+</tr>
+
+</table>
+
+<script>
+jQuery('#A002_001').click( function() {
+jQuery('.NULLA002').removeClass('selezionato');
+jQuery('#A002_001').addClass('selezionato');
+});
+
+jQuery('#A002_002').click( function() {
+jQuery('.NULLA002').removeClass('selezionato');
+jQuery('#A002_002').addClass('selezionato');
+});
+
+jQuery('#A002_003').click( function() {
+jQuery('.NULLA002').removeClass('selezionato');
+jQuery('#A002_003').addClass('selezionato');
+});
+
+jQuery('#A002_004').click( function() {
+jQuery('.NULLA002').removeClass('selezionato');
+jQuery('#A002_004').addClass('selezionato');
+});
+
+jQuery('#A002_005').click( function() {
+jQuery('.NULLA002').removeClass('selezionato');
+jQuery('#A002_005').addClass('selezionato');
+});
+
+jQuery('#A002_006').click( function() {
+jQuery('.NULLA002').removeClass('selezionato');
+jQuery('#A002_006').addClass('selezionato');
+});
+
+jQuery('#A002_007').click( function() {
+jQuery('.NULLA002').removeClass('selezionato');
+jQuery('#A002_007').addClass('selezionato');
+});
+
+jQuery('#A002_008').click( function() {
+jQuery('.NULLA002').removeClass('selezionato');
+jQuery('#A002_008').addClass('selezionato');
+});
+
+</script>
+
+<script>
+$('.NULLA002').click( function(){
+$('#semaforo_A001').removeClass('semaforo_verde');
+$('#semaforo_A002').addClass('semaforo_verde');
+}
+);
+
+</script>
+
+</article>
+
+
+
+  
+  
+</aside>
+
+
+  
+</div>
+</div>
+
+</section>
+
+
+
+
+</main>
+
+<iframe name="odlanir"></iframe>
+
+
+</body>
+</html>
