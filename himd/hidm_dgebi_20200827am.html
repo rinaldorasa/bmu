@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="AlterVista - Editor HTML"/>
+ <title>
+ 1250
+ HIMD studio apps
+ 20200827
+ hhmm
+ html
+ yyyymmdd
+ 
+ </title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+ 
+<script src="https://use.fontawesome.com/2d0876dd08.js"></script>
+ 
+ <style>
+ html, body { background-color:oldlace; }
+ </style>
+ 
+ 
+ <style> </style>
+ 
+ 
+</head>
+<body>
+
+
+<main id="DGEBIhimd"></main>
+
+
+<iframe src="http://edoraandiamo.altervista.org/" name="odlanir"></iframe>
+
+
+
+<script>
+
+//
+// il progetto diventa fluid 
+// permettendo di ovviare 
+// ad un utilizzo esagerato
+// di codice javascript
+//
+INTESTAZIONE_HEIGHT=3; // header senza tag
+
+//
+// il posizionamento e larghezza altezza
+// del iframe sono da definirsi subito
+// il progetto ruota attorno a questo
+// componente
+// deve essere considerato anche lo
+// zindex settato a zero dato che in seguito
+// ci saranno i menu a discesa e il modal box
+// i quali devono avere un zindex maggiore
+// 
+
+IFRAME_WIDTH=80; IFRAME_HEIGHT=80; 
+
+// settaggi per centrare iframe
+
+IFRAME_LEFT=50; // percento 
+IFRAME_MARGINE_LEFT=-40; //percento
+
+
+
+ICONA_ANNOUNCEMENT_TOP=0.5; // rem
+ICONA_CLOSE = ICONA_ANNOUNCEMENT_TOP;
+// 
+// announcement apre
+// close chiude
+// fare attenzione che la creazione
+// di un modal box necessita una
+// contemporaneità di announcement e close
+// altrimenti si crea bug insidioso
+//
+// lo scostamento dal bordo della finestra
+// gestisce il posizionamento delle due
+// icone principali del modal box
+//
+SCOSTAMENTO_ICONE_MODAL=5; // percento
+
+SCOSTAMENTO_ICONA_TOOLTIP=50; // percento
+CORREZIONE_POS_TOOLTIP=SCOSTAMENTO_ICONA_TOOLTIP*0.7;  // percento
+LARGHEZZA_TOOLTIP=30; // percento
+ALTEZZA_TOOLTIP=30; // percento
+
+document.getElementById("DGEBIhimd").innerHTML=
+' <style> '+
+' html * { font-family:sans-serif; } '+
+
+
+' iframe { '+
+' position:fixed; '+
+' top:'+INTESTAZIONE_HEIGHT+'rem; '+
+' width:'+IFRAME_WIDTH+'%; '+
+' height:'+IFRAME_HEIGHT+'%; '+
+' left:'+IFRAME_LEFT+'%; '+
+' margin-left:'+IFRAME_MARGINE_LEFT+'%; '+ 
+' border:none; '+
+' z-index:0; '+
+' } '+
+ // definizione del modal box
+
+' .m1t { pointer-events:none; opacity:0;} '+
+' .m1t:target { pointer-events:auto; opacity:1;} '+
+
+// definizione delle icone di controllo
+// zindex 100
+' .m1t_announcement, .m1t_close { '+
+' position:fixed; '+
+' top:'+ICONA_ANNOUNCEMENT_TOP+'rem; '+
+' font-size:2rem; z-index:100; '+
+' } '+
+' .m1t_announcement {'+
+' position:fixed; right:'+SCOSTAMENTO_ICONE_MODAL+'% ;'+
+' } '+
+' .m1t_close {'+
+' position:fixed; left:'+SCOSTAMENTO_ICONE_MODAL+'%;'+
+' } '+ 
+ 
+' .m1t_contenitore { '+
+' position:fixed; top:'+INTESTAZIONE_HEIGHT+'rem; '+
+// posizionare il contenitore al centro schermo
+' left:50%; '+
+' margin-left:-50%; '+
+// larghezza e altezza seguono lo standard del progetto
+// il contenitore visualizza elenco item tra cui
+// scegliere quindi seve coprire da fine intestazione
+// a fine iframe in modo da evitare dei click sul
+// contenuto della pagina in iframe 
+// la sovrapposizione risulta perfetta
+// la larghezza del contenitore risulta un drawback
+// parziale in quanto si sovrappone alla scroll bar
+// del box disattivandone in parte la funzione
+' width:100%; height: 80%; '+
+// patch per il drawback box vertical scroll bar 
+' width:100%; height: 80%; '+
+
+// colore background teal
+' background-color:rgba(0,128,128,0.25); '+
+// evitare traboccamento quando si aggiungono
+// articoli al aside
+' overflow:auto; '+ 
+' border:solid .1rem blue; '+
+' z-index:100;'+
+' } '+
+
+
+
+
+ // tooltip ha il valore zindex 110 maggiore di altri
+ // componenti e un doppione del close
+ // fare attenzione che zindex funziona solo
+ // con relative in caso contrario possibili
+ // stop and go in aggiustamento zindex
+ // di finestre inopinatamente sovrapposte
+ ' .m1t_tooltip { position:relative; z-index:110; '+
+ '   ' +
+ '  } ' +
+ ' .m1t_tooltip_contenitore { display:none; } ' +
+
+ // per garantire effetto tooltip
+ // occorre che icona e tooltip contenitore
+ // abbiano lo stesso scostamento
+ ' .m1t_tooltip:hover .m1t_tooltip_contenitore { ' +
+ ' position:fixed; top:0.3rem; '+
+ 
+ // posizionare il contenitore tooltip
+ // al centro della finestra
+ 
+ ' '+
+ ' right:'+SCOSTAMENTO_ICONA_TOOLTIP+'%; ' +
+ '  '+
+ // quasi una patch
+ ' right:'+CORREZIONE_POS_TOOLTIP+'% ; '+
+ 
+ ' width:'+LARGHEZZA_TOOLTIP+'%; '+
+ ' height:'+ALTEZZA_TOOLTIP+'%; ' +
+ ' background-color:orange; ' +
+ ' text-align:center; ' +
+ ' border-radius:0.2rem; ' +
+ ' border:solid 0.2rem transparent; ' +
+ ' display:block; z-index:110; } ' +
+ ' ' +
+ //
+ // posizione di icona help_center
+ //
+ ' .m1t_tooltip_icona { position:fixed; top:0.3rem; ' + 
+ ' right:'+SCOSTAMENTO_ICONA_TOOLTIP+'%; } ' +
+ ' .m1t_tooltip_contenuto>span { ' +
+ ' font-size:1rem; overflow: auto ; z-index:110;} ' +
+
+
+
+ // *********************
+ // il blackout dei bordi
+ // *********************
+ 'article, table, td, '+
+ 'blockquote, .m1t_tooltip_contenitore, '+
+ ' .m1t_contenitore, .m1t_contenuto '+
+ '{ border-color: transparent !important;}'+
+
+
+
+
+' </style> '+
+
+
+
+' <section> '+
+' '+
+'<a href="#m1t" '+
+'class="m1t_announcement material-icons"> '+
+'announcement '+
+'</a> '+
+
+' <div id="m1t" class="m1t m1t_contenitore"> '+
+'<a href="#" class="m1t_close material-icons"> '+
+'close '+
+'</a> '+
+
+//
+// TOOLTIP help center
+// permette di ovviare
+// ad eventuali drawback nel codice
+//
+
+' <div class="m1t_tooltip"> '+
+// posizionamento icona del tooltip
+' <div class="m1t_tooltip_icona material-icons"> '+
+' help_center '+
+' </div> '+
+// definizione del contenitore
+'<div class="m1t_tooltip_contenitore"> '+
+// disposizione dei contenuti
+'<div class="m1t_tooltip_contenuto"> '+
+// titolo del tooltip
+ '  '+
+ ' <span style="font-variant:small-caps;">help center!</span> '+
+ '<hr/> '+
+ //
+ // refresh del modal box
+ // 
+ '<a href="javascript:location.reload(true)" '+
+ ' class="material-icons"> '+
+ ' '+
+ 'autorenew'+
+ ' '+
+ '</a> '+
+
+// ' <a href="#A001"  '+
+// ' class="material-icons"> '+
+// ' '+
+// 'arrow_circle_up'+
+// ' '+
+// ' </a> '+
+
+ '  '+
+ 
+ '<hr/> '+
+'<a href="http://odlanir.altervista.org/logoutagenda.php"> '+
+ ' <span class="material-icons"> '+
+ ' exit_to_app '+
+ '</span> '+
+ '</a> '+
+ '<hr/> '+
+ '<a href="https://twitter.com/odlanir"> '+
+ '<span class="fa fa-twitter"></span> '+
+ '</a> '+
+ '</div> '+
+ '</div> '+
+
+' </div>'+
+
+
+' <div class="m1t_contenuto"> '+
+' '+
+// ******************************
+//
+// file compilato js
+// id elencoY
+// file: elencoY.js
+//
+// ******************************
+
+' <aside id="elencoY"> '+
+
+//
+// 
+//
+
+
+' </aside> '+
+' '+
+' </div>'+
+' </div>'+
+' </section> '+
+
+''
+;
+</script>
+
+<!--  -->
+<script src="elencoY_20200827am.js"></script>
+  <!--  -->
+
+
+
+<!--  
+<script src="elencoY.js"></script>
+ -->
+
+
+
+
+
+</body>
+</html>
