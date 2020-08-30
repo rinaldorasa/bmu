@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="AlterVista - Editor HTML"/>
+ <title>
+1830
+ HIMD studio apps
+ 20200830
+ hhmm
+ html
+ yyyymmdd
+ </title>
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ 
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+  
+ <script src="https://use.fontawesome.com/2d0876dd08.js"></script>
+
+  <style>
+  html, body { font-family:monospace; background-color:oldlace; }
+  </style>
+ </head>
+
+ <body>
+  <main id="DGEBIhimd" class="material-icons">bug_report</main>
+
+<!--  -->
+ <iframe src="http://edoraandiamo.altervista.org/" name="odlanir"></iframe>
+<!--  -->   
+
+
+
+ <script>
+ // progetto fluid ha come centro iframe
+ // sul quale devono prevalere
+ // i menu a discesa usando zindex
+ // es. iframe zindex0 menu zindex100
+ // iframe viene posizionato con un
+ // discostamento dal top0
+ //
+ // INTESTAZIONE_HEIGHT=3; // rem  // default
+ //
+ 
+ //
+ // utilizzo del calcolo al fine
+ // di determinare i valori delle
+ // variabili
+ //
+ INTESTAZIONE_HEIGHT=4; // rem
+ I_H = INTESTAZIONE_HEIGHT ;  //  mirror 
+ 
+ 
+ // settaggi indipendenti da I_H
+ IFRAME_WIDTH=80; IFRAME_HEIGHT=80; // percento
+ // settaggi per centrare iframe
+ IFRAME_LEFT=50; // percento 
+ IFRAME_MARGINE_LEFT=-40; //percento
+ //
+ //
+ ANNOUNCEMENT_POS_RIGHT=5; // percento
+ ANNOUNCEMENT_POS_TOP=0.5; // rem
+ CLOSE_POS_LEFT=5; // percento 
+ CLOSE_POS_TOP=ANNOUNCEMENT_POS_TOP;
+ // FONT_SIZE_ANNOUNCEMENT=2; // rem
+ // FONT_SIZE_ANNOUNCEMENT=2.5; // rem
+ // font size calcolato 
+ // FONT_SIZE_ANNOUNCEMENT=I_H*0.625; // rem 
+  FONT_SIZE_ANNOUNCEMENT=I_H*0.7; // rem 
+  
+ FONT_SIZE_CLOSE=FONT_SIZE_ANNOUNCEMENT; // rem
+ //
+ HELP_CENTER_POS_RIGHT=50; // percento
+ HELP_CENTER_POS_TOP=ANNOUNCEMENT_POS_TOP;
+ FONT_SIZE_HELP_CENTER=FONT_SIZE_ANNOUNCEMENT; 
+ //
+ //
+ //
+M1T_CONTENITORE_LARGHEZZA=99.25;  // percento
+M1T_CONTENUTO_LARGHEZZA=M1T_CONTENITORE_LARGHEZZA;
+
+M1T_CONTENITORE_ALTEZZA=80;  // percento
+M1T_CONTENUTO_ALTEZZA=M1T_CONTENITORE_ALTEZZA;
+ //
+ //
+ // 
+ 
+
+ document.getElementById("DGEBIhimd").innerHTML=
+ // classes stile
+ ' <style> ' +
+ // definizione di iframe
+ ' iframe { '+
+ ' position:fixed; '+
+ ' top:'+INTESTAZIONE_HEIGHT+'rem; '+
+ ' width:'+IFRAME_WIDTH+'%; '+
+ ' height:'+IFRAME_HEIGHT+'%; '+
+ ' left:'+IFRAME_LEFT+'%; '+
+ ' margin-left:'+IFRAME_MARGINE_LEFT+'%; '+ 
+ ' border:none; '+
+ ' z-index:0; '+ // zindex importante
+ ' } '+
+ // sistemazione icone material
+ '  '+
+ // 
+ '.m1t_announcement {'+
+ // 
+ ' position:fixed; '+
+ // 
+ ' top:'+ANNOUNCEMENT_POS_TOP+'rem ;'+
+ // 
+ ' right:'+ANNOUNCEMENT_POS_RIGHT+'% ; '+
+ // 
+ ' font-size:'+FONT_SIZE_ANNOUNCEMENT+'rem ; '+
+ // 
+ ' } '+ 
+ '  '+
+///////////////////////////////////////////// 
+'.m1t_close {'+
+// 
+' position:fixed; '+
+// 
+' top:'+CLOSE_POS_TOP+'rem ;'+
+// 
+' left:'+CLOSE_POS_LEFT+'% ; '+
+// 
+' font-size:'+FONT_SIZE_CLOSE+'rem ; '+
+// 
+' } '+ 
+//
+ '  '+
+ '  '+
+ '  '+
+ '  '+
+ '  '+
+ '  '+
+ '  '+
+ 
+ // definizione modal box
+ ' .m1t { pointer-events:none; opacity:0; } '+
+ //
+ ' .m1t:target { pointer-events:auto; opacity:1; }  '+
+ //////////////////////////////////////////////////
+ ' .m1t_contenitore { position:fixed; z-index:100; }  '+
+ ' .m1t_contenitore { top:'+INTESTAZIONE_HEIGHT+'rem; }   '+
+ ' .m1t_contenitore { left:50%; margin-left:-50%; }   '+ 
+// ' .m1t_contenitore { width:99.25%; }   '+ // 100%
+// ' .m1t_contenitore { height:80%; }   '+
+ ' .m1t_contenitore { width:'+M1T_CONTENITORE_LARGHEZZA+
+ '%; }   '+ // 100%
+ ' .m1t_contenitore { height:'+M1T_CONTENITORE_ALTEZZA+
+ '%; }   '+
+ 
+ ' .m1t_contenitore { background-color:rgba(0,0,0,0.25); }   '+
+
+ ' .m1t_contenitore { border:solid 0.2rem transparent; }   '+
+ '  '+
+ '  '+
+ ///////////////////////////////////////////////// 
+ ' .m1t_contenuto { position:fixed; z-index:100; }  '+
+ ' .m1t_contenuto { top:'+INTESTAZIONE_HEIGHT+'rem; }   '+
+ ' .m1t_contenuto { left:50%; margin-left:-50%; }   '+ 
+// ' .m1t_contenuto { width:99.25%; }   '+ // 100%
+// ' .m1t_contenuto { height:80%; }   '+
+ ' .m1t_contenuto { width:'+M1T_CONTENUTO_LARGHEZZA+
+ '%; }   '+ // 100%
+ ' .m1t_contenuto { height:'+M1T_CONTENUTO_ALTEZZA+
+ '%; }   '+
+ 
+ ' .m1t_contenuto { background-color:rgba(0,0,0,0.25); }   '+
+ ' .m1t_contenuto { overflow:auto; }   '+
+
+ ' .m1t_contenuto { border:solid 0.2rem transparent; }   '+
+ '  '+
+ '  '+
+ 
+ /////////////////////////////////////////////////
+ '  '+
+ ' .m1t_tooltip_contenuto { display:none; } '+
+ '  '+
+ ' .m1t_tooltip_contenitore:hover '+
+ ' .m1t_tooltip_contenuto { display:block; }'+
+ '  '+
+ '  '+
+ '  '+
+ 
+ ' .m1t_tooltip_contenitore { position:fixed; z-index:110; } '+
+ ' .m1t_tooltip_contenitore { top:'+HELP_CENTER_POS_TOP+'rem ; } '+ 
+ ' .m1t_tooltip_contenitore { right:50% ; } '+ 
+ ' .m1t_tooltip_contenitore { margin-right:-25% ; } '+  
+// ' .m1t_tooltip_contenitore { width:50% ; } '+
+// ' .m1t_tooltip_contenitore { height:50% ; } '+  
+ ' .m1t_tooltip_contenitore { background-color:transparent; } '+ 
+
+ ' .m1t_tooltip_contenitore { border:solid 0.2rem transparent ; } '+ 
+ '  '+
+ '  '+
+ '  '+
+ '  '+
+ ' .m1t_tooltip_contenuto { position:fixed; z-index:110; } '+
+ ' .m1t_tooltip_contenuto { top:'+HELP_CENTER_POS_TOP+'rem ; } '+ 
+ ' .m1t_tooltip_contenuto { right:50% ; } '+ 
+ ' .m1t_tooltip_contenuto { margin-right:-25% ; } '+  
+ ' .m1t_tooltip_contenuto { width:50% ; } '+
+ ' .m1t_tooltip_contenuto { height:50% ; } '+  
+ ' .m1t_tooltip_contenuto { font-family:monospace; } '+ 
+ ' .m1t_tooltip_contenuto { background-color:orange; } '+ 
+ ' .m1t_tooltip_contenuto { border-radius:0.2rem; } '+
+ ' .m1t_tooltip_contenuto { overflow:auto; } '+
+ ' .m1t_tooltip_contenuto { border:solid 0.2rem orange ; } '+  
+ '  '+
+ '  '+
+ 
+
+////////////////////////////////////////////
+///////////////// icona tooltip 
+'.m1t_help_center {'+
+// 
+' position:fixed; '+
+// 
+' top:'+HELP_CENTER_POS_TOP+'rem ;'+
+// 
+' RIGHT:'+HELP_CENTER_POS_RIGHT+'% ; '+
+// 
+' font-size:'+FONT_SIZE_HELP_CENTER+'rem ; '+
+// 
+' } '+ 
+////////////////////////////////////////////
+
+/////////////// utility
+ '  '+
+ ' .dissolvenza {  '+
+ '   animation: fadeIn ease 2.5s; '+
+ '  -webkit-animation: fadeIn ease 2.5s; '+
+ '  -moz-animation: fadeIn ease 2.5s; '+
+ '  -o-animation: fadeIn ease 2.5s; '+
+ '  -ms-animation: fadeIn ease 2.5s; '+
+ '   } '+
+ '   @keyframes fadeIn { '+
+ '   0% {opacity:0;} '+
+ '   100% {opacity:1;} '+
+ '   } '+
+ '  '+
+////////////////////////////////////////// 
+ '  '+
+ '  '+
+ '  '+
+ '  '+
+ '  '+
+ '  '+
+
+ ' </style> ' +
+ '  '+
+ //
+ // inizia codice
+ ' <section> '+
+ //
+ /////////////
+ ' <header> '+
+// 
+' <a href="#m1t" ' + 
+'class="m1t_announcement material-icons">'+
+// 
+' announcement'+
+// 
+' </a> '+
+//
+ ' </header> '+ 
+
+
+ '  '+
+ '  '+
+ '  '+
+ ///////////////////////////////////
+ ' <div id="m1t" class="m1t m1t_contenitore">  '+
+ ////////////////
+ ' <a href="#" class="m1t_close">  '+
+ //
+ 'close'+
+ //
+  ' </a> '+
+//
+///////////////
+ ' <div class="m1t_tooltip_contenitore">  '+
+////////////////
+// 
+' <span class="m1t_help_center material-icons"> '+
+// 
+' help_center '+
+// 
+' </span> '+
+//
+//
+//////////////////// contenuto TOOLTIP ini
+ ' <div class="m1t_tooltip_contenuto dissolvenza">  '+
+//////////////////// 
+//
+ ' <article> '+
+// titolo del tooltip
+ '  '+
+ ' <div style="text-align:center; "> '+
+ ' <span style="font-variant:small-caps; '+
+ ' ">'+
+ 'help center!'+
+ ' </span> '+
+ ' </div> '+
+ '<hr/> '+
+ //
+ // refresh del modal box NON reload browser
+ // 
+ '<a href="javascript:location.reload(true)" '+
+ ' class="material-icons"> '+
+ ' '+
+ 'autorenew'+
+ ' '+
+ '</a> '+
+ '  '+
+ '<hr/> '+
+ '<a href="http://odlanir.altervista.org/logoutagenda.php"> '+
+ ' <span class="material-icons"> '+
+ ' exit_to_app '+
+ '</span> '+
+ '</a> '+
+ '<hr/> '+
+ '<a href="https://twitter.com/odlanir"> '+
+ '<span class="fa fa-twitter"></span> '+
+ '</a> '+
+ '  '+
+ ' </article> '+
+ '  '+
+////////////////////
+ ' </div> '+
+/////////////////// contenuto TOOLTIP fin
+//
+//
+ ' </div> '+ // contenitore TOOLTIP fin
+//
+// 
+ '  '+
+ '  '+
+ '  '+
+ '  '+
+ '  '+
+ '  '+
+
+ ///////////////////////////////////
+ '  '+
+ ' <div class="m1t_contenuto">  '+
+ ///////////////
+ '  '+
+ '  '+
+ '  '+
+// 
+// 
+' <aside id="elencoY"> '+
+// 
+' </aside> '+
+ '  '+
+ '  '+
+ '  '+
+ ' </div> '+
+ ' </div> '+ 
+ '  '+
+ 
+ ' </section> '+
+
+
+ ' '
+ ;
+ </script>
+
+
+<!--  *  *  elencoYhimd  *  *  -->
+
+<!--   -->
+<script>
+
+var casuale = Math.random();
+var esteso = casuale.toString();
+esteso ="?"+esteso;
+ 
+var link_js_01 = document.createElement( "script" );
+var nome_link_js_01 ="20200830-1900_elencoY_new-immA-txtA.js";
+nome_link_js_01 = nome_link_js_01+esteso;
+link_js_01.src = nome_link_js_01 ;
+document.getElementsByTagName( "head" )[0].appendChild( link_js_01 );
+
+
+</script>
+<!--   -->
+
+
+
+</body>
+</html>
+
+
