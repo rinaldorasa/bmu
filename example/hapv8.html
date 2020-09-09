@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+ <meta charset="utf-8">
+ <meta name="generator" content="AlterVista - Editor HTML"/>
+ <title>
+
+0945
+ HAPV8
+ 20200909
+ hhmm
+ html
+ yyyymmdd
+ 
+ </title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+ 
+<script src="https://use.fontawesome.com/2d0876dd08.js"></script>
+
+
+<style> 
+html * { /* font-family:monospace; */ }
+body { background-color:oldlace; }
+</style>
+
+<style>
+iframe, .m1t:target { width:80%; height:80%;
+left:50%; margin-left:-40%; border:none ; }
+iframe{z-index:0; }
+
+.m1t{pointer-events:none; opacity:0; }
+
+.m1t:target 
+{
+ pointer-events:auto; opacity:1; 
+ background-color:rgba(253,245,230,0.5);
+}
+
+.m1t:target{z-index:100;}
+
+.help_center{visibility:visible; }
+.contenuto_help_center{display:none;}
+/*
+.help_center:hover .contenuto_help_center
+{
+ display:block; left:0rem; width:40%; height:40%; 
+ background-color:orange; border-radius:0.4rem; 
+}
+*/
+/* debugging */
+.contenuto_help_center{display:none;}
+.help_center:hover .contenuto_help_center
+{
+ display:block; left:0rem; width:40%; height:40%; 
+ background-color:transparent; border-radius:0.4rem;
+ overflow:auto; 
+ border:solid 0.1rem orange; 
+}
+.contenuto_help_center>p{
+ margin-left:20%; 
+ background-color:maroon; color:white; 
+ }
+ .help_center:hover .ico_help_center
+{visibility:hidden; 
+}
+
+.dissolvenza {
+ animation: fadeIn ease 2.5s;
+ -webkit-animation: fadeIn ease 2.5s;
+ -moz-animation: fadeIn ease 2.5s;
+ -o-animation: fadeIn ease 2.5s;
+ -ms-animation: fadeIn ease 2.5s;
+ }
+ @keyframes fadeIn {
+ 0% {opacity:0;}
+ 100% {opacity:1;}
+ }
+
+.ico_announcement, .ico_spinner, .ico_close, 
+.ico_help_center, iframe, 
+.m1t:target, .contenuto_help_center {position:fixed; }
+
+.ico_announcement, .ico_spinner, 
+.ico_close, .ico_help_center {font-size:2.5rem; }
+
+.ico_announcement, .ico_spinner, iframe, 
+.m1t:target {top:3rem; }
+
+.ico_close, .ico_help_center, .contenuto_help_center
+ {top:9rem; }
+
+
+.ico_announcement, .ico_close {right:0.5rem; }
+
+.ico_spinner, .ico_help_center {left:0.5rem; }
+
+.ico_help_center {color:silver; }
+
+</style>
+
+
+ 
+</head>
+<body onload="attesa()">
+<div class="ico_spinner">
+ <div id="spinner" class="fa fa-spinner fa-pulse"></div>
+</div>
+
+<main>
+ <!--
+ <iframe src="http://edoraandiamo.altervista.org/aiuto.html" name="odlanir"></iframe>
+ -->
+
+ <iframe  name="odlanir"></iframe>
+
+<section>
+ <a href="#m1t" class="ico_announcement material-icons" >announcement</a>
+
+ <div id="m1t" class="m1t">
+ <a href="#" class="ico_close material-icons">close</a>
+
+ <div class="help_center" style="visibility:hidden; ">
+ <div class="ico_help_center material-icons">help_center</div>
+ <div class="dissolvenza contenuto_help_center">
+ <p>
+ HELP CENTER!
+ </p>
+ </div>
+ </div> 
+
+<!-- -->
+<div class="contenitore_m1t">
+<a href="https://ed-ora-andiamo.com/img/la-resistenza-e-la-liberazione-dell_Italia-1945-aprile.png" 
+target="odlanir" style="display:none;">MODAL BOX DIALOG </a>
+
+<p id="arrayA001_tes" style="margin:0;">
+<span class="material-icons">bug_report</span> 
+<span> in array </span> 
+</p>
+</div>
+<!--  --> 
+
+ </div>
+</section>
+</main>
+
+<script>
+
+// dichiarazioni array
+//
+ var arrayA000_url=new Array;
+ var arrayA000_tes=new Array;
+ var arrayA000_imm=new Array;
+ var arrayA000_sot=new Array;
+
+ // 
+ var arrayA001_url=new Array;
+ var arrayA001_tes=new Array;
+ var arrayA001_imm=new Array;
+ var arrayA001_sot=new Array;
+
+//
+ var arrayA002_url=new Array;
+ var arrayA002_tes=new Array;
+ var arrayA002_imm=new Array;
+ var arrayA002_sot=new Array;
+
+//
+ var arrayA003_url=new Array;
+ var arrayA003_tes=new Array;
+ var arrayA003_imm=new Array;
+ var arrayA003_sot=new Array;
+
+
+// inserimento dati
+//
+ arrayA000_url[0]="url";
+ arrayA000_tes[0]="TITOLO A000";
+ arrayA000_imm[0]="immagine";
+ arrayA000_sot[0]="commento";
+
+
+/////////////////
+ arrayA001_url[0]="";
+ arrayA001_tes[0]="web siti altervista";
+ arrayA001_imm[0]="";
+ arrayA001_sot[0]="";
+
+ arrayA001_url[1]='http://edoraandiamo.altervista.org/';
+ arrayA001_tes[1]="indice";
+ arrayA001_imm[1]='"http://edoraandiamo.altervista.org/img0/rinaldo-rasa-avatar-image.png"';
+ arrayA001_sot[1]="commento";
+
+ arrayA001_url[2]='http://rinaldorasa.altervista.org/';
+ arrayA001_tes[2]="rinaldo rasa";
+ arrayA001_imm[2]='"http://edoraandiamo.altervista.org/img0/rinaldo-rasa-avatar-image.png"';
+ arrayA001_sot[2]="commento";
+
+ arrayA001_url[3]='http://rasarinaldo.altervista.org/';
+ arrayA001_tes[3]="rasa rinaldo";
+ arrayA001_imm[3]='"http://edoraandiamo.altervista.org/img0/rinaldo-rasa-avatar-image.png"';
+ arrayA001_sot[3]="commento";
+
+
+
+ arrayA001_url[4]='http://beatsupernovarasa.altervista.org/';
+ arrayA001_tes[4]="beatsupernovarasa";
+ arrayA001_imm[4]='"http://edoraandiamo.altervista.org/img0/rinaldo-rasa-avatar-image.png"';
+ arrayA001_sot[4]="commento";
+
+ arrayA001_url[5]='http://veneziamestremarghera.altervista.org/';
+ arrayA001_tes[5]="veneziamestremarghera";
+ arrayA001_imm[5]='"http://edoraandiamo.altervista.org/img0/rinaldo-rasa-avatar-image.png"';
+ arrayA001_sot[5]="commento";
+
+ arrayA001_url[6]='http://mestreveneziamarghera.altervista.org/';
+ arrayA001_tes[6]="mestreveneziamarghera";
+ arrayA001_imm[6]='"http://edoraandiamo.altervista.org/img0/rinaldo-rasa-avatar-image.png"';
+ arrayA001_sot[6]="commento";
+
+
+
+
+ arrayA001_url[7]='http://margheraveneziamestre.altervista.org/';
+ arrayA001_tes[7]="margheraveneziamestre";
+ arrayA001_imm[7]='"http://edoraandiamo.altervista.org/img0/rinaldo-rasa-avatar-image.png"';
+ arrayA001_sot[7]="commento";
+
+ arrayA001_url[8]='https://venexia.altervista.org/';
+ arrayA001_tes[8]="venexia";
+ arrayA001_imm[8]='"http://edoraandiamo.altervista.org/img0/rinaldo-rasa-avatar-image.png"';
+ arrayA001_sot[8]="commento";
+
+ arrayA001_url[9]='http://venexiadue.altervista.org/';
+ arrayA001_tes[9]="venexiadue";
+ arrayA001_imm[9]='"http://edoraandiamo.altervista.org/img0/rinaldo-rasa-avatar-image.png"';
+ arrayA001_sot[9]="commento";
+
+
+
+
+ arrayA001_url[10]='http://noteapiedipagina.altervista.org/';
+ arrayA001_tes[10]="noteapiedipagina";
+ arrayA001_imm[10]='"http://edoraandiamo.altervista.org/img0/rinaldo-rasa-avatar-image.png"';
+ arrayA001_sot[10]="commento";
+
+ arrayA001_url[11]='http://venexiatre.altervista.org/';
+ arrayA001_tes[11]="venexiatre";
+ arrayA001_imm[11]='"http://edoraandiamo.altervista.org/img0/rinaldo-rasa-avatar-image.png"';
+ arrayA001_sot[11]="commento";
+
+ arrayA001_url[12]='http://venexiaiv.altervista.org/';
+ arrayA001_tes[12]="venexiaiv";
+ arrayA001_imm[12]='"http://edoraandiamo.altervista.org/img0/rinaldo-rasa-avatar-image.png"';
+ arrayA001_sot[12]="commento";
+
+
+
+ arrayA001_url[13]='https://veneziav.altervista.org/';
+ arrayA001_tes[13]="veneziav";
+ arrayA001_imm[13]='"http://edoraandiamo.altervista.org/img0/rinaldo-rasa-avatar-image.png"';
+ arrayA001_sot[13]="commento";
+
+ arrayA001_url[14]='http://veneziavi.altervista.org/';
+ arrayA001_tes[14]="veneziavi";
+ arrayA001_imm[14]='"http://edoraandiamo.altervista.org/img0/rinaldo-rasa-avatar-image.png"';
+ arrayA001_sot[14]="commento";
+
+ arrayA001_url[15]='http://odlanir.altervista.org/';
+ arrayA001_tes[15]="odlanir";
+ arrayA001_imm[15]='"http://edoraandiamo.altervista.org/img0/rinaldo-rasa-avatar-image.png"';
+ arrayA001_sot[15]="commento";
+
+
+
+
+
+
+
+/////////////////
+ arrayA002_url[0]="url";
+ arrayA002_tes[0]="TITOLO A002";
+ arrayA002_imm[0]="immagine";
+ arrayA002_sot[0]="commento";
+
+
+
+/////////////////
+ arrayA003_url[0]="url";
+ arrayA003_tes[0]="TITOLO A003";
+ arrayA003_imm[0]="immagine";
+ arrayA003_sot[0]="commento";
+
+
+
+
+ document.getElementById("arrayA001_tes").innerHTML=
+ //
+ ' '+
+ ' <style> '+ 
+ //
+ ' .MODAL_BOX_DIALOG_FILE{position:fixed; top:0; left:0; '+
+ ' width:100%; height:2rem; '+
+ ' font-size:1.25rem; '+
+ ' font-family:sans-serif; '+
+ ' text-align:center; '+
+ ' overflow:auto; '+
+ ' border:solid 0.1rem transparent; '+
+ '} '+
+ //
+ ' table{table-layout: fixed; width:100%; }'+ 
+ ' table{ background-color:teal; }'+ 
+ ' table{ background-color:rgba(0,128,128,0.5); }'+
+ // ' table{ background-color:oldlace; }'+ 
+ // ' table{ background-color:rgba(253,245,230,0.5); }'+  
+ ' table{ border-radius:0.4rem; }'+ 
+ ' table{ border:solid 0.1rem maroon; }'+ 
+ ' table{ }'+ 
+ //
+ ' caption{background-color:gray; color:white; '+
+ ' font-size:1rem; font-family:sans-serif; '+
+ ' font-variant:small-caps; '+
+ '}'+ 
+ //
+ ' td{text-align:center; border:solid 0.1rem transparent; '+
+ ' border-bottom:solid 0.1rem gray; '+
+// ' font-size:1rem; font-family:sans-serif;'+
+ ' overflow:auto; '+
+ '}'+ 
+ ' td>p{margin:0.25rem; }'+
+/////////////////////////////////////////// 
+ ' td>p>a{'+
+// 
+ ' background-color:orange; color:black; '+
+ ' font-size:1.25rem; '+
+ ' font-family:sans-serif; '+
+ ' border-radius:0.4rem; '+
+ ' border:solid .1rem transparent; }'+
+ //
+ /////////////////////////////////////////
+ //
+ ' td>p>img{width:2rem; height:2rem; border-radius:0.2rem; }'+ 
+ ' td>p:nth-child(3){ color:maroon; text-align:justify; '+
+ ' font-size:0.8rem; visibility:hidden; }'+ 
+ ' '+ 
+ ' '+ 
+ // 
+ ' .semaforo{ '+
+ ' margin-left:0.5rem; '+
+ ' margin-right:0.5rem; '+
+ ' padding-left:0.5rem; '+
+ ' padding-right:0.5rem; '+
+ 
+ ' background-color:green; '+
+ ' color:white; '+
+ ' font-size:1.50rem; '+
+ ' border-radius:0.4rem; '+
+ ' border:solid 0.1rem transparent; }'+ 
+ ' '+ 
+ //
+ ' </style> '+ 
+ //
+ ' <div id="MBDF" class="MODAL_BOX_DIALOG_FILE"> '+
+ ' '+ arrayA001_url[0] +''+
+ '<div class="semaforo"></div>'+
+ ' </div> '+
+ //
+ ' <table id="arrayA001"> '+
+ ' <caption id="capA001">'+
+ ' '+arrayA001_url[0] +''+
+ ' '+arrayA001_tes[0] +''+
+ ' '+arrayA001_imm[0] +''+
+ ' '+arrayA001_sot[0] +''+ 
+ ' </caption>'+ 
+ ' <tr> '+
+ 
+ ' <td> '+ ' <p> '+ 
+ ' <a id="A001_001" href="'+
+ arrayA001_url[1]+ '" target="odlanir">'+
+ ' <span> '+ 
+ arrayA001_tes[1]+
+ ' </span> '+ ' </a> '+ ' </p> '+
+ ' <p> '+ '<img src='+
+ arrayA001_imm[1]+ ' alt="" title="" > '+
+ ' </p> '+ ' <p> '+ 
+ arrayA001_sot[1]+ ' </p> '+
+ ' </td> '+
+ 
+ ' <td> '+ ' <p> '+ 
+ ' <a id="A001_002" href="'+
+ arrayA001_url[2]+ '" target="odlanir">'+
+ ' <span> '+ 
+ arrayA001_tes[2]+
+ ' </span> '+ ' </a> '+ ' </p> '+
+ ' <p> '+ '<img src='+
+ arrayA001_imm[2]+ ' alt="" title="" > '+
+ ' </p> '+ ' <p> '+ 
+ arrayA001_sot[2]+ ' </p> '+
+ ' </td> '+
+ 
+ ' <td> '+ ' <p> '+ 
+ ' <a id="A001_003" href="'+
+ arrayA001_url[3]+ '" target="odlanir">'+
+ ' <span> '+ 
+ arrayA001_tes[3]+
+ ' </span> '+ ' </a> '+ ' </p> '+
+ ' <p> '+ '<img src='+
+ arrayA001_imm[3]+ ' alt="" title="" > '+
+ ' </p> '+ ' <p> '+ 
+ arrayA001_sot[3]+ ' </p> '+
+ ' </td> '+
+
+ ' </tr> '+
+
+
+ ' <tr> '+
+ ' <td> '+ ' <p> '+ 
+ ' <a id="A001_004" href="'+
+ arrayA001_url[4]+ '" target="odlanir">'+
+ ' <span> '+ 
+ arrayA001_tes[4]+
+ ' </span> '+ ' </a> '+ ' </p> '+
+ ' <p> '+ '<img src='+
+ arrayA001_imm[4]+ ' alt="" title="" > '+
+ ' </p> '+ ' <p> '+ 
+ arrayA001_sot[4]+ ' </p> '+
+ ' </td> '+
+ 
+ ' <td> '+ ' <p> '+ 
+ ' <a id="A001_005" href="'+
+ arrayA001_url[5]+ '" target="odlanir">'+
+ ' <span> '+ 
+ arrayA001_tes[5]+
+ ' </span> '+ ' </a> '+ ' </p> '+
+ ' <p> '+ '<img src='+
+ arrayA001_imm[5]+ ' alt="" title="" > '+
+ ' </p> '+ ' <p> '+ 
+ arrayA001_sot[5]+ ' </p> '+
+ ' </td> '+
+ 
+ ' <td> '+ ' <p> '+ 
+ ' <a id="A001_006" href="'+
+ arrayA001_url[6]+ '" target="odlanir">'+
+ ' <span> '+ 
+ arrayA001_tes[6]+
+ ' </span> '+ ' </a> '+ ' </p> '+
+ ' <p> '+ '<img src='+
+ arrayA001_imm[6]+ ' alt="" title="" > '+
+ ' </p> '+ ' <p> '+ 
+ arrayA001_sot[6]+ ' </p> '+
+ ' </td> '+
+ ' </tr> '+ 
+
+ ' <tr> '+
+ ' <td> '+ ' <p> '+ 
+ ' <a id="A001_007" href="'+
+ arrayA001_url[7]+ '" target="odlanir">'+
+ ' <span> '+ 
+ arrayA001_tes[7]+
+ ' </span> '+ ' </a> '+ ' </p> '+
+ ' <p> '+ '<img src='+
+ arrayA001_imm[7]+ ' alt="" title="" > '+
+ ' </p> '+ ' <p> '+ 
+ arrayA001_sot[7]+ ' </p> '+
+ ' </td> '+
+ 
+ ' <td> '+ ' <p> '+ 
+ ' <a id="A001_008" href="'+
+ arrayA001_url[8]+ '" target="odlanir">'+
+ ' <span> '+ 
+ arrayA001_tes[8]+
+ ' </span> '+ ' </a> '+ ' </p> '+
+ ' <p> '+ '<img src='+
+ arrayA001_imm[8]+ ' alt="" title="" > '+
+ ' </p> '+ ' <p> '+ 
+ arrayA001_sot[8]+ ' </p> '+
+ ' </td> '+
+ 
+ ' <td> '+ ' <p> '+ 
+ ' <a id="A001_009" href="'+
+ arrayA001_url[9]+ '" target="odlanir">'+
+ ' <span> '+ 
+ arrayA001_tes[9]+
+ ' </span> '+ ' </a> '+ ' </p> '+
+ ' <p> '+ '<img src='+
+ arrayA001_imm[9]+ ' alt="" title="" > '+
+ ' </p> '+ ' <p> '+ 
+ arrayA001_sot[9]+ ' </p> '+
+ ' </td> '+
+ ' </tr> '+ 
+
+
+ ' <tr> '+
+ ' <td> '+ ' <p> '+ 
+ ' <a id="A001_010" href="'+
+ arrayA001_url[10]+ '" target="odlanir">'+
+ ' <span> '+ 
+ arrayA001_tes[10]+
+ ' </span> '+ ' </a> '+ ' </p> '+
+ ' <p> '+ '<img src='+
+ arrayA001_imm[10]+ ' alt="" title="" > '+
+ ' </p> '+ ' <p> '+ 
+ arrayA001_sot[10]+ ' </p> '+
+ ' </td> '+
+ 
+ ' <td> '+ ' <p> '+ 
+ ' <a id="A001_011" href="'+
+ arrayA001_url[11]+ '" target="odlanir">'+
+ ' <span> '+ 
+ arrayA001_tes[11]+
+ ' </span> '+ ' </a> '+ ' </p> '+
+ ' <p> '+ '<img src='+
+ arrayA001_imm[11]+ ' alt="" title="" > '+
+ ' </p> '+ ' <p> '+ 
+ arrayA001_sot[11]+ ' </p> '+
+ ' </td> '+
+ 
+ ' <td> '+ ' <p> '+ 
+ ' <a id="A001_012" href="'+
+ arrayA001_url[12]+ '" target="odlanir">'+
+ ' <span> '+ 
+ arrayA001_tes[12]+
+ ' </span> '+ ' </a> '+ ' </p> '+
+ ' <p> '+ '<img src='+
+ arrayA001_imm[12]+ ' alt="" title="" > '+
+ ' </p> '+ ' <p> '+ 
+ arrayA001_sot[12]+ ' </p> '+
+ ' </td> '+
+ ' </tr> '+ 
+
+
+ ' <tr> '+
+ ' <td> '+ ' <p> '+ 
+ ' <a id="A001_013" href="'+
+ arrayA001_url[13]+ '" target="odlanir">'+
+ ' <span></span>'+
+ arrayA001_tes[13]+
+ ' <span></span> '+ ' </a> '+ ' </p> '+
+ ' <p> '+ '<img src='+
+ arrayA001_imm[13]+ ' alt="" title="" > '+
+ ' </p> '+ ' <p> '+ 
+ arrayA001_sot[13]+ ' </p> '+
+ ' </td> '+
+ 
+ ' <td> '+ ' <p> '+ 
+ ' <a id="A001_014" href="'+
+ arrayA001_url[14]+ '" target="odlanir">'+
+ ' <span></span>'+
+ arrayA001_tes[14]+
+ ' <span></span> '+ ' </a> '+ ' </p> '+
+ ' <p> '+ '<img src='+
+ arrayA001_imm[14]+ ' alt="" title="" > '+
+ ' </p> '+ ' <p> '+ 
+ arrayA001_sot[14]+ ' </p> '+
+ ' </td> '+
+ 
+ ' <td> '+ ' <p> '+ 
+ ' <a id="A001_015" href="'+
+ arrayA001_url[15]+ '" target="odlanir">'+
+ ' <span></span>'+
+ arrayA001_tes[15]+
+ ' <span></span> '+ ' </a> '+ ' </p> '+
+ ' <p> '+ '<img src='+
+ arrayA001_imm[15]+ ' alt="" title="" > '+
+ ' </p> '+ ' <p> '+ 
+ arrayA001_sot[15]+ ' </p> '+
+ ' </td> '+
+ ' </tr> '+ 
+
+
+ ' </table> '+ 
+ ' '+
+ ' '+
+ 
+//
+ ''
+ ;
+
+
+$("#A001_001").click(function vediA001(){ 
+document.getElementById("MBDF").innerHTML=
+'<div>'+arrayA001_url[1]+'</div>'+'';
+$("#A001_001").addClass("semaforo");
+$("#A001_002").removeClass("semaforo");
+$("#A001_003").removeClass("semaforo");
+$("#A001_004").removeClass("semaforo");
+$("#A001_005").removeClass("semaforo");
+$("#A001_006").removeClass("semaforo");
+$("#A001_007").removeClass("semaforo");
+$("#A001_008").removeClass("semaforo");
+$("#A001_009").removeClass("semaforo");
+$("#A001_010").removeClass("semaforo");
+$("#A001_011").removeClass("semaforo");
+$("#A001_012").removeClass("semaforo");
+$("#A001_013").removeClass("semaforo");
+$("#A001_014").removeClass("semaforo");
+$("#A001_015").removeClass("semaforo");
+
+});
+
+$("#A001_002").click(function vediA001(){ 
+document.getElementById("MBDF").innerHTML=
+'<div>'+arrayA001_url[2]+'</div>'+'';
+$("#A001_001").removeClass("semaforo");
+$("#A001_002").addClass("semaforo");
+$("#A001_003").removeClass("semaforo");
+$("#A001_004").removeClass("semaforo");
+$("#A001_005").removeClass("semaforo");
+$("#A001_006").removeClass("semaforo");
+$("#A001_007").removeClass("semaforo");
+$("#A001_008").removeClass("semaforo");
+$("#A001_009").removeClass("semaforo");
+$("#A001_010").removeClass("semaforo");
+$("#A001_011").removeClass("semaforo");
+$("#A001_012").removeClass("semaforo");
+$("#A001_013").removeClass("semaforo");
+$("#A001_014").removeClass("semaforo");
+$("#A001_015").removeClass("semaforo");
+
+});
+
+$("#A001_003").click(function vediA001(){ 
+document.getElementById("MBDF").innerHTML=
+'<div>'+arrayA001_url[3]+'</div>'+'';
+$("#A001_001").removeClass("semaforo");
+$("#A001_002").removeClass("semaforo");
+$("#A001_003").addClass("semaforo");
+$("#A001_004").removeClass("semaforo");
+$("#A001_005").removeClass("semaforo");
+$("#A001_006").removeClass("semaforo");
+$("#A001_007").removeClass("semaforo");
+$("#A001_008").removeClass("semaforo");
+$("#A001_009").removeClass("semaforo");
+$("#A001_010").removeClass("semaforo");
+$("#A001_011").removeClass("semaforo");
+$("#A001_012").removeClass("semaforo");
+$("#A001_013").removeClass("semaforo");
+$("#A001_014").removeClass("semaforo");
+$("#A001_015").removeClass("semaforo");
+
+});
+
+$("#A001_004").click(function vediA001(){ 
+document.getElementById("MBDF").innerHTML=
+'<div>'+arrayA001_url[4]+'</div>'+'';
+$("#A001_001").removeClass("semaforo");
+$("#A001_002").removeClass("semaforo");
+$("#A001_003").removeClass("semaforo");
+$("#A001_004").addClass("semaforo");
+$("#A001_005").removeClass("semaforo");
+$("#A001_006").removeClass("semaforo");
+$("#A001_007").removeClass("semaforo");
+$("#A001_008").removeClass("semaforo");
+$("#A001_009").removeClass("semaforo");
+$("#A001_010").removeClass("semaforo");
+$("#A001_011").removeClass("semaforo");
+$("#A001_012").removeClass("semaforo");
+$("#A001_013").removeClass("semaforo");
+$("#A001_014").removeClass("semaforo");
+$("#A001_015").removeClass("semaforo");
+
+});
+
+$("#A001_005").click(function vediA001(){ 
+document.getElementById("MBDF").innerHTML=
+'<div>'+arrayA001_url[5]+'</div>'+'';
+$("#A001_001").removeClass("semaforo");
+$("#A001_002").removeClass("semaforo");
+$("#A001_003").removeClass("semaforo");
+$("#A001_004").removeClass("semaforo");
+$("#A001_005").addClass("semaforo");
+$("#A001_006").removeClass("semaforo");
+$("#A001_007").removeClass("semaforo");
+$("#A001_008").removeClass("semaforo");
+$("#A001_009").removeClass("semaforo");
+$("#A001_010").removeClass("semaforo");
+$("#A001_011").removeClass("semaforo");
+$("#A001_012").removeClass("semaforo");
+$("#A001_013").removeClass("semaforo");
+$("#A001_014").removeClass("semaforo");
+$("#A001_015").removeClass("semaforo");
+
+});
+
+$("#A001_006").click(function vediA001(){ 
+document.getElementById("MBDF").innerHTML=
+'<div>'+arrayA001_url[6]+'</div>'+'';
+$("#A001_001").removeClass("semaforo");
+$("#A001_002").removeClass("semaforo");
+$("#A001_003").removeClass("semaforo");
+$("#A001_004").removeClass("semaforo");
+$("#A001_005").removeClass("semaforo");
+$("#A001_006").addClass("semaforo");
+$("#A001_007").removeClass("semaforo");
+$("#A001_008").removeClass("semaforo");
+$("#A001_009").removeClass("semaforo");
+$("#A001_010").removeClass("semaforo");
+$("#A001_011").removeClass("semaforo");
+$("#A001_012").removeClass("semaforo");
+$("#A001_013").removeClass("semaforo");
+$("#A001_014").removeClass("semaforo");
+$("#A001_015").removeClass("semaforo");
+
+});
+
+
+$("#A001_007").click(function vediA001(){ 
+document.getElementById("MBDF").innerHTML=
+'<div>'+arrayA001_url[7]+'</div>'+'';
+$("#A001_001").removeClass("semaforo");
+$("#A001_002").removeClass("semaforo");
+$("#A001_003").removeClass("semaforo");
+$("#A001_004").removeClass("semaforo");
+$("#A001_005").removeClass("semaforo");
+$("#A001_006").removeClass("semaforo");
+$("#A001_007").addClass("semaforo");
+$("#A001_008").removeClass("semaforo");
+$("#A001_009").removeClass("semaforo");
+$("#A001_010").removeClass("semaforo");
+$("#A001_011").removeClass("semaforo");
+$("#A001_012").removeClass("semaforo");
+$("#A001_013").removeClass("semaforo");
+$("#A001_014").removeClass("semaforo");
+$("#A001_015").removeClass("semaforo");
+
+});
+
+
+$("#A001_008").click(function vediA001(){ 
+document.getElementById("MBDF").innerHTML=
+'<div>'+arrayA001_url[8]+'</div>'+'';
+$("#A001_001").removeClass("semaforo");
+$("#A001_002").removeClass("semaforo");
+$("#A001_003").removeClass("semaforo");
+$("#A001_004").removeClass("semaforo");
+$("#A001_005").removeClass("semaforo");
+$("#A001_006").removeClass("semaforo");
+$("#A001_007").removeClass("semaforo");
+$("#A001_008").addClass("semaforo");
+$("#A001_009").removeClass("semaforo");
+$("#A001_010").removeClass("semaforo");
+$("#A001_011").removeClass("semaforo");
+$("#A001_012").removeClass("semaforo");
+$("#A001_013").removeClass("semaforo");
+$("#A001_014").removeClass("semaforo");
+$("#A001_015").removeClass("semaforo");
+
+});
+
+
+$("#A001_009").click(function vediA001(){ 
+document.getElementById("MBDF").innerHTML=
+'<div>'+arrayA001_url[9]+'</div>'+'';
+$("#A001_001").removeClass("semaforo");
+$("#A001_002").removeClass("semaforo");
+$("#A001_003").removeClass("semaforo");
+$("#A001_004").removeClass("semaforo");
+$("#A001_005").removeClass("semaforo");
+$("#A001_006").removeClass("semaforo");
+$("#A001_007").removeClass("semaforo");
+$("#A001_008").removeClass("semaforo");
+$("#A001_009").addClass("semaforo");
+$("#A001_010").removeClass("semaforo");
+$("#A001_011").removeClass("semaforo");
+$("#A001_012").removeClass("semaforo");
+$("#A001_013").removeClass("semaforo");
+$("#A001_014").removeClass("semaforo");
+$("#A001_015").removeClass("semaforo");
+
+});
+
+
+
+$("#A001_010").click(function vediA001(){ 
+document.getElementById("MBDF").innerHTML=
+'<div>'+arrayA001_url[10]+'</div>'+'';
+$("#A001_001").removeClass("semaforo");
+$("#A001_002").removeClass("semaforo");
+$("#A001_003").removeClass("semaforo");
+$("#A001_004").removeClass("semaforo");
+$("#A001_005").removeClass("semaforo");
+$("#A001_006").removeClass("semaforo");
+$("#A001_007").removeClass("semaforo");
+$("#A001_008").removeClass("semaforo");
+$("#A001_009").removeClass("semaforo");
+$("#A001_010").addClass("semaforo");
+$("#A001_011").removeClass("semaforo");
+$("#A001_012").removeClass("semaforo");
+$("#A001_013").removeClass("semaforo");
+$("#A001_014").removeClass("semaforo");
+$("#A001_015").removeClass("semaforo");
+
+});
+
+
+
+$("#A001_011").click(function vediA001(){ 
+document.getElementById("MBDF").innerHTML=
+'<div>'+arrayA001_url[11]+'</div>'+'';
+$("#A001_001").removeClass("semaforo");
+$("#A001_002").removeClass("semaforo");
+$("#A001_003").removeClass("semaforo");
+$("#A001_004").removeClass("semaforo");
+$("#A001_005").removeClass("semaforo");
+$("#A001_006").removeClass("semaforo");
+$("#A001_007").removeClass("semaforo");
+$("#A001_008").removeClass("semaforo");
+$("#A001_009").removeClass("semaforo");
+$("#A001_010").removeClass("semaforo");
+$("#A001_011").addClass("semaforo");
+$("#A001_012").removeClass("semaforo");
+$("#A001_013").removeClass("semaforo");
+$("#A001_014").removeClass("semaforo");
+$("#A001_015").removeClass("semaforo");
+
+});
+
+
+
+$("#A001_012").click(function vediA001(){ 
+document.getElementById("MBDF").innerHTML=
+'<div>'+arrayA001_url[12]+'</div>'+'';
+$("#A001_001").removeClass("semaforo");
+$("#A001_002").removeClass("semaforo");
+$("#A001_003").removeClass("semaforo");
+$("#A001_004").removeClass("semaforo");
+$("#A001_005").removeClass("semaforo");
+$("#A001_006").removeClass("semaforo");
+$("#A001_007").removeClass("semaforo");
+$("#A001_008").removeClass("semaforo");
+$("#A001_009").removeClass("semaforo");
+$("#A001_010").removeClass("semaforo");
+$("#A001_011").removeClass("semaforo");
+$("#A001_012").addClass("semaforo");
+$("#A001_013").removeClass("semaforo");
+$("#A001_014").removeClass("semaforo");
+$("#A001_015").removeClass("semaforo");
+
+});
+
+
+
+$("#A001_013").click(function vediA001(){ 
+document.getElementById("MBDF").innerHTML=
+'<div>'+arrayA001_url[13]+'</div>'+'';
+$("#A001_001").removeClass("semaforo");
+$("#A001_002").removeClass("semaforo");
+$("#A001_003").removeClass("semaforo");
+$("#A001_004").removeClass("semaforo");
+$("#A001_005").removeClass("semaforo");
+$("#A001_006").removeClass("semaforo");
+$("#A001_007").removeClass("semaforo");
+$("#A001_008").removeClass("semaforo");
+$("#A001_009").removeClass("semaforo");
+$("#A001_010").removeClass("semaforo");
+$("#A001_011").removeClass("semaforo");
+$("#A001_012").removeClass("semaforo");
+$("#A001_013").addClass("semaforo");
+$("#A001_014").removeClass("semaforo");
+$("#A001_015").removeClass("semaforo");
+
+});
+
+
+
+
+$("#A001_014").click(function vediA001(){ 
+document.getElementById("MBDF").innerHTML=
+'<div>'+arrayA001_url[14]+'</div>'+'';
+$("#A001_001").removeClass("semaforo");
+$("#A001_002").removeClass("semaforo");
+$("#A001_003").removeClass("semaforo");
+$("#A001_004").removeClass("semaforo");
+$("#A001_005").removeClass("semaforo");
+$("#A001_006").removeClass("semaforo");
+$("#A001_007").removeClass("semaforo");
+$("#A001_008").removeClass("semaforo");
+$("#A001_009").removeClass("semaforo");
+$("#A001_010").removeClass("semaforo");
+$("#A001_011").removeClass("semaforo");
+$("#A001_012").removeClass("semaforo");
+$("#A001_013").removeClass("semaforo");
+$("#A001_014").addClass("semaforo");
+$("#A001_015").removeClass("semaforo");
+
+});
+
+
+
+$("#A001_015").click(function vediA001(){ 
+document.getElementById("MBDF").innerHTML=
+'<div>'+arrayA001_url[15]+'</div>'+'';
+$("#A001_001").removeClass("semaforo");
+$("#A001_002").removeClass("semaforo");
+$("#A001_003").removeClass("semaforo");
+$("#A001_004").removeClass("semaforo");
+$("#A001_005").removeClass("semaforo");
+$("#A001_006").removeClass("semaforo");
+$("#A001_007").removeClass("semaforo");
+$("#A001_008").removeClass("semaforo");
+$("#A001_009").removeClass("semaforo");
+$("#A001_010").removeClass("semaforo");
+$("#A001_011").removeClass("semaforo");
+$("#A001_012").removeClass("semaforo");
+$("#A001_013").removeClass("semaforo");
+$("#A001_014").removeClass("semaforo");
+$("#A001_015").addClass("semaforo");
+
+});
+
+
+
+
+
+
+$("#A001_001").click(function(){
+$("#capA001").css("background-color","maroon")
+});
+$("#A001_002").click(function(){
+$("#capA001").css("background-color","maroon")
+});
+$("#A001_003").click(function(){
+$("#capA001").css("background-color","maroon")
+});
+$("#A001_004").click(function(){
+$("#capA001").css("background-color","maroon")
+});
+$("#A001_005").click(function(){
+$("#capA001").css("background-color","maroon")
+});
+$("#A001_006").click(function(){
+$("#capA001").css("background-color","maroon")
+});
+$("#A001_007").click(function(){
+$("#capA001").css("background-color","maroon")
+});
+$("#A001_008").click(function(){
+$("#capA001").css("background-color","maroon")
+});
+$("#A001_009").click(function(){
+$("#capA001").css("background-color","maroon")
+});
+$("#A001_010").click(function(){
+$("#capA001").css("background-color","maroon")
+});
+$("#A001_011").click(function(){
+$("#capA001").css("background-color","maroon")
+});
+$("#A001_012").click(function(){
+$("#capA001").css("background-color","maroon")
+});
+$("#A001_013").click(function(){
+$("#capA001").css("background-color","maroon")
+});
+$("#A001_014").click(function(){
+$("#capA001").css("background-color","maroon")
+});
+$("#A001_015").click(function(){
+$("#capA001").css("background-color","maroon")
+});
+
+
+
+ </script>
+
+
+<script>
+function attesa(){
+if (document.all){}
+else if (document.getElementById){
+document.getElementById("spinner").style.visibility="hidden";
+}
+
+}
+</script>
+
+</body>
+</html>
