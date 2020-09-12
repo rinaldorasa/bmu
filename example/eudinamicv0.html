@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="AlterVista - Editor HTML"/>
+  <title>
+  
+1750 20200912 abcde
+  
+  hhmm
+  html
+  yyyymmdd
+  
+  </title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+  
+<script src="https://use.fontawesome.com/2d0876dd08.js"></script>
+   
+   
+   <script src="http://beatsupernovarasa.altervista.org/base_dati/base_dati.js"></script>
+
+   
+<style> 
+html * { font-family:monospace; }
+body  { background-color:oldlace; }
+</style>
+  
+</head>
+
+<body  onload="attesax()">
+  <div class="">
+    <div id="spinner" class="fa fa-spinner fa-pulse"></div>
+   </div>
+
+<main>
+
+
+
+<div id="dimensioni_finestra">
+    <span class="material-icons">bug_report</span>
+    <span><i> in </i><b> dimensioni finestra </b></span>    
+</div>
+
+<div id="test">
+<span class="material-icons">bug_report</span>
+<span><i> in </i><b> test </b></span>
+</div>
+
+<script>
+
+// var testa=new Array();
+// testa[0]="color:red; font-size:5rem;  ";
+
+addEventListener("load", dimensioni_finestra)
+
+setInterval(
+    function dimensioni_finestra() {
+      var w = window.innerWidth;
+      var h = window.innerHeight;
+
+      var lunghezza_finestra = window.innerWidth;
+      var lunghezza_finestra_rem = window.innerWidth*0.0625;
+
+      var altezza_finestra = window.innerHeight;
+      var altezza_finestra_rem = window.innerHeight*0.0625;
+
+      document.getElementById("dimensioni_finestra").innerHTML =
+      '<div style="position:absolute; top:50%; left:50%; '+
+      'padding:0.5rem; border:dashed 0.1rem maroon; ">'+ 
+      '<p>'+
+      'Lunghezza px:  ' +
+      lunghezza_finestra + '</p>'+ 
+      '<p>'+
+      ' Altezza px: '+ 
+      altezza_finestra  + 
+      '</p>'+ 
+      '<p>'+
+      'Lunghezza rem:  ' +
+      lunghezza_finestra_rem + '</p>'+ 
+      '<p>'+
+      ' Altezza rem: '+ 
+      altezza_finestra_rem  + 
+      '</p>'+ 
+      '</div>'+
+      ''
+      ;
+/////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+
+
+var main_stile=new Array();
+ab= (lunghezza_finestra_rem-lunghezza_finestra_rem*0.1);
+bd=3;
+//
+fixed="position:fixed; ";
+absolute="position:absolute; ";
+//
+main_top="top:"+bd+"rem; ";
+main_width="width:"+ab+"rem; ";
+main_height="height:85%; ";
+main_left="left:50%; ";
+main_margin_left="margin-left:"+(-ab*0.5)+"rem; ";
+main_border="border:dashed 0.1rem maroon; ";
+main_overflow="overflow:auto; ";
+//
+main_stile[0]=absolute+main_top+main_width+main_height+
+main_left+main_margin_left+main_border+main_overflow;
+//
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+      document.getElementById("test").innerHTML=
+//  '<div>'+bsn_array_url[5]+'</div> '+
+
+'   '+
+' <main style="'+main_stile[0]+'">  '+
+' <span style="position:absolute; top:0; left:0; ">A</span>  '+
+' <span style="position:absolute; top:0; right:0; ">B</span>  '+
+' <span style="position:absolute; bottom:0; right:0; ">C</span>  '+
+' <span style="position:absolute; top:'+(bd)+'rem; right:0; ">D</span>  '+
+' <span style="position:absolute; top:'+(bd)+'rem; left:0; ">E</span>  '+
+' <span style="position:absolute; top:'+(bd)+'rem; left:'+(ab*0.5)+'rem; ">F</span>  '+
+
+
+
+'   '+
+'   '+
+'   '+
+'   '+
+'   '+
+' </main>  '+
+'   '+
+'   '+
+'   '+
+'   '+
+'   '+
+'   '+
+'   '+
+'   '+
+'   '+
+'   '+
+// ' <div style="'+testa[0]+'"> colore rosso  <div>  '+
+
+''
+;
+
+//    
+}  //  funzione dimensioni_finestra
+// 
+
+
+, 1000);
+//
+
+
+
+
+</script>
+
+</main>
+
+
+<script>
+  function attesa(){
+  if (document.all){}
+  else if (document.getElementById){
+  document.getElementById("spinner").style.visibility="hidden";
+  }
+  
+  }
+  </script>
+  
+</body>
+</html>
+
+
+
+<!--
+
+
+document.getElementById("test").innerHTML=
+//  '<div>'+bsn_array_url[5]+'</div> '+
+
+'   '+
+' <main style="'+main_stile[0]+'">  '+
+' <span style="position:absolute; top:0; left:0; ">A</span>  '+
+' <span style="position:absolute; top:0; right:0; ">B</span>  '+
+' <span style="position:absolute; bottom:0; right:0; ">C</span>  '+
+' <span style="position:absolute; top:'+(bd)+'rem; right:0; ">D</span>  '+
+' <span style="position:absolute; top:'+(bd)+'rem; left:0; ">E</span>  '+
+' <span style="position:absolute; top:'+(bd)+'rem; left:'+(ab*0.5)+'rem; ">F</span>  '+
+
+
+
+'   '+
+'   '+
+'   '+
+'   '+
+'   '+
+' </main>  '+
+'   '+
+'   '+
+'   '+
+'   '+
+'   '+
+'   '+
+'   '+
+'   '+
+'   '+
+'   '+
+
+
+// ' <div style="'+testa[0]+'"> colore rosso  <div>  '+
+ 
+ 
+''
+;
+
+
+-->
+
+
+<!--
+
+
+// lunghezza_finestra_rem=46.85;
+
+var main_stile=new Array();
+ab= lunghezza_finestra_rem;
+bd=3;
+//
+fixed="position:fixed; ";
+absolute="position:absolute; ";
+//
+main_top="top:"+bd+"rem; ";
+main_width="width:"+ab+"rem; ";
+main_height="height:85%; ";
+main_left="left:50%; ";
+main_margin_left="margin-left:"+(-ab*0.5)+"rem; ";
+main_border="border:solid 0.1rem black; ";
+main_overflow="overflow:auto; ";
+//
+main_stile[0]=absolute+main_top+main_width+main_height+
+main_left+main_margin_left+main_border+main_overflow;
+//
+
+
+
+-->
+
+
+
+<!--
+  <p id="dimensioni_finestra"></p>  <script>
+
+addEventListener("load", dimensioni_finestra)
+
+
+setInterval(
+    function dimensioni_finestra() {
+      var w = window.innerWidth;
+      var h = window.innerHeight;
+      document.getElementById("dimensioni_finestra").innerHTML = "Width: " + w + "<br>Height: " + h;
+    }, 1000);
+
+   </script>
+-->
+
+
