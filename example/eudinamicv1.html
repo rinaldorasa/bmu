@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+ <meta charset="utf-8">
+ <meta name="generator" content="AlterVista - Editor HTML"/>
+ <title>
+ 
+1900
+20200913 eudinamicv1
+ 
+ hhmm
+ html
+ yyyymmdd
+ 
+ </title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+ 
+<script src="https://use.fontawesome.com/2d0876dd08.js"></script>
+ 
+ 
+<script src="http://beatsupernovarasa.altervista.org/base_dati/base_dati.js"></script>
+
+<script src="variabili.js"></script>
+
+
+
+<style> 
+html * { font-family:monospace; }
+body { background-color:oldlace; }
+</style>
+ 
+</head>
+
+<body onload="attesax()">
+ <div class="">
+ <div id="spinner" class="fa fa-spinner fa-pulse"></div>
+ </div>
+
+<main>
+
+
+
+<div id="dimensioni_finestra">
+ <span class="material-icons">bug_report</span>
+ <span><i> in </i><b> dimensioni finestra </b></span> 
+</div>
+
+<div id="test">
+<span class="material-icons">bug_report</span>
+<span><i> in </i><b> test </b></span>
+</div>
+
+<script>
+
+// var testa=new Array();
+// testa[0]="color:red; font-size:5rem; ";
+
+addEventListener("load", dimensioni_finestra)
+
+setInterval(
+ function dimensioni_finestra() {
+ var widthFinestra = window.innerWidth;
+ var hFinestra = window.innerHeight;
+
+ var lunghezza_finestra = window.innerWidth;
+ var lunghezza_finestra_rem = window.innerWidth*0.0625;
+
+ var altezza_finestra = window.innerHeight;
+ var altezza_finestra_rem = window.innerHeight*0.0625;
+
+ document.getElementById("dimensioni_finestra").innerHTML =
+ '<div style="position:absolute; bottom:0%; left:0%; '+
+ 'padding:0.5rem; border:dashed 0.1rem maroon; ">'+ 
+ '<p style="display:none; ">'+
+ 'Lunghezza px: ' +
+ lunghezza_finestra + '</p>'+ 
+ '<p style="display:none; ">'+
+ ' Altezza px: '+ 
+ altezza_finestra + 
+ '</p>'+ 
+ ' <span> '+ 
+ ' <span>'+
+ ' Lunghezza rem: ' +
+ lunghezza_finestra_rem + '</span>'+ 
+ ' <span>'+
+ ' Altezza rem: '+ 
+ altezza_finestra_rem + 
+ ' </span>'+ 
+ ' </span> '+ 
+ ' '+
+ '</div>'+
+ ''
+ ;
+/////////////////////////////////////////////////////////
+// variabili
+/////////////////////////////////////////////////////////
+//
+//
+var main_stile=new Array();
+// lunghezza main ridotta del 10% 
+// ab= (lunghezza_finestra_rem-lunghezza_finestra_rem*0.1);
+// ab = 42.5 ;
+//
+//--------------------------
+//
+// a n b
+// e f d
+// l g m
+// i h c
+//
+//--------------------------
+// variabili nel file variabili.js
+// ipotesi standard
+// capopagina_height = 2 ;
+//
+// bd=3;
+//
+// capopagina_height=(1);
+//
+// magic number 3
+//////////////////////
+// sezioni
+//////////////////////
+
+// abde 
+
+// ab = 42.5 ; // width
+
+// bd = 2 ; // height
+
+// efgl
+// ef = 42 ; // width
+
+// fg = 15 ; // height
+
+
+// fdmg
+
+// lghi
+
+// lg = 20 ; // width
+
+// gh = 20 ; // height
+
+// gmch
+
+//-------------------------
+// debugging
+// raccolta settaggi bordi
+//
+//
+main_border="border:dashed 0.1rem transparent; ";
+section_border_abde="border:dashed 0.1rem transparent; ";
+section_border_efgl="border:dashed 0.1rem transparent; ";
+section_border_lghi="border:dashed 0.1rem transparent; ";
+//
+/*
+main_border="border:dashed 0.1rem maroon; ";
+section_border_abde="border:dashed 0.1rem green; ";
+section_border_efgl="border:dashed 0.1rem red; ";
+section_border_lghi="border:dashed 0.1rem fuchsia; ";
+*/
+//
+//
+bc=(altezza_finestra_rem-((3)*2));
+//
+fixed="position:fixed; ";
+absolute="position:absolute; ";
+overflow="overflow:auto; ";
+//
+main_top="top:"+capopagina_height+"rem; ";
+main_width="width:"+ab+"rem; ";
+main_height="height:85%; ";
+main_left="left:50%; ";
+main_margin_left="margin-left:"+(-ab*0.5)+"rem; ";
+main_background_color="background-color:rgba(255,165,0,0.125); ";
+
+main_overflow=overflow;
+//
+main_stile[0]=absolute+main_top+main_width+main_height+
+main_left+main_margin_left+
+main_background_color+
+main_border+
+main_overflow;
+//
+//
+//////////////////////////////////////
+// le sezioni
+//////////////////////////////////////
+//
+//
+var section_stile_abde=new Array();
+section_top_abde=main_top;
+section_width_abde="width:"+(ab-0.5)+"rem; "; // variabili.js
+section_height_abde="height:"+(bd)+"rem; "; // variabili.js
+section_background_color_abde="background-color:rgba(255,165,0,0.15); ";
+
+//
+section_stile_abde[0]=section_top_abde+
+section_width_abde+section_height_abde+
+section_background_color_abde+
+section_border_abde;
+//
+//
+//
+var section_stile_efgl=new Array();
+section_top_efgl=section_height_abde;
+section_width_efgl="width:"+(ef)+"rem; "; // variabili.js
+section_height_efgl="height:"+(fg)+"rem; "; // variabili.js
+section_background_color_efgl="background-color:rgba(255,165,0,0.35); ";
+
+//
+section_stile_efgl[0]=section_top_efgl+
+section_width_efgl+section_height_efgl+
+section_background_color_efgl+
+section_border_efgl;
+//
+//
+//
+//
+var section_stile_lghi=new Array();
+section_top_lghi=section_height_efgl;
+section_width_lghi="width:"+(lg)+"rem; "; // variabili.js
+section_height_lghi="height:"+(gh)+"rem; "; // variabili.js
+section_background_color_lghi="background-color:rgba(255,165,0,0.55); ";
+
+//
+section_stile_lghi[0]=section_top_lghi+
+section_width_lghi+section_height_lghi+
+section_background_color_lghi+
+section_border_lghi;
+//
+//
+//
+//
+
+
+
+
+
+
+var ico_size=new Array();
+ico_size[0]="font-size:"+
+(lunghezza_finestra_rem*0.1*0.4)+"rem; ";
+//
+var ico_pos_right=new Array();
+ico_pos_right[0]="right:0; ";
+
+var ico_pos_left=new Array();
+ico_pos_left[0]="left:0; ";
+
+var ico_color=new Array();
+ico_color[0]="color:orange; ";
+
+
+
+
+/////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+ document.getElementById("test").innerHTML=
+// '<div>'+bsn_array_url[5]+'</div> '+
+//
+//
+//
+' <div> '+
+' '+
+' '+
+' </div> '+
+' '+
+' '+
+
+
+' <main style="'+main_stile[0]+'"> '+
+' <span style="position:absolute; top:0; left:0; ">a</span> '+
+' <span style="position:absolute; top:0; right:0; ">b</span> '+
+' <span style="position:absolute; bottom:0; right:0; ">c</span> '+
+' <span style="position:absolute; top:'+(bd)+'rem; right:0; ">d</span> '+
+' <span style="position:absolute; top:'+(bd)+'rem; left:0; ">e</span> '+
+' <span style="position:absolute; top:'+(bd)+'rem; left:'+(ab*0.5)+'rem; ">f</span> '+
+' <span style="position:absolute; top:'+(bc*0.5)+'rem; left:'+(ab*0.5)+'rem; ">g</span> '+
+' <span style="position:absolute; bottom:'+(0)+'rem; left:'+(ab*0.5)+'rem; ">h</span> '+
+' <span style="position:absolute; bottom:'+(0)+'rem; left:'+(ab*0)+'rem; ">i</span> '+
+' <span style="position:absolute; top:'+(bc*0.5)+'rem; left:'+(ab*0)+'rem; ">l</span> '+
+' <span style="position:absolute; top:'+(bc*0.5)+'rem; left:'+(ab*0.99)+'rem; ">m</span> '+
+' <span style="position:absolute; top:'+(bc*0)+'rem; left:'+(ab*0.5)+'rem; ">n</span> '+
+
+' '+
+' <div style="'+
+ fixed+ico_pos_right[0]+ico_size[0]+ico_color[0]+
+'" class="material-icons"> '+
+' announcement '+
+' '+
+' </div> '+
+' <section style="'+section_stile_abde[0]+'"> '+
+' '+
+' '+
+' </section> '+
+' '+
+// 
+' <section style="'+section_stile_efgl[0]+'"> '+
+' '+
+' '+
+// 
+' </section> '+
+
+' '+
+// 
+' <section style="'+section_stile_lghi[0]+'"> '+
+' '+
+' '+
+// 
+' </section> '+
+
+
+' '+
+' '+
+' '+
+' '+
+' '+
+
+
+
+' </main> '+
+' '+
+' '+
+' '+
+' '+
+' '+
+' '+
+' '+
+' '+
+' '+
+// ' <div style="'+testa[0]+'"> colore rosso <div> '+
+
+''
+;
+
+// 
+} // funzione dimensioni_finestra
+// 
+
+
+, 1000);
+//
+
+
+
+
+</script>
+
+</main>
+
+
+<script>
+ function attesa(){
+ if (document.all){}
+ else if (document.getElementById){
+ document.getElementById("spinner").style.visibility="hidden";
+ }
+ 
+ }
+ </script>
+ 
+</body>
+</html>
+
+
+
+<!--
+
+
+document.getElementById("test").innerHTML=
+// '<div>'+bsn_array_url[5]+'</div> '+
+
+' '+
+' <main style="'+main_stile[0]+'"> '+
+' <span style="position:absolute; top:0; left:0; ">A</span> '+
+' <span style="position:absolute; top:0; right:0; ">B</span> '+
+' <span style="position:absolute; bottom:0; right:0; ">C</span> '+
+' <span style="position:absolute; top:'+(bd)+'rem; right:0; ">D</span> '+
+' <span style="position:absolute; top:'+(bd)+'rem; left:0; ">E</span> '+
+' <span style="position:absolute; top:'+(bd)+'rem; left:'+(ab*0.5)+'rem; ">F</span> '+
+
+
+
+' '+
+' '+
+' '+
+' '+
+' '+
+' </main> '+
+' '+
+' '+
+' '+
+' '+
+' '+
+' '+
+' '+
+' '+
+' '+
+' '+
+
+
+// ' <div style="'+testa[0]+'"> colore rosso <div> '+
+ 
+ 
+''
+;
+
+
+-->
+
+
+<!--
+
+
+// lunghezza_finestra_rem=46.85;
+
+var main_stile=new Array();
+ab= lunghezza_finestra_rem;
+bd=3;
+//
+fixed="position:fixed; ";
+absolute="position:absolute; ";
+//
+main_top="top:"+bd+"rem; ";
+main_width="width:"+ab+"rem; ";
+main_height="height:85%; ";
+main_left="left:50%; ";
+main_margin_left="margin-left:"+(-ab*0.5)+"rem; ";
+main_border="border:solid 0.1rem black; ";
+main_overflow="overflow:auto; ";
+//
+main_stile[0]=absolute+main_top+main_width+main_height+
+main_left+main_margin_left+main_border+main_overflow;
+//
+
+
+
+-->
+
+
+
+<!--
+ <p id="dimensioni_finestra"></p> <script>
+
+addEventListener("load", dimensioni_finestra)
+
+
+setInterval(
+ function dimensioni_finestra() {
+ var w = window.innerWidth;
+ var h = window.innerHeight;
+ document.getElementById("dimensioni_finestra").innerHTML = "Width: " + w + "<br>Height: " + h;
+ }, 1000);
+
+ </script>
+-->
+
+
