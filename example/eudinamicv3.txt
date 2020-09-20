@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+ <meta charset="utf-8">
+ <meta name="generator" content="AlterVista - Editor HTML"/>
+ <title>
+
+1930
+
+ 20200919
+
+ eudinamicv2
+ boostrap5
+
+ </title>
+ 
+ 
+<!-- BOOTSTRAP 5  --> 
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+<!-- JavaScript and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  
+ 
+ 
+ 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+ 
+<script src="https://use.fontawesome.com/2d0876dd08.js"></script>
+
+<script src="base_dati.js"></script>
+
+<style>html *{ font-size:1.5rem; font-family:monospace; z-index: 0;}</style>
+
+<style>
+html{ border:solid .205rem rgb(148, 102, 102); 
+ background-color:rgb(211, 206, 182);} 
+
+body{ 
+ background-color:oldlace;
+ border:solid .1rem rgb(100, 160, 160); }
+
+main{ border:dashed .05rem blue;}
+p{border:solid .1rem burlywood; }
+</style>
+
+<style>
+.bottone_remove{ border:solid 0rem fuchsia; }
+
+.pos_settaggi_articolo0{ border:dashed .05rem red; }
+
+.pos_settaggi_articolo0>span{ border:solid .05rem rgba(0,0,0,0.75); }
+
+ .pos_settaggi_articolo0>span>span{ border:solid 0rem lime; }
+ 
+ 
+</style>
+
+
+
+
+
+<style>
+
+html, body, main {
+ margin:0 auto; 
+}
+
+body, main{
+ position: absolute; padding: 0px;
+ text-align:justify; overflow: auto;
+}
+
+ html{position:relative; 
+ width:800px; height:90%;
+ height:100%; /* debugging */
+ width:850px; /* debugging */
+
+ text-align:center; 
+ 
+ }
+
+ body{
+ top:0px; left:0%; 
+ width: 100%; height: 99%; 
+ 
+ }
+
+ main{
+ top:2px; left:0%;
+ width:99%; height:100%;
+ }
+ 
+ </style>
+
+
+
+<style>
+
+.bottone_remove{
+position:fixed; top:0; right:0; 
+margin:0; padding:0;
+width:auto; height:0px;
+cursor:pointer;
+background-color: coral;
+}
+
+.bottone_remove>span{
+ margin:0 !important; 
+ padding:0 !important;
+background-color:green; 
+color:white; 
+border:none; border-radius:0.2rem;
+font-size:42px;
+} 
+
+
+ aside.pos_settaggi_articolo0{
+ position:fixed;
+ bottom:0; left:0; 
+ width:100%;
+ }
+
+ .pos_settaggi_articolo0{
+ margin:0 auto; padding:0;
+ text-align:center;
+ background-color:oldlace;
+ overflow: auto;
+ } 
+
+ .pos_settaggi_articolo0>span{
+ border-radius:0.2rem; 
+ }
+
+ .pos_settaggi_articolo0>span>span{
+ font-size:16px;
+ }
+ 
+ aside>span>input{width:50px; font-size:16px; } 
+ 
+ aside>button{
+ width:25px; font-size:16px; 
+ margin:0; padding:0;
+ background-color:oldlace; color:black;
+ border:none;
+ font: size 16px;   }
+ 
+ aside>a.material-icons{
+     vertical-align:top; 
+     background-color:green; color:white; 
+ font-size:34px; 
+   border-radius:0.2rem; } 
+  
+
+ .bottone_input{
+ cursor:pointer; 
+ background-color:orange; color:black; 
+ border-radius:0.2rem;
+}
+.bottone_input>span{
+ font-size:24px; 
+}
+
+ </style>
+ 
+
+
+<style>
+.main_start, .main_end {
+position:relative; left:0;
+height:0px;
+font-size:90px; 
+border:solid .2rem  red;
+visibility:visible; visibility:hidden; display:block; }
+
+.main_start{top:0;}
+
+.main_end{ bottom:0;}
+
+.posizione_spinner{
+ position:fixed; top:0; left:0; border:none;
+ }
+
+</style>
+
+
+</head>
+<body onload="attesa()">
+
+<style>.wiwihe_remove_svg{display:block;}</style>
+
+<span class="wiwihe_remove_svg"
+style="position:fixed; top:0; left:0; border:solid 0rem red;" >
+<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-window" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M14 2H2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z"/>
+  <path fill-rule="evenodd" d="M15 6H1V5h14v1z"/>
+  <path d="M3 3.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm1.5 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm1.5 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+</svg>
+</span>
+<script>
+jQuery('.wiwihe_remove_svg').on('click',function(){
+
+jQuery("#dim_win").toggle(); 
+ 
+});
+
+
+
+</script>
+
+
+
+<main>
+ <span id="main_start" class="main_start" >MAIN START </span>
+
+ <div id="articolo0">
+     <span style="font-size:1rem; ">inserisci i dati e  click
+         <span class="material-icons">input</span> 
+        </span>
+    </div>
+ 
+<span id="main_end" class="main_end">MAIN END</span>
+</main>
+
+
+
+
+
+</body>
+
+<!-- * * utilities * * -->
+<div id="spinner" 
+class="posizione_spinner fa fa-spinner fa-pulse">
+</div>
+
+<script>
+ function attesa(){
+ if (document.all){}
+ else if (document.getElementById){
+ document.getElementById("spinner").style.visibility="hidden";
+ }
+ 
+ }
+ </script>
+
+
+<!-- -->
+<a class="bottone_remove">
+<span class="material-icons">expand_less</span>
+</a>
+
+
+<script>
+$('.bottone_remove').on('click',function(){
+ // if ($(this).find('span').text() == 'add'){
+
+if ($(this).find('span').text() == 'expand_more'){
+ $(this).find('span').text('expand_less');
+ } else {
+ // $(this).find('span').text('add');
+ 
+ $(this).find('span').text('expand_more');
+ }
+jQuery("#pos_settaggi_articolo0").toggle(); 
+ 
+});
+
+</script>
+
+ <aside id="pos_settaggi_articolo0" class="pos_settaggi_articolo0" 
+ style="visibility:visible;">
+
+ <span id="dim_win"></span>
+
+ <span>
+ <input type="number" id="articolo0_TOP" 
+ value="16" style="border:solid .1rem blueviolet; ">
+ <span style="border:solid .1rem blueviolet; ">T0</span>
+ </span> 
+ <span>
+ <input type="number" id="articolo0_LEFT" 
+ value="16">
+ <span>L0</span>
+ </span> 
+ <span>
+ <input type="number" id="articolo0_WIDTH" 
+ value="256" style="border:solid .1rem blueviolet; ">
+ <span style="border:solid .1rem blueviolet; ">W0</span>
+ </span> 
+ <span>
+ <input type="number" id="articolo0_HEIGHT" 
+ value="256">
+ <span>H0</span>
+ </span>
+ <span>
+ <input type="number" id="articolo0_FONT_SIZE" 
+ value="16" style="border:solid .1rem blueviolet; ">
+ <span style="border:solid .1rem blueviolet; ">FS</span>
+ </span>
+ 
+ 
+ <button onclick="TLWH()" class="bottone_input">
+ <span class="material-icons">
+ input </span>
+ </button>
+
+
+<script>
+
+function TLWH(){
+articolo0_TOP=document.getElementById("articolo0_TOP").value;
+articolo0_LEFT=document.getElementById("articolo0_LEFT").value;
+articolo0_WIDTH=document.getElementById("articolo0_WIDTH").value;
+articolo0_HEIGHT=document.getElementById("articolo0_HEIGHT").value;
+articolo0_FONT_SIZE=document.getElementById("articolo0_FONT_SIZE").value;
+
+document.getElementById("articolo0").innerHTML=
+' <style>'+
+' .articolo0{'+
+' position:relative;'+
+' top:'+articolo0_TOP+'px; '+
+' left:'+articolo0_LEFT+'px; '+
+' width:'+articolo0_WIDTH+'px; '+
+' height:'+articolo0_HEIGHT+'px; '+
+' font-size:'+articolo0_FONT_SIZE+'px; '+
+' overflow:auto; '+
+' '+
+' border:solid .2rem orange;'+
+' '+
+' }'+
+' </style>'+
+' <div class="articolo0">'+
+' testo: '+lorem_ipsum[0]+lorem_ipsum[1]+
+' immagine: '+
+// 
+' <img src="'+lorem_ipsum_immagine[0]+'" />'+
+' '+
+' '+
+' '+
+' </div>'+
+'';
+}
+
+</script>
+
+
+ <a href="#main_start" class="material-icons">arrow_circle_up</a>
+ <a href="#main_end" class="material-icons">arrow_circle_down</a>
+ </aside>
+ 
+ 
+
+
+<script>
+setInterval(
+function dimensione_finestra(){
+
+xwin=window.innerWidth; ywin=window.innerHeight;
+document.getElementById("dim_win").innerHTML=
+' '+
+' '+xwin+
+' '+
+' '+ywin+
+' '+
+' '+
+'';
+
+}
+
+)
+
+</script>
+
+</html>

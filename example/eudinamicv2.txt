@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+ <meta charset="utf-8">
+ <meta name="generator" content="AlterVista - Editor HTML"/>
+ <title>
+
+1300
+
+ 20200918
+
+ eudinamicv2
+
+ </title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+ 
+<script src="https://use.fontawesome.com/2d0876dd08.js"></script>
+
+<script src="base_dati.js"></script>
+
+<style>html *{ font-size:1.5rem; font-family:monospace; }</style>
+
+<style>
+html{ border:solid .205rem rgb(148, 102, 102); 
+ background-color:rgb(211, 206, 182);} 
+
+body{ 
+ background-color:oldlace;
+ border:solid .1rem rgb(100, 160, 160); }
+
+main{ border:dashed .05rem blue;}
+p{border:solid .1rem burlywood; }
+
+
+
+
+html, body, main {
+ margin:0 auto; 
+}
+
+body, main{
+ position: absolute; padding: 0px;
+ text-align:justify; overflow: auto;
+}
+
+ html{position:relative; width:800px; height:90%;
+ height:100%; /* debugging */
+ text-align:center; 
+ 
+ }
+
+ body{
+ top:0px; left:0%; 
+ width: 100%; height: 99%; 
+ 
+ }
+
+ main{
+ top:2px; left:0%;
+ width:99%; height:100%;
+ }
+ 
+ </style>
+
+
+<style>
+ aside.pos_settaggi_articolo0{
+ position:fixed;
+ bottom:0; left:0; 
+ width:100%;
+ }
+
+ .pos_settaggi_articolo0{
+ margin:0 auto; padding:0;
+ text-align:center;
+ background-color:oldlace;
+ overflow: auto;
+ border:dashed .05rem red;
+ } 
+ .pos_settaggi_articolo0>span{
+ border:solid .05rem rgba(0,0,0,0.75); border-radius:0.2rem; 
+ 
+ }
+ .pos_settaggi_articolo0>span>span{
+ font-size:16px;
+ border:solid 0rem lime; 
+ }
+ aside>span>input{width:50px; font-size:16px; } 
+ 
+ aside>button{
+ width:25px; font-size:16px; 
+ margin:0; padding:0;
+ background-color:oldlace; color:black;
+ border:none;
+ font: size 16px; }
+ 
+ aside>a{background-color:green; color:white; border-radius:0.2rem; } 
+ </style>
+ 
+
+
+
+</head>
+<body onload="attesa()">
+
+
+
+<main>
+ <span id="main_start" 
+ style="position:relative; top:0; left:0; visibility:hidden; ">MAIN START
+ </span>
+
+
+
+ <div id="articolo0"><span>inserisci i dati per articolo0</span></div>
+ 
+ 
+
+<span id="main_end" 
+style="position:relative; bottom:0; left:0; visibility:hidden; ">MAIN END
+</span>
+</main>
+
+
+
+<!-- * * utilities * * -->
+<div id="spinner" style="position:fixed; top:0; left:0; ";>
+<span class="fa fa-spinner fa-pulse"> </span>
+</div>
+
+<script>
+ function attesa(){
+ if (document.all){}
+ else if (document.getElementById){
+ document.getElementById("spinner").style.visibility="hidden";
+ }
+ 
+ }
+ </script>
+
+</body>
+
+ <aside class="pos_settaggi_articolo0">
+
+    <span id="dim_win"></span>
+
+ <span>
+ <input type="number" id="articolo0_TOP" 
+ value="16">
+ <span>T0</span>
+ </span> 
+ <span>
+ <input type="number" id="articolo0_LEFT" 
+ value="16">
+ <span>L0</span>
+ </span> 
+ <span>
+ <input type="number" id="articolo0_WIDTH" 
+ value="256">
+ <span>W0</span>
+ </span> 
+ <span>
+ <input type="number" id="articolo0_HEIGHT" 
+ value="256">
+ <span>H0</span>
+ </span>
+ <span>
+ <input type="number" id="articolo0_FONT_SIZE" 
+ value="16">
+ <span>FS</span>
+ </span>
+ 
+ 
+ <button onclick="TLWH()">
+ <span class="material-icons" style="font-size:16px;">
+ input </span>
+ </button>
+<script>
+
+function TLWH(){
+articolo0_TOP=document.getElementById("articolo0_TOP").value;
+articolo0_LEFT=document.getElementById("articolo0_LEFT").value;
+articolo0_WIDTH=document.getElementById("articolo0_WIDTH").value;
+articolo0_HEIGHT=document.getElementById("articolo0_HEIGHT").value;
+articolo0_FONT_SIZE=document.getElementById("articolo0_FONT_SIZE").value;
+
+document.getElementById("articolo0").innerHTML=
+' <style>'+
+' .articolo0{'+
+' position:relative;'+
+' top:'+articolo0_TOP+'px; '+
+' left:'+articolo0_LEFT+'px; '+
+' width:'+articolo0_WIDTH+'px; '+
+' height:'+articolo0_HEIGHT+'px; '+
+' font-size:'+articolo0_FONT_SIZE+'px; '+
+' overflow:auto; '+
+' '+
+' border:solid .2rem orange;'+
+' '+
+' }'+
+' </style>'+
+' <div class="articolo0">'+
+' testo: '+lorem_ipsum[0]+lorem_ipsum[1]+
+' immagine: '+
+// 
+' <img src="'+lorem_ipsum_immagine[0]+'" />'+
+'  '+
+'  '+
+'  '+
+' </div>'+
+'';
+}
+
+</script>
+
+
+ <a href="#main_start" class="material-icons">arrow_circle_up</a>
+ <a href="#main_end" class="material-icons">arrow_circle_down</a>
+ </aside>
+ 
+ 
+
+
+<script>
+setInterval(
+function dimensione_finestra(){
+
+xwin=window.innerWidth; ywin=window.innerHeight;
+document.getElementById("dim_win").innerHTML=
+' '+
+' '+xwin+
+' '+
+' '+ywin+
+' '+
+' '+
+'';
+
+}
+
+)
+
+</script>
+
+</html>
