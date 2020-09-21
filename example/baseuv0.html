@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="generator" content="AlterVista - Editor HTML"/>
+ <title>
+
+0930
+
+ 20200921
+
+ TESTEUv0
+ boostrap5
+
+ https://v5.getbootstrap.com/docs/5.0/getting-started/introduction/
+ https://github.com/google/material-design-icons
+ https://jquery.com/download/
+ https://use.fontawesome.com/2d0876dd08.js
+ https://kit.fontawesome.com/ed2e43b4ed.js
+
+
+ </title>
+ 
+ <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+ <!-- Optional JavaScript -->
+ <!-- Popper.js first, then Bootstrap JS -->
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+
+ <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+ rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://use.fontawesome.com/2d0876dd08.js"></script>
+<script src="https://kit.fontawesome.com/ed2e43b4ed.js" crossorigin="anonymous"></script>
+
+<!-- base dati in locale -->
+<script src="base_dati.js"></script>
+
+<style>
+/********************************
+stili globali
+********************************/
+html * { font-size:1rem; font-family:monospace; z-index: 0;}
+html { position:relative; width:850px; height:100%; }
+html, body, main { margin:0 auto; text-align:center; }
+body, main { position:absolute; padding:0; text-align:justify;}
+body{ top:0%; left:0%; width:100%; height:99% ;}
+main{ top:0%; left:0%; width:99%; height:100%;}
+
+</style>
+
+
+<style>
+ /***************
+ bordi debugging
+ ***************/
+ html{ border:solid .205rem rgb(148, 102, 102); 
+ background-color:rgb(211, 206, 182);} 
+ 
+ body{ 
+ background-color:oldlace;
+ border:solid .1rem rgb(100, 160, 160); }
+ 
+ main{ border:dashed .05rem blue;}
+ p{border:solid .1rem burlywood; }
+ </style>
+
+</head>
+
+ <body onload="attesa()">
+<spinner id="spinner" class="fa fa-spinner fa-pulse"></spinner>
+
+
+
+<main>
+
+ stili globali
+
+</main>
+
+
+
+ </body>
+ <script>
+ function attesa(){
+ if (document.all){}
+ else if (document.getElementById) {document.getElementById("spinner").style.visibility="hidden";}
+ 
+ } 
+ </script>
+
+</html>
