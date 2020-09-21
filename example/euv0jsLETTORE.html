@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="generator" content="AlterVista - Editor HTML"/>
+ <title>
+
+1745
+
+ 20200921
+ LETTORE
+ TESTEUv0
+ boostrap5
+
+ https://v5.getbootstrap.com/docs/5.0/getting-started/introduction/
+ https://github.com/google/material-design-icons
+ https://jquery.com/download/
+ https://use.fontawesome.com/2d0876dd08.js
+ https://kit.fontawesome.com/ed2e43b4ed.js
+
+
+ </title>
+ 
+ <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+ <!-- Optional JavaScript -->
+ <!-- Popper.js first, then Bootstrap JS -->
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+
+ <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+ rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://use.fontawesome.com/2d0876dd08.js"></script>
+<script src="https://kit.fontawesome.com/ed2e43b4ed.js" crossorigin="anonymous"></script>
+
+<!-- base dati in locale -->
+<script src="base_dati.js"></script>
+
+<style>
+/********************************
+stili globali
+********************************/
+html * { font-size:1rem; font-family:monospace; z-index: 0;}
+html { position:relative; width:850px; height:100%; }
+html, body, main { margin:0 auto; text-align:center; }
+body, main { position:absolute; padding:0; text-align:justify;}
+body{ top:0%; left:0%; width:100%; height:99% ;}
+main{ top:0%; left:0%; width:99%; height:100%;}
+
+</style>
+
+<!--
+<style>
+ /***************
+ bordi debugging
+ ***************/
+ html{ border:solid .205rem rgb(148, 102, 102); 
+ background-color:rgb(211, 206, 182);} 
+ 
+ body{ 
+ background-color:oldlace;
+ border:solid .1rem rgb(100, 160, 160); }
+ 
+ main{ border:dashed .05rem blue;}
+ p{border:solid .1rem burlywood; }
+ </style>
+-->
+</head>
+
+ <body onload="attesa()">
+<spinner id="spinner" class="fa fa-spinner fa-pulse"></spinner>
+
+
+
+<main>
+
+ 
+<div id="lettore_euv0js" style="text-align:left;">bug lettore</div>
+
+</main>
+
+<script>
+var euv0js = new Array;
+
+euv0js=[
+ 
+ '', 
+ '&lt;!DOCTYPE html&gt;',
+ '&lt;html lang=&#34;it&#34;&gt;&lt;head&gt;',
+ '&lt;meta charset=&#34;utf-8&#34;&gt;',
+ ' &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1&#34;&gt;',
+ ' &lt;meta name=&#34;generator&#34; content=&#34;AlterVista - Editor HTML&#34;/&gt;',
+ '&lt;title&gt;',
+ ' https://v5.getbootstrap.com/docs/5.0/getting-started/introduction/',
+ 'https://github.com/google/material-design-icons',
+ 'https://jquery.com/download/',
+ 'https://use.fontawesome.com/2d0876dd08.js',
+ 'https://kit.fontawesome.com/ed2e43b4ed.js',
+ '&lt;/title&gt;',
+ '&lt;!-- Bootstrap CSS --&gt;',
+ ' &lt;link rel=&#34;stylesheet&#34; href=&#34;https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css&#34; integrity=&#34;sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I&#34; crossorigin=&#34;anonymous&#34;&gt;',
+ ' &lt;!-- Optional JavaScript --&gt; &lt;!-- Popper.js first, then Bootstrap JS --&gt;',
+ ' &lt;script src=&#34;https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js&#34; integrity=&#34;sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;',
+ '&lt;script src=&#34;https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js&#34; integrity=&#34;sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;',
+ ' &lt;link href=&#34;https://fonts.googleapis.com/css2?family=Material+Icons&#34; rel=&#34;stylesheet&#34;&gt;',
+ '&lt;script src=&#34;https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js&#34;&gt;&lt;/script&gt;',
+ '&lt;script src=&#34;https://use.fontawesome.com/2d0876dd08.js&#34;&gt;&lt;/script&gt;',
+ '&lt;script src=&#34;https://kit.fontawesome.com/ed2e43b4ed.js&#34;crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;',
+ '&lt;!-- base dati in locale --&gt;',
+ '&lt;script src=&#34;base_dati.js&#34;&gt;&lt;/script&gt;',
+
+ '&lt;style&gt;',
+ '/********************************',
+ 'stili globali',
+ '********************************/',
+ 'html * { font-size:1rem; font-family:monospace; z-index: 0;}',
+ 'html { position:relative; width:850px; height:100%; }',
+ 'html, body, main { margin:0 auto; text-align:center; }',
+ 'body, main { position:absolute; padding:0; text-align:justify;}',
+ 'body{ top:0%; left:0%; width:100%; height:99% ;}',
+ 'main{ top:0%; left:0%; width:100%; height:100%;  overflow:auto; }',
+ '&lt;/style&gt;',
+  '',
+ '&lt;style&gt;',
+ '    /***************',
+ '    bordi debugging',
+ '    ***************/',
+ '   html{ border:solid .205rem rgb(148, 102, 102); ',
+ '   background-color:rgb(211, 206, 182);} ',
+ '',
+ '   body{',
+ '    background-color:oldlace;',
+ ' border:solid .1rem rgb(100, 160, 160); }',
+ '',
+ '    main{ border:dashed .05rem blue; }',
+ '',
+ ' p{border:solid .1rem burlywood;}',
+ '',
+ '&lt;/style&gt;',
+ '',
+
+ '&lt;/head&gt;',
+ '&lt;body onload=&#34;attesa()&#34;&gt;',
+ '&lt;spinner id=&#34;spinner&#34; class=&#34;fa fa-spinner fa-pulse&#34;&gt;&lt;/spinner&gt;',
+ '&lt;main&gt;',
+ '',
+ '&lt;/main&gt;',
+ '',
+ ' &lt;/body&gt;',
+ '',
+ '&lt;script&gt;',
+ ' function attesa(){',
+ ' if (document.all){}',
+ ' else if (document.getElementById) {document.getElementById(&#34;spinner&#34;).style.visibility=&#34;hidden&#34;}',
+ ' } ',
+ ' &lt;/script&gt;',
+ '',
+ '&lt;/html&gt;',
+ '',
+ 
+ '',
+
+ '','',
+ '','',
+ '','',
+ '','',
+ '','',
+
+ '','',
+ '','',
+ '','',
+ '','',
+
+
+ '','',
+ '','',
+ '','',
+ '','',
+ '','',
+
+ '','',
+ '','',
+ '','',
+ '','',
+ '','',
+
+ '','',
+ '','',
+ '','',
+ '','',
+ 
+ '','',
+ '','',
+ '','',
+ '','',
+ '','',
+
+ '','',
+ '','',
+ '','',
+ '','',
+ '','',
+
+ '','',
+ '','',
+ '','',
+ '','',
+ '',''
+
+ ];
+
+/*
+euv0js[0]='';
+euv0js[1]='&lt;!DOCTYPE html&gt;';
+euv0js[2]='';
+euv0js[3]='';
+euv0js[4]='';
+euv0js[5]='';
+euv0js[6]='';
+euv0js[7]='';
+euv0js[8]='';
+euv0js[9]='';
+euv0js[10]='';
+euv0js[11]='';
+euv0js[12]='';
+euv0js[13]='';
+euv0js[14]='';
+euv0js[15]='';
+euv0js[16]='';
+euv0js[17]='';
+euv0js[18]='';
+euv0js[19]='';
+*/
+
+
+
+
+document.getElementById("lettore_euv0js").innerHTML=
+' <div> '+
+// ' '+bsn_beatpics_url[0]+
+// 
+//
+' '+
+euv0js[0]+'<br>'+euv0js[1]+'<br>'+euv0js[2]+'<br>'+euv0js[3]+'<br>'+
+euv0js[4]+'<br>'+euv0js[5]+'<br>'+euv0js[6]+'<br>'+euv0js[7]+'<br>'+
+euv0js[8]+'<br>'+euv0js[9]+'<br>'+
+euv0js[10]+'<br>'+euv0js[11]+'<br>'+euv0js[12]+'<br>'+
+euv0js[13]+'<br>'+euv0js[14]+'<br>'+euv0js[15]+'<br>'+
+euv0js[16]+'<br>'+euv0js[17]+'<br>'+euv0js[18]+'<br>'+
+euv0js[19]+'<br>'+
+euv0js[20]+'<br>'+euv0js[21]+'<br>'+euv0js[22]+'<br>'+
+euv0js[23]+'<br>'+euv0js[24]+'<br>'+euv0js[25]+'<br>'+
+euv0js[26]+'<br>'+euv0js[27]+'<br>'+euv0js[28]+'<br>'+
+euv0js[29]+'<br>'+
+euv0js[30]+'<br>'+euv0js[31]+'<br>'+euv0js[32]+'<br>'+
+euv0js[33]+'<br>'+euv0js[34]+'<br>'+euv0js[35]+'<br>'+
+euv0js[36]+'<br>'+euv0js[37]+'<br>'+euv0js[38]+'<br>'+
+euv0js[39]+'<br>'+
+euv0js[40]+'<br>'+euv0js[41]+'<br>'+euv0js[42]+'<br>'+
+euv0js[43]+'<br>'+euv0js[44]+'<br>'+euv0js[45]+'<br>'+
+euv0js[46]+'<br>'+euv0js[47]+'<br>'+euv0js[48]+'<br>'+
+euv0js[49]+'<br>'+
+euv0js[50]+'<br>'+euv0js[51]+'<br>'+euv0js[52]+'<br>'+
+euv0js[53]+'<br>'+euv0js[54]+'<br>'+euv0js[55]+'<br>'+
+euv0js[56]+'<br>'+euv0js[57]+'<br>'+euv0js[58]+'<br>'+
+euv0js[59]+'<br>'+
+euv0js[60]+'<br>'+euv0js[61]+'<br>'+euv0js[62]+'<br>'+
+euv0js[63]+'<br>'+euv0js[64]+'<br>'+euv0js[65]+'<br>'+
+euv0js[66]+'<br>'+euv0js[67]+'<br>'+euv0js[68]+'<br>'+
+euv0js[69]+'<br>'+
+
+
+' '+
+' </div> '+
+' '+
+
+''
+;
+
+</script>
+
+
+
+
+ </body>
+ <script>
+ function attesa(){
+ if (document.all){}
+ else if (document.getElementById) {document.getElementById("spinner").style.visibility="hidden";}
+ 
+ } 
+ </script>
+
+</html>
