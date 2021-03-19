@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html id="html" lang="it" class="bg-dark mx-5" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="AlterVista - Editor HTML"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title> 1245@20210319 SPINNER DEFINITIVO </title>
+<style>
+html * {color:maroon;} /* settaggio colore silver per i caratteri */
+html * {font-size:normal;font-family:"PT Mono", monospace;} /* settaggio font */
+html * {}
+html * {}
+html * {}
+
+body {margin-bottom:15rem!important;}
+
+mark{padding:0.1rem!important;background-color:black!important;color:oldlace!important;border-radius:0.25rem!important;}
+</style>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+
+
+<body id="body" onload="ATTESAx()" class="px-3" style="visibility: hidden;">
+
+
+
+<!-- navigazione interna -->
+<a style="position:fixed;top:32px;left:0;" href="#fine">
+<i class="bi-chevron-down" style="font-size: 2rem; color: cornflowerblue;"></i>
+</a>
+
+<a style="position:fixed;top:0;left:0;" href="#">
+<i class="bi-chevron-up" style="font-size: 2rem; color: cornflowerblue;"></i>
+</a>
+
+<a style="position:fixed;top:80px;left:0;" href="#SPINNER_link"><b class="p-1 bg-primary rounded"><i class="bi-bookmark"> 1 </i></b></a>
+
+<a style="position:fixed;top:112px;left:0;" href="#BACKDOOR_link"><b class="p-1 bg-primary rounded"><i class="bi-bookmark"> 2 </i></b></a>
+
+
+
+
+<!-- TITOLO -->
+<div class="mx-auto fw-bold" style="width: 200px;">
+ LO SPINNER E LE SUE FUNZIONI VANILLA. 
+</div><span class="spinner-border text-info"> </span>
+
+
+
+
+ <div class="my-1 invisible"> interlinea </div>
+
+
+
+
+<section id="vediTUTTO">
+<div id="SPINNERpausa" class="vedoBODY" style="position:fixed;top:50%;left:50%;margin:-7.5rem;visibility:visible;" >
+
+
+
+<div class="text-center">
+<p CLASS="mx-auto btn btn-warning p-3 rounded fw-bold" onclick="vedoBODY()" > 
+<span class="p-2 bg-warning rounded">
+
+
+
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="orange" class="bi bi-toggle-on" viewBox="0 0 16 16">
+ <path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
+</svg>
+
+</span>
+<span style="width:5rem!important;opacity:1;display:inline-block;font-size:small!important;">
+LOADING...
+</span> <span id="percento" class="bg-warning fw-bold"></span>
+<span id="pausa" class="spinner-border text-danger"></span>
+
+</p>
+
+
+</div>
+</div>
+</section>
+
+
+
+
+
+
+
+<div> In pratica questo bottone permette la sparizione 
+del rettangolino di spinner per far apparire il BODY ecco spiegato il nome vedoBODY
+che altrimenti sembra inesplicabile. Viene introdotto per interrompere 
+lo spinner e visualizzare il contenuto prima dell'effettivo
+totale caricamento
+</div>
+
+<div class="bg-info">
+Lo spinner animato dipende da bootstrap<br/>
+
+&#60;span id&#61;"pausa" class&#61;"spinner-border text-warning"&#62;
+
+</div>
+
+
+<div>
+<pre class="px-5 bg-warning">
+function vedoBODY() { 
+ element = document.querySelector(".vedoBODY"); 
+ element.style.visibility = "hidden"; 
+ body.style.visibility = "visible";
+ html.style.backgroundColor = "rgba(253,245,230,0.5)";
+ 
+ }
+</pre>
+</div>
+
+<div>
+Veniamo ora ad un miglioramento estetico informativo dello
+spinner.<br/>
+
+<b> Apparizione dello spinner quando si carica la pagina
+e il tempo dicaricamento è lungo. In questa evenienza si
+utilizza la funzione <mark>ATTESA()</mark> che utilizza
+un metodo denominato <mark>document.all</mark>
+</b>
+
+</div>
+
+<div>
+Ecco la funzione vanilla<br/>
+
+
+<pre class="px-5 bg-warning">
+
+function ATTESA(){
+if (document.all){} 
+else if 
+(document.getElementById)
+{document.getElementById("SPINNERpausa").style.visibility="hidden";}
+}
+
+</pre>
+
+Come si può notare appare uno <mark> SPINNERpausa </mark> ad 
+indicare che quando il documento sarà caricato completamente
+occorre che l'elemento con lo id specificato venga nascosto.
+Va quindi posto questo id all'elemento da nascondere in questo caso
+il div con class <mark> .vedoBODY </mark>. In aggiunta occorre
+metter al modi un onload apposito <mark> onload="ATTESA()" </mark>
+ il quale al caricamento avvia la funzione che ci serve.
+
+</div>
+
+<div>
+Una volta eseguiti questi aggiustamenti se il documento
+si carica velocemente lo spinner non sarà quasi visualizzato.
+Nel caso sia lungo il caricamento e si desideri togliere
+lo spinner si clicca sul bottone vediBODY.
+
+</div>
+<div class="my-5 invisible"> interlinea </div>
+
+
+<div>
+Un miglioramento potrebbe essere inserire una icona nel bottone
+che disattiva lo spinner.<br/>
+Per fare questo occorre avere a disposizione le icone svg di 
+bootstrap prelevabili dalla cartella alfabeta <u> non come link ma
+come vanilla svg</u> es.<mark>toggle-off.svg <i class="rounded bg-warning bi-toggle-off"></mark></i> modificando 
+width height all'occorrenza.
+</div>
+
+ <div class="my-5 invisible"> interlinea </div>
+
+<div>
+Aggiungiamo ora un contatore di percentuale di caricamento
+che tuttavia è piuttosto artigianale in quanto il programmatore 
+deve sapere a priori quanto ci mette a caricarsi la pagina.<br/>
+A tal fine utilizziamo uno script dgebi:
+
+<pre class="px-5 bg-warning">
+var percento=document.getElementById("percento");
+var contatore=1; 
+var intervallo=setInterval( function() { percento.innerHTML=contatore+"%"; 
+contatore++; if (contatore===101) {clearInterval(intervallo);} 
+} , 9000) 
+</pre>
+
+</div>
+
+<div>
+
+Lo script dgebi <mark> percento </mark> in questione fa scattare un intervallo della
+durata di 9000 millisecondi vale a dire ogni 9 secondi scatta 
+un punto di percentuale. In totale 900 secondi quando si è
+raggiunto il 100% corrispondenti a 15 minuti. 
+
+
+</div>
+
+
+ <div class="my-5 invisible"> interlinea </div>
+
+<div>
+Ecco lo script che riassume la vicenda spinner:<br/>
+
+
+<pre class="px-5 bg-warning fw-bold">
+
+function vedoBODY() { 
+ element = document.querySelector(".vedoBODY"); 
+ element.style.visibility = "hidden"; 
+ body.style.visibility = "visible";
+ html.style.backgroundColor = "rgba(253,245,230,0.5)";
+ 
+ }
+
+
+function ATTESA(){
+if (document.all){} 
+else if 
+(document.getElementById)
+{document.getElementById("SPINNERpausa").style.visibility="hidden";}
+}
+
+var percento=document.getElementById("percento");
+var contatore=1; 
+var intervallo=setInterval( function() { percento.innerHTML=contatore+"%"; 
+contatore++; if (contatore===101) {clearInterval(intervallo);} 
+} , 9000) 
+
+
+</pre>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="my-2 invisible"> interlinea </div>
+
+<div>
+Spostato lo spinner all'interno del box loading.<br/>
+
+Il passo successivo è introdurre lo schermo scuro che
+nasconde il body durante il <u> loading </u>.<br/>
+Partiamo però da un esperimento modificando il codice <br/>
+<pre class="px-5 bg-warning fw-bold">
+function ATTESA(){
+if (document.all){} 
+else if 
+(document.getElementById)
+{
+document.getElementById("SPINNERpausa").style.visibility="hidden";
+document.getElementById("body").style.visibility="hidden";
+}
+}
+</pre>
+
+
+Osservando i comandi vediamo che oltre a nascondere il box 
+del loading si nasconde anche il <u> body </u>. Ragioniamo
+ora in senso inverso: se il body avesse invisible in partenza
+si vedrebbe solamente il box loading mentre una volta
+finito il loading sarebbe settato il body visible.<br/><br/>
+
+Settare il body con style <mark> hidden </mark> 
+ il che cancella anche il box loading <br/>
+allora si che funziona 
+
+<pre class="px-5 bg-warning fw-bold">
+
+document.getElementById("body").style.visibility="visible";
+
+</pre>
+
+nella funzione <mark> ATTESA() </mark><br/>
+
+Quindi < div id="SPINNERpausa" class="vedoBODY" style="visibility: visible;" > 
+
+</div> 
+
+
+<span id="SPINNER_link"> <b> COSTRUZIONE DELLO SPINNER </b></span>
+
+<pre class="px-5 bg-warning fw-bold">
+
+&#60;section id&#61;"vediTUTTO" style&#61;"visibility:visible;"&#62;
+&#60;article id&#61;"SPINNERpausa" class&#61;"vedoBODY spinner_box-position" style&#61;"visibility: visible; " &#62;
+
+&#60;div class&#61;"text-center"&#62;
+&#60;p CLASS&#61;"mx-auto btn btn-warning p-3 rounded fw-bold" onclick&#61;"vedoBODY()" &#62; 
+&#60;span class&#61;"p-2 bg-warning rounded"&#62;
+
+&#60;svg xmlns&#61;"http://www.w3.org/2000/svg" width&#61;"32" height&#61;"32" fill&#61;"black" class&#61;"bi bi-toggle-on" viewBox&#61;"0 0 16 16"&#62;
+ &#60;path d&#61;"M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/&#62;
+&#60;/svg&#62;
+
+&#60;/span&#62;
+&#60;span style&#61;""&#62;
+LOADING...
+&#60;/span&#62; &#60;span id&#61;"percento" class&#61;"bg-warning fw-bold"&#62;&#60;/span&#62;
+&#60;span id&#61;"pausa" class&#61;"spinner-border text-danger"&#62;&#60;/span&#62;
+
+&#60;/p&#62;
+
+&#60;/div&#62;
+&#60;/article&#62;
+&#60;/section&#62;
+</pre>
+
+
+
+<div style="font-weight:bold;">
+L'elemento con id <mark> SPINNERpausa </mark>
+deve essere settato <mark> visible </mark> in
+quanto body è settato hidden alla partenza della
+pagina. Una volta caricata la pagina il metodo
+document style visibility setta body a visible e
+spinner box settato a hidden. <br/>
+<i> Rimane aperta la questione del tempo di caricamento
+che come sappiamo risulta fissata artigianalmente 
+dunque se il calcolo è fissato per difetto 
+viene visualizzato un messaggio di 100%
+e ancora lo schermo è dark. In un caso come questo
+funziona il querySelector <mark> .vedoBODY </mark> </i>
+il quale forza la chiusura del box.<br/>
+<b> Considerazione importante:<br/> 
+siccome si utilizza un javascript vanilla 
+
+<mark> occorre 
+usare visible e hidden con il tag style </mark>
+altrimenti non funziona il meccanismo. <u> Inoltre 
+fare attenzione che style con document non accetta 
+!important </u>.
+
+
+</b>
+</div>
+
+
+
+<pre class="px-5 bg-warning fw-bold">
+function vedoBODY() { 
+ element = document.querySelector(".vedoBODY"); 
+ element.style.visibility = "hidden"; 
+ body.style.visibility = "visible";
+ html.style.backgroundColor = "rgba(253,245,230,0.5)";
+ 
+ }
+
+
+function ATTESA(){
+if (document.all){} 
+else if 
+(document.getElementById)
+{
+document.getElementById("SPINNERpausa").style.visibility="hidden";
+document.getElementById("body").style.visibility="visible";
+// document.getElementById("body").style.visibility="hidden";
+}
+}
+
+var percento=document.getElementById("percento");
+var contatore=1; 
+var intervallo=setInterval( function() { percento.innerHTML=contatore+"%"; 
+contatore++; if (contatore===101) {clearInterval(intervallo);} 
+} , 9000) 
+
+
+
+</pre>
+
+<div>
+
+</div>
+
+
+
+
+<div id="BACKDOOR_link" >
+<b> BACKDOOR </b><br/>
+
+Questa funzione javascript è una specie di reset <br/>
+<pre class="px-1 bg-warning fw-bold">
+
+
+&#60;span id&#61;"BACKDOOR" onclick&#61;"BACKDOOR()" class&#61;"BACKDOOR" style&#61;"position:fixed;bottom:0;left:0;cursor:pointer;background-color:transparent;color:transparent;visibility:visible;"&#62;&nbsp;&#60;/span&#62;
+
+&#60;script&#62;
+function BACKDOOR(){
+document.getElementById("vediTUTTO").style.visibility&#61;"hidden"; // se click nascondi loading box
+document.getElementById("SPINNERpausa").style.visibility&#61;"hidden"; // se click nascondi loading box
+document.getElementById("body").style.visibility&#61;"visible";
+}
+
+&#60;/script&#62;
+
+
+</pre>
+
+Cliccando sul bottone in basso a sinistra si setta 
+la visibility hidden per box loading e visibility 
+visible per body. Il <b> backdoor </b> funziona anche
+indipendentemente dallo spinner. Nella sequenza di
+costruzione del programma anzi lo precede.
+
+</div>
+
+
+
+
+
+<!-- da qui CODICE EFFETTIVO -->
+<script>
+
+function vedoBODY() { 
+ element = document.querySelector(".vedoBODY"); 
+ element.style.visibility = "hidden"; 
+ body.style.visibility = "visible";
+ html.style.backgroundColor = "rgba(253,245,230,0.5)";
+ 
+ }
+
+
+function ATTESA(){
+if (document.all){} 
+else if 
+(document.getElementById)
+{
+document.getElementById("SPINNERpausa").style.visibility="hidden";
+document.getElementById("body").style.visibility="visible";
+// document.getElementById("body").style.visibility="hidden";
+}
+}
+
+var percento=document.getElementById("percento");
+var contatore=1; 
+var intervallo=setInterval( function() { percento.innerHTML=contatore+"%"; 
+contatore++; if (contatore===101) {clearInterval(intervallo);} 
+} , 9000) 
+
+</script>
+
+
+
+<span id="alfabeta-bs-standard">bug alfabeta-bs-standard</span>
+<script src="http://noteapiedipagina.altervista.org/cm-op/cm-op-v-00/alfabeta/bs/standard/default.js"></script>
+
+<hr/>
+
+
+
+
+<span id="BACKDOOR" onclick="BACKDOOR()" class="BACKDOOR" style="position:fixed;bottom:0;left:0;cursor:pointer;background-color:transparent;color:transparent;visibility:visible;">&nbsp;</span>
+
+<script>
+function BACKDOOR(){
+document.getElementById("vediTUTTO").style.visibility="hidden"; // se click nascondi loading box
+document.getElementById("SPINNERpausa").style.visibility="hidden"; // se click nascondi loading box
+document.getElementById("body").style.visibility="visible";
+}
+
+</script>
+
+
+<span id="fine"></span>
+</body>
+</html>
