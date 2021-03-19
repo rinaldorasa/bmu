@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html id="html" lang="it" class="bg-dark mx-5" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="AlterVista - Editor HTML"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title> 20210319-0745 spinner modulo</title>
+<style>
+html * {color:maroon;} /* settaggio colore silver per i caratteri */
+html * {font-size:normal;font-family:"PT Mono", monospace;} /* settaggio font */
+html * {}
+html * {}
+html * {}
+body {margin-bottom:15rem!important;}
+
+mark{padding:0.1rem!important;background-color:black!important;color:oldlace!important;border-radius:0.25rem!important;}
+
+/* management di spinner e backdoor */
+.spinner_box-loading{width:5rem!important;opacity:1;display:inline-block;font-size:small!important;}
+.spinner_box-position{position:fixed;top:50%;left:50%;margin:-7.5rem;}
+.BACKDOOR-position{position:fixed;bottom:0;left:0;cursor:pointer;background-color:transparent;color:transparent;visibility:visible;}
+
+</style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+
+</head>
+
+<body id="body" onload="ATTESAx()" class="px-3" style="visibility: hidden;">
+
+
+<div>
+backdoor ok.
+</div>
+
+
+
+<!-- -->
+<section id="vediTUTTO" style="visibility:visible;">
+<article id="SPINNERpausa"  class="vedoBODY spinner_box-position" style="visibility: visible; " >
+
+<div class="text-center">
+<p CLASS="mx-auto btn btn-warning p-3 rounded fw-bold" onclick="vedoBODY()" > 
+<span class="p-2 bg-warning rounded">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="black" class="bi bi-toggle-on" viewBox="0 0 16 16">
+  <path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
+</svg>
+
+</span>
+<span style="">
+LOADING...
+</span> <span id="percento" class="bg-warning fw-bold"></span>
+<span id="pausa" class="spinner-border text-danger"></span>
+
+</p>
+
+</div>
+</article>
+</section>
+
+
+<span id="alfabeta-bs-standard">bug alfabeta-bs-standard</span>
+<script src="http://noteapiedipagina.altervista.org/cm-op/cm-op-v-00/alfabeta/bs/standard/default.js"></script>
+
+
+<!-- da qui CODICE EFFETTIVO -->
+<script>
+
+function vedoBODY() { 
+ element = document.querySelector(".vedoBODY"); 
+ element.style.visibility = "hidden"; 
+ body.style.visibility = "visible";
+ html.style.backgroundColor = "rgba(253,245,230,0.5)";
+ 
+ }
+
+
+function ATTESA(){
+if (document.all){} 
+else if 
+(document.getElementById)
+{
+document.getElementById("SPINNERpausa").style.visibility="hidden!important";
+document.getElementById("body").style.visibility="visible";
+// document.getElementById("body").style.visibility="hidden";
+}
+}
+
+var percento=document.getElementById("percento");
+var contatore=1; 
+var intervallo=setInterval( function() { percento.innerHTML=contatore+"%"; 
+contatore++; if (contatore===101) {clearInterval(intervallo);} 
+} , 9000) 
+
+</script>
+
+
+<span id="BACKDOOR" onclick="BACKDOOR()" class="BACKDOOR" style="position:fixed;bottom:0;left:0;cursor:pointer;background-color:transparent;color:transparent;visibility:visible;">&nbsp;</span>
+
+<script>
+function BACKDOOR(){
+document.getElementById("vediTUTTO").style.visibility="hidden"; // se click nascondi loading box
+document.getElementById("SPINNERpausa").style.visibility="hidden"; // se click nascondi loading box
+document.getElementById("body").style.visibility="visible";
+}
+
+</script>
+
+<span id="fine"></span>
+</body>
+</html>
