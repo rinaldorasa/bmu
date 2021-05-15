@@ -1,0 +1,117 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="generator" content="AlterVista - Editor HTML"/>
+      <title>  09:45 ①⏳ 20210515 UNICODE CARSET </title>
+      
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+       
+       <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">     
+      <style>
+    html{background-color:oldlace;font-size:1.25rem;}
+      
+      </style>
+      
+          <style>
+    	/* https://github.com/douglascrockford/Programma */
+    	/* https://github.com/douglascrockford */
+        @font-face {
+        font-family: 'Programma';
+        font-weight: bold;
+    	font-weight: normal;
+        src: url('Programma-Bold.woff2') format('woff2');
+        } 
+      
+      <style> 
+      
+      html * { font-size:2rem;font-family:monospace;}
+      body{background-color:oldlace;}
+      table{padding:0;}
+	  tr{}
+	  td{width:100%;}
+      </style>
+      
+    </head>
+    <body>
+	<section style="position:fixed;bottom:0%;right:0;"> <a href="http://venexiatre.altervista.org/WORKOU/OGGI/20191119/20191119f_1-CREEK.html"><i class="bi bi-house"></i> </a> </section>
+	
+	
+	<section class="px-0"  style="position:fixed;top:0rem;left:0;width:100%;height:4.5rem;text-align:center;">
+     <div  onclick="vediloop()" style="background-color:orange;text-align:center;font-family:Programma;cursor:pointer;"> unicode insert valori <b>[<span class="bg-light" style="font-size:0.75rem;font-variant:small-caps;">a_sinistra_valore_iniziale</span>] [<span class="bg-light" style="font-size:0.75rem;font-variant:small-caps;">a_destra_quello_finale</span>]</b> <span class="mx-2"><u class="btn-sm btn-success">click_qui</u></span></div>
+     <input type="number" id="numeroini" value="9200">
+     <input type="number" id="numerofine" value="9200">
+    </section>
+	  
+      <p id="loop"></p>
+ 
+ 
+      <script> 
+      "use strict";
+      
+     function   vediloop()  {
+     
+      let ininum;
+      let finnum;
+      let ix;
+      let cix;
+      let textx;
+      let codice;
+      
+      
+      ininum=document.getElementById("numeroini").value;
+      finnum=document.getElementById("numerofine").value;
+      textx="";
+      codice="";
+    // 
+    
+    for (ix = ininum; ix <= finnum; ix++) { cix=ix.toString(); textx+="<table class='table mx-auto d-block'><tr><td class='my-1 px-1'><span style='color:gray;'>&#38;&#35;"+(cix)+"&#59;</span></td>"+" <td class='px-3 border border-danger'>&nbsp; <span style='color:maroon;'> "+String.fromCharCode(ix)+"</span></td></tr></table><br>"; }
+    // codice+=String.fromCharCode(textx)+"<br>";
+    
+      document.getElementById("loop").innerHTML=
+      ' '+
+        ' <section style="margin-top:5rem;text-align:center;"> '+
+        ' '+
+        ' '+
+      ' <div class="btn btn-success" style="margin-bottom:0.5rem;font-size:0.75rem;font-family:Programma;cursor:default;visibility:hidden;"> da <i> codice carattere </i> a <i> simbolo </i> &#9200; </div>  <br> '+
+	  ' '+
+        ' <div style="width:75%;text-align:center;"> '+textx+'</div> '+
+        ' '+
+        ' '+
+            ' </section> '+
+        ' '+
+        ' ';
+        }
+        
+    // for (ix = num; ix < 10; ix++) { textx+=ix+"<br>"; }   
+      
+      </script>
+ <!--      
+     <input type="number" id="numeroini" value="9200">
+      <input type="number" id="numerofine" value="9200">
+     
+     
+      <div  onclick="vediloop()" style="background-color:orange;text-align:center;font-family:Programma;cursor:pointer;"> insert valori nei form e click </div> 
+-->
+      
+      
+      
+      
+     <!-- 
+      <p id="demo"></p>
+    
+    <script>
+    var text = "";
+    var i;
+    for (i = 0; i < 5; i++) {
+      text += "The number is " + i + "<br>";
+    }
+    document.getElementById("demo").innerHTML = text;
+    </script>
+    -->
+    
+    
+    
+    </body>
+    </html>
