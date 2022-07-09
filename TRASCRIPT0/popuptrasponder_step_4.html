@@ -1,0 +1,1025 @@
+<!doctype html>
+
+
+
+<html id="HTML" lang="it" class="daxmo" >
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="AlterVista - Editor HTML"/>
+<title>
+
+B-DOCUMENT_TRASPONDER_OPE__20220707B
+
+</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
+<style>
+.cursore { background: lime; line-height: 17px; margin-left: 3px; -webkit-animation: blink 0.8s infinite; width: 7px; height: 15px;}
+/* @-webkit-keyframes blink { 0% {background: #222} 50% {background: lime} 100% {background: #222}} */
+ @-webkit-keyframes blink { 0% {background: #222} 50% {background: orange} 100% {background: #222}} 
+
+
+.dissolvenza {  
+    animation: fadeIn ease 2.5s; 
+   -webkit-animation: fadeIn ease 2.5s; 
+   -moz-animation: fadeIn ease 2.5s; 
+   -o-animation: fadeIn ease 2.5s; 
+   -ms-animation: fadeIn ease 2.5s; 
+    } 
+    @keyframes fadeIn { 
+    0% {opacity:0;} 
+    100% {opacity:1;} 
+    } 
+
+
+</style>
+
+<style> 
+html * {font-family:"PT Mono",monospace;} /* DESKTOP */
+
+a, button{margin:0.25rem;padding:0.25rem; background-color:indigo;color:oldlace;border:solid 0.15rem orange;border-radius:0.25rem;display:inline-block;}
+a:hover, button:hover{background-color:oldlace!important;color:indigo!important;}
+
+aside>span{}
+
+body{margin-left:2.5rem;margin-right:2.5rem;}
+
+i{color:purple;font-size:small!important;}
+
+/* span#p60{color:red;} */
+
+summary{cursor:pointer;}
+summary:hover{background-color:orange;color:black;font-style:italic;cursor:pointer;}
+
+tt{color:maroon;font-size:5rem;}
+
+xmp{font-size:0.75rem!important;border:dashed 0.00rem magenta;}
+
+</style>
+
+<style>/* dark mode ? */
+.daxmo{background-color:rgba(5,5,5,1);color:rgba(255,245,235,1);}
+.daxmo{background-color:purple;color:white;}
+.daxmo{background-color:rgba(5,5,5,1);color:rgba(255,245,235,1);font-size:1.25rem;}
+</style>
+
+<script>
+
+alfabeto='A B C D E F G H I J K L M N O P Q R S T U V W X Y Z  [  \  ]  ^  _  `  a  b  c  d  e  f  g  h  i  j  k  l  m  n  o  p  q  r  s  t  u  v  w  x  y  z  {  |  }  ~';
+
+/* matrixe ha una sola line quindi matrixe[0] */
+matrixe=[""]; testmatrixe=[""];
+documentmatrixe=[""];documentematrix=[""];
+documentmatrixe[2]="base_mtrxe_v3__test20220626a.js"; //963
+documentmatrixe[1]="base_mtrxe_v3__test20220619b.js"; //963
+documentmatrixe[3]="base_mtrxe_v3__mini20220619b.js"; //963
+documentmatrixe[0]="base_mtrxe_v3__mini20220704a.js"; //963
+
+testmatrixe[2]="test_mtrxe_v3__mini20220705a.js"; //963
+testmatrixe[1]="test_mtrxe_v3__mini20220705b.js"; //963
+testmatrixe[3]="test_mtrxe_v3__mini20220705c.js"; //963
+testmatrixe[0]="ttest__20220707a.js"; //963
+
+
+documentmatrixe[0]=testmatrixe[0];
+
+
+Informazioni=[''];
+Informazioni[0]='';
+
+</script>
+<script>
+ /*
+ How to copy TEXT to Clipboard on Button-Click
+ A Pen By Shaik Maqsood
+  https://codepen.io/shaikmaqsood/pen/XmydxJ
+ */
+ /*
+<button onclick="copyToClipboard('#commento')">
+Copy TEXT 
+</button>
+ */
+ 
+function copyToClipboard(element) {
+ var $temp = $("<input>");
+ $("body").append($temp);
+ $temp.val($(element).text()).select();
+ document.execCommand("copy");
+ $temp.remove();
+ }
+ </script> 
+ 
+</head>
+
+<body id="BODY" class="daxmo dissolvenza" >
+
+<HEADER id="noHEADER" STYLE="Z-INDEX:100000;POSITION:FIXED;TOP:0REM;LEFT:0REM;WIDTH:100%;WIDTH:99%;WIDTH:100%;" class="shadow p-3 mb-5 bg-body rounded">
+	<div style="text-align:LEFT;border:dotted 0.00rem red;">
+		<a onclick="RELOAD()" STYLE="background-color:transparent;font-size:1.25rem;text-decoration:none;border:none!important;cursor:pointer;" class="fs-1">&#128259;</a>
+
+<script>function RELOAD(){ location.reload(true); }</script>
+		<a href="#" STYLE="text-decoration:none;display:none;opacity:0.25;" class="fs-1">&#128154;</a>
+		<a STYLE="POSITION:static;POSITION:ABSOLUTE;right:0;background-color:transparent;font-size:1.25rem;text-decoration:none;border:none!important;" id="on_UPDOWN" href="#" onclick="toggle_UPDOWN_ON()" class="btn mx-0 my-0 p-0 fs-1">&#128316;</a>
+		<a STYLE="POSITION:static;POSITION:ABSOLUTE;right:0;background-color:transparent;font-size:1.25rem;text-decoration:none;border:none!important;" id="of_UPDOWN" href="#fine" onclick="toggle_UPDOWN_OF()" class="btn mx-0 my-0 p-0 fs-1">&#128317;</a>
+	</div>
+<!--
+<div style="position:fixed;top:35%;left:25%;width:50%;padding:0.25rem;background-color:orange;color:navy;font-weight:bold;text-align:center;border-radius:0.25rem; display:none;" 
+-->
+
+<div style="position:fixed;top:35%;left:50%;width:75%;height:50%;margin-top:-15%;margin-left:-37.5%;padding:0.00rem;background-color:tan;color:navy;font-weight:normal;text-align:center;display:none;OVERFLOW:AUTO;" 
+id="DIFFYES" class="dissolvenza"> 
+     <div style="position:static;text-align:right;">
+     <!--<span style="padding:0.25rem;background-color:rgba(245,235,225,1);color:navy;color:orange;font-size:large;font-variant:small-caps;text-align:center;display:inline-block;" class="dissolvenza">-->
+     <!--<span class="cursore">&#128521;--><!--&nbsp;--><!--</span><br>--><!--Pop <br> UP<br><span class="cursore">&#128521;--><!--&nbsp;--><!--</span>-->
+     <!--</span>-->
+      <div style="">
+        <a style=" position:static;top:0%;right:50%;margin-top:0%;text-align:right;" id="DIFFNOT" onclick="DIFFNOT()"> 
+        &#10060;<!-- x -->
+        </a>
+      </div>
+    
+     </div>
+<div style="padding:1.25rem;font-size:small;font-weight:initial;text-align:justify; text-align:left;border:solid 0.05rem #1E90FF; line-height:initial;overflow:auto;">
+<div style ="background-color:white;color:maroon; font-size:1.75rem!important; font-variant:small-caps;text-align:center;OVERFLOW:AUTO;">
+document.trasponder
+</div>
+<div style ="background-color:white;color:maroon; font-size:1.25rem!important; font-variant:small-caps;text-align:center;">
+versione 0.2
+</div>
+<br>
+1) creare file 120car lasttwo 10<br>
+2) creare card lunghezza 10<br>
+3) riempire posizioni<br>
+4) creare file compilato<br>
+<br>
+<br>
+<br>
+</div>
+
+</div>
+
+    
+<script>function toggle_UPDOWN_OF(){ toggle_UPDOWN_ = document.querySelector("#of_UPDOWN"); toggle_UPDOWN_.style.visibility="hidden"; toggle_UPDOWN_ = document.querySelector("#on_UPDOWN"); toggle_UPDOWN_.style.visibility="visible"; toggle_UPDOWN_.style.backgroundColor="transparent"; toggle_UPDOWN_.style.color="white"; }</script>
+<script>function toggle_UPDOWN_ON(){ toggle_UPDOWN_ = document.querySelector("#on_UPDOWN"); toggle_UPDOWN_.style.visibility="hidden"; toggle_UPDOWN_ = document.querySelector("#of_UPDOWN"); toggle_UPDOWN_.style.visibility="visible"; toggle_UPDOWN_.style.backgroundColor="transparent"; toggle_UPDOWN_.style.color="white"; }</script>
+</HEADER>
+
+
+
+
+
+<blockquote style="margin-top:5rem;" id="INSERIREKEY">
+
+
+<!-- inserto (9) -->
+
+<div style="text-align:center;">
+<a id="ATTIVA_FUNZIONE_TEST" onclick="TEST()" class="daxmo" >TEST</a>
+</div>
+
+
+<!-- inserto numero (8) -->
+
+
+</blockquote>
+
+<!-- inserto numero (7) -->
+
+
+<script>
+TEST = () =>{ //alert("TEST()");
+
+		var SCRIPTmatrixe = document.createElement('script');
+		var poscritto00  = new Date().getTime();
+		RANDOM=String(Math.floor(Math.random()*10000));
+		poscritto00=RANDOM;
+		poscritto00 ='?'+poscritto00;
+		SCRIPTmatrixe.src = documentmatrixe[0]+ poscritto00;
+
+SCRIPTmatrixe.onload=function(){ //alert("ON LOAD ok!!!");
+
+
+/* inserto numero (6) */
+
+/* insert here dgebi TECHNICALITIES (5) */
+
+
+TROV_I=0;
+TROV_I=parseInt(document.getElementById("TROV_I").value);
+TROV_I=1;
+if(TROV_I===1){
+DIFFYES();
+} // if TROV_I===0
+
+}; document.body.appendChild(SCRIPTmatrixe);
+
+
+
+} //TEST()
+</script>
+
+
+
+
+
+<!-- appendixes -->
+<!-- SCRIPT FUORI SACCO -->
+<script>
+
+function DIFFYES(){//alert("DIFFYES()");
+DIFFYESflag=document.querySelector("#DIFFYES");
+DIFFYESflag.style.display="block";
+
+} // DIFFYES()
+
+
+function DIFFNOT(){
+DIFFNOTflag=document.querySelector("#DIFFYES");
+DIFFNOTflag.style.display="none";
+
+
+
+} // DIFFNOT()
+
+</script>
+
+
+<!-- closePopUpTouchScreen -->
+
+<script> 
+/*
+const TARGET = document.querySelector('#DIFFYES')
+document.addEventListener('click', (event) => {
+  const TOCCASCREEN = event.composedPath().includes(TARGET)
+  if (TOCCASCREEN) {} else {TARGET.style.display="none";} 
+})
+*/
+
+document.addEventListener('click', ({ target }) => {
+  if (!target.closest('#DIFFYES')) {
+    document.querySelector('#DIFFYES').style.display = 'none'
+  }
+})
+
+
+
+</script> 
+
+
+<!-- PURE HTML (4) -->
+
+<details style="margin-top:2.5rem;width:99.5%;overflow:auto;border-top:solid 0.05rem rgb(82%,71%,55%);border-bottom:solid 0.05rem rgb(82%,71%,55%);"><summary style="font-size:medium;">backdoor</summary>
+
+<!-- protocol (3) -->
+
+<!-- detect so (2) -->
+
+<!-- backdoor (1) -->
+
+
+<blockquote STYLE="text-align:center;">
+
+<input style="width:2rem;" id="TROV_I" type="text" value="0" placeholder="" />
+
+</blockquote>
+
+</section>
+</details>
+
+
+
+
+
+<div id="fine"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!-- inserto (9)
+
+
+<article>
+<span>&#128273;</span><input id="NAME_I" type="text" value="1a2b3c4d5e6f" placeholder=""  class="daxmo" /> <span style="font-size:x-small;display:none;">NAME_I</span>
+</article>
+<article>
+ <span>&#128272;</span><input id="PASS_I" type="text" value="7g8h9i" placeholder=""  class="daxmo" /> <span style="font-size:x-small;display:none;">PASS_I</span> 
+</article>
+
+<details style="margin-top:1.25rem;margin-bottom:1.25rem;"><summary><u>interattivo</u></summary>
+<article style="width:100%;border:solid 0.00rem magenta;overflow:auto;">
+<aside style="margin-top:2.5rem;margin-bottom:2.5rem;text-align:left;">
+<div style="display:inline-block;"><span style="font-size:0.75rem;">&nbsp;0</span><span><input style="width:2.5rem" id="ni0"  type="text" value="ƒ" placeholder="" class="daxmo" /></span></div>
+<div style="display:inline-block;"><span style="font-size:0.75rem;">&nbsp;1</span><span><input style="width:2.5rem" id="ni1"  type="text" value="ƒ" placeholder="" class="daxmo" /></span></div>
+<div style="display:inline-block;"><span style="font-size:0.75rem;">&nbsp;2</span><span><input style="width:2.5rem" id="ni2"  type="text" value="ƒ" placeholder="" class="daxmo" /></span></div>
+<div style="display:inline-block;"><span style="font-size:0.75rem;">&nbsp;3</span><span><input style="width:2.5rem" id="ni3"  type="text" value="ƒ" placeholder="" class="daxmo" /></span></div>
+<div style="display:inline-block;"><span style="font-size:0.75rem;">&nbsp;4</span><span><input style="width:2.5rem" id="ni4"  type="text" value="ƒ" placeholder="" class="daxmo" /></span></div>
+<div style="display:inline-block;"><span style="font-size:0.75rem;">&nbsp;5</span><span><input style="width:2.5rem" id="ni5"  type="text" value="ƒ" placeholder="" class="daxmo" /></span></div>
+<div style="display:inline-block;"><span style="font-size:0.75rem;">&nbsp;6</span><span><input style="width:2.5rem" id="ni6"  type="text" value="ƒ" placeholder="" class="daxmo" /></span></div>
+<div style="display:inline-block;"><span style="font-size:0.75rem;">&nbsp;7</span><span><input style="width:2.5rem" id="ni7"  type="text" value="ƒ" placeholder="" class="daxmo" /></span></div>
+<div style="display:inline-block;"><span style="font-size:0.75rem;">&nbsp;8</span><span><input style="width:2.5rem" id="ni8"  type="text" value="ƒ" placeholder="" class="daxmo" /></span></div>
+<div style="display:inline-block;"><span style="font-size:0.75rem;">&nbsp;9</span><span><input style="width:2.5rem" id="ni9"  type="text" value="ƒ" placeholder="" class="daxmo" /></span></div>
+<div style="display:inline-block;"><span style="font-size:0.75rem;">     10</span><span><input style="width:2.5rem" id="ni10" type="text" value="ƒ" placeholder="" class="daxmo" /></span></div>
+<div style="display:inline-block;"><span style="font-size:0.75rem;">     11</span><span><input style="width:2.5rem" id="ni11" type="text" value="ƒ" placeholder="" class="daxmo" /></span></div>
+<div style="display:inline-block;"><span style="font-size:0.75rem;">     12</span><span><input style="width:2.5rem" id="ni12" type="text" value="ƒ" placeholder="" class="daxmo" /></span></div>
+<div style="display:inline-block;"><span style="font-size:0.75rem;">     13</span><span><input style="width:2.5rem" id="ni13" type="text" value="ƒ" placeholder="" class="daxmo" /></span></div>
+<div style="display:inline-block;"><span style="font-size:0.75rem;">     14</span><span><input style="width:2.5rem" id="ni14" type="text" value="ƒ" placeholder="" class="daxmo" /></span></div>
+<div style="display:inline-block;"><span style="font-size:0.75rem;">     15</span><span><input style="width:2.5rem" id="ni15" type="text" value="ƒ" placeholder="" class="daxmo" /></span></div>
+<div style="display:inline-block;"><span style="font-size:0.75rem;">     16</span><span><input style="width:2.5rem" id="ni16" type="text" value="ƒ" placeholder="" class="daxmo" /></span></div>
+<div style="display:inline-block;"><span style="font-size:0.75rem;">     17</span><span><input style="width:2.5rem" id="ni17" type="text" value="ƒ" placeholder="" class="daxmo" /></span></div>
+<div style="display:inline-block;"><span style="font-size:0.75rem;">     18</span><span><input style="width:2.5rem" id="ni18" type="text" value="ƒ" placeholder="" class="daxmo" /></span></div>
+<div style="display:inline-block;"><span style="font-size:0.75rem;">     19</span><span><input style="width:2.5rem" id="ni19" type="text" value="ƒ" placeholder="" class="daxmo" /></span></div>
+
+</aside>
+</article>
+</details>
+
+
+
+-->
+
+
+<!-- inserto (8)
+
+<BR>
+<span STYLE="FONT-SIZE:0.75REM;" > OUTPUT <span style="font-size:1.00rem!important;">dinamico</span> = </span><SPAN ID="OUTPUT"><span style="font-size:0.75rem;">&#9940;</span></SPAN>
+
+-->
+
+
+<!--  inserto (7) 
+
+<details style="margin-top:2.50rem;margin-bottom:2.50rem;"><summary><u>matrice compilata letta da file</u></summary>
+<blockquote style="margin-top:2.50rem;border-top:dashed 0.05rem orange;background-color:rgba(245,235,225,1);border-bottom:dashed 0.05rem orange;text-align:center;">
+<div style="display:inline-block;"><span>&#128100;</span><input id="NAME_I_TEST" type="text" value="1a2b3c4d5e6f" placeholder="username" /></div>
+<div style="display:inline-block;"><span>&#127915;</span><input id="PASS_I_TEST" type="text" value="7g8h9i" placeholder="password" /></div>
+</blockquote>
+</details>
+
+
+<details style="border-top:solid 0.05rem rgb(82%,71%,55%);"><summary><u>tecnicismi</u></summary><div style="width:99.99%;overflow:auto;" id="TECHNICALITIES" class="daxmo" >&#9940; TECHNICALITIES</div>  </details>
+
+-->
+
+
+
+<!-- inserto numero (6)
+
+/* caricare file esterno */
+// trasformare matrixe[0] in string
+		matrixeStringa="";
+		for(conta=0;conta<matrixe[0].length;conta++){
+		matrixeStringa=matrixeStringa+matrixe[0].charAt(conta);
+		}conta=0;
+		// indi creare array con numero maggiore di 0
+		// formattato con id pnn
+		matrixeStringaArray=[""];
+		for(conta=0;conta<matrixeStringa.length;conta++){
+		matrixeStringaArray[conta]='<span id="p'+conta.toString()+'">'+matrixeStringa.charAt(conta)+'</span>';
+		}conta=0;
+        
+// metainformazione
+	numeINFOlast=parseInt( matrixeStringa.charAt(matrixeStringa.length-1) );
+	numeINFOminu=parseInt( matrixeStringa.charAt(matrixeStringa.length-2) );
+    numeINFOlami=numeINFOlast+numeINFOminu;
+
+
+// assemblaggio e  trasformare string input in object
+    
+NAME_I=(document.getElementById("NAME_I").value).toUpperCase() ;
+PASS_I=(document.getElementById("PASS_I").value).toUpperCase() ;
+NAME_I=NAME_I+PASS_I;
+
+// 
+    NAME_I=[...new Set(NAME_I)] ;
+	NAME_P=[""];
+    
+	// converte caratter in unicode 
+	for(conta=0;conta<NAME_I.length;conta++){NAME_P[conta]=NAME_I[conta].charCodeAt(0);};conta=0;
+	// output temporaneo
+    // limitato da metainformazione
+	nuovoNAME_P=[''];
+	for(conta=0;conta<numeINFOlami;conta++){NAME_P[conta]=NAME_I[conta].charCodeAt(0);
+	nuovoNAME_P[conta]=NAME_P[conta];
+	
+	};conta=0; NAME_P=nuovoNAME_P;
+	// attenzione name_p condizionato
+    // bypassato con un valore dato da metainformazione
+    
+
+	OUTPUT=[""];
+	for(conta=0;conta<NAME_P.length;conta++){OUTPUT[conta]=matrixeStringaArray[NAME_P[conta]]};conta=0;
+
+
+	/* caratteri interattivi  */
+	CARA_I=['']; inni=[''];
+	for(conta=0;conta<NAME_P.length;conta++){
+	inni[conta]='ni'+conta;
+	
+	CHECKI=document.getElementById(inni[conta]).value;
+	EFFE='ƒ';
+	
+	if(CHECKI!==EFFE){ //
+	
+	CARA_I[conta]=CHECKI;
+	
+	} else
+	{
+	CARA_I[conta]=matrixeStringaArray[NAME_P[conta]];
+	}
+	
+	};conta=0;
+	
+	/*
+||
+||
+\/
+	*/
+	
+INFORM='';
+for(conta=0;conta<numeINFOlami;conta++){matrixeStringaArray[NAME_P[conta]]=CARA_I[conta];INFORM=INFORM+CARA_I[conta];};conta=0;
+
+OUTPUT=INFORM;
+document.getElementById("OUTPUT").innerHTML=OUTPUT;
+
+
+// visu matrixe[0]
+MATRIXE=['','','','']; INCLINE=[''];
+INCLINE[0]=30 ;
+INCLINE[1]=60 ;
+INCLINE[2]=90 ;
+INCLINE[3]=120;
+ 
+for(conta=0;conta<INCLINE[0];conta++){
+MATRIXE[0]=MATRIXE[0]+matrixe[0].charAt(conta);
+}
+for(conta=INCLINE[0];conta<INCLINE[1];conta++){
+MATRIXE[1]=MATRIXE[1]+matrixe[0].charAt(conta);
+}
+for(conta=INCLINE[1];conta<INCLINE[2];conta++){
+MATRIXE[2]=MATRIXE[2]+matrixe[0].charAt(conta);
+}
+for(conta=INCLINE[2];conta<INCLINE[3];conta++){
+MATRIXE[3]=MATRIXE[3]+matrixe[0].charAt(conta);
+}
+
+
+
+// lettura di un user mtrxe[0] il lato user
+// presenta una compilazione di una matrice
+// randomizzata seguendo indicazioni precise
+// date dal modello di lettura del file
+
+NAME_I_TEST=(document.getElementById("NAME_I_TEST").value).toUpperCase() ;
+PASS_I_TEST=(document.getElementById("PASS_I_TEST").value).toUpperCase() ;
+NAME_I_TEST=[...new Set(NAME_I_TEST+PASS_I_TEST)];
+numeINFOlami_TEST=
+parseInt(matrixe[0].charAt(matrixe[0].length-1))+
+parseInt(matrixe[0].charAt(matrixe[0].length-2));
+
+if(numeINFOlami_TEST>NAME_I_TEST.length){
+alert("numeINFOlami_TEST>NAME_I_TEST.length");
+}
+
+
+NAME_I_TEST_P=[""]; NAME_I_TEST_P_C=[""];
+for(conta=0;conta<numeINFOlami_TEST;conta++){
+// 
+NAME_I_TEST_P[conta]=NAME_I_TEST[conta];
+NAME_I_TEST_P_C[conta]=NAME_I_TEST[conta].charCodeAt(0) ;
+
+//alert( "NAME_I_TEST["+conta+"].charCodeAt(0)=" + NAME_I_TEST[conta].charCodeAt(0) );
+//alert( "NAME_I_TEST_P_C["+conta+"]=" + NAME_I_TEST_P_C[conta] );
+
+};conta=0;
+
+OUTPUT_TEST="";
+for(conta=0;conta<NAME_I_TEST_P_C.length;conta++){
+OUTPUT_TEST=OUTPUT_TEST+matrixe[0].charAt(NAME_I_TEST_P_C[conta]);
+
+};conta=0;
+
+
+// prototipo di matrice compilata
+matrixeStringaArrayREVERSE="";
+
+for(conta=0;conta<matrixeStringaArray.length;conta++){
+matrixeStringaArrayREVERSE=matrixeStringaArrayREVERSE+matrixeStringaArray[conta];
+};conta=0;
+
+
+
+
+-->
+
+
+
+
+<!-- ecmas js TECHNICALITIES (5)
+
+document.getElementById("TECHNICALITIES").innerHTML=''
++''+''+'<br>'
++''+''+'<blockquote STYLE="PADDING:0.50REM;FONT-SIZE:MEDIUM;BORDER:SOLID 0.05REM TEAL;BORDER-BOTTOM:SOLID 0.50REM TEAL;border-top-left-radius:0.25rem;border-top-right-radius:0.25rem;;OVERFLOW:AUTO;">'
++''+''+'<br>'
++'file='+documentmatrixe[0]+'<br>'
++''+''+'<br>'
++'<span style="color:teal;">'+MATRIXE[0]+'</span>'+'<br>'
++'<span style="color:teal;">'+MATRIXE[1]+'</span>'+'<br>'
++'<span style="color:teal;">'+MATRIXE[2]+'</span>'+'<br>'
++'<span style="color:teal;">'+MATRIXE[3]+'</span>'+'<br>'
+
++'<div style="border-top:dashed 0.25rem magenta;border-bottom:dashed 0.25rem magenta;">'+''+'<br>'
++'NAME_I_TEST='+NAME_I_TEST+' '+'typeof='+typeof(NAME_I_TEST)+''+'<br>'
++'NAME_I_TEST.length='+NAME_I_TEST.length+' '+'typeof='+typeof(NAME_I_TEST.length)+''+'<br>'
++'numeINFOlami_TEST='+numeINFOlami_TEST+' '+'typeof='+typeof(numeINFOlami_TEST)+''+'<br>'
++'NAME_I_TEST_P[0]='+NAME_I_TEST_P[0]+''+'<br>'
++'NAME_I_TEST_P[0].charCodeAt(0)='+NAME_I_TEST_P[0].charCodeAt(0)+''+'<br>'
+
++'NAME_I_TEST_P[11]='+NAME_I_TEST_P[11]+''+'<br>'
++'NAME_I_TEST_P.length='+NAME_I_TEST_P.length+''+'<br>'
++'NAME_I_TEST_P='+NAME_I_TEST_P+''+'<br>'
++'NAME_I_TEST_P_C='+NAME_I_TEST_P_C+''+'<br>'
++''+''+'<br>'
++'OUTPUT_TEST='+'<span style="background-color:black;color:orange;">'+OUTPUT_TEST+'</span>'+'<br>'
++''+''+'<br>'
++'<span style="background-color:black;color:magenta;">'+'OUTPUT_TEST.length='+'</span>'+'<span style="background-color:black;color:magenta;">'+OUTPUT_TEST.length+'</span>'+'<br>'
+
+
++'</div>'+''+'<br>'
+
+
++''+''+'<br>'
++''+''+'<br>'
++''+''+'<br>'
++'numeINFOlami='+numeINFOlami+' '+'typeof='+typeof(numeINFOlami)+''+'<br>'
+//+''+''+'<br>'
++''+''+'<br>'
++'matrixeStringa='+matrixeStringa+'<br>'
++'matrixeStringa.length='+matrixeStringa.length+'<br>'
++''+''+'<br>'
++'matrixeStringaArray='+matrixeStringaArray+'<br>'
++'matrixeStringaArray.length='+matrixeStringaArray.length+'<br>'
+
+
++''+''+'<br>'
++'NAME_I='+NAME_I+' '+'typeof='+typeof(NAME_I)+''+'<br>'
++'NAME_I.length='+NAME_I.length+' '+'typeof='+typeof(NAME_I.length)+''+'<br>'
++''+''+'<br>'
++'NAME_P='+NAME_P+' '+'typeof='+typeof(NAME_P)+''+'<br>'
++'NAME_P.length='+NAME_P.length+' '+'typeof='+typeof(NAME_P.length)+''+'<br>'
++''+''+'<br>'
+
++''+''+'<br>'
++''+''+'<br>'
+
++'nuovoNAME_P='+nuovoNAME_P+' '+'typeof='+typeof(nuovoNAME_P)+''+'<br>'
+
+
++''+''+'<br>'
++''+''+'<br>'
+
++'OUTPUT='+OUTPUT+' '+'typeof='+typeof(OUTPUT)+''+'<br>'
++'OUTPUT.length='+OUTPUT.length+' '+'typeof='+typeof(OUTPUT.length)+''+'<br>'
++'/\\'+''+'<br>'
++'||'+''+'<br>'
++'||'+''+'<br>'
++'||'+''+'<br>'
+
++'CARA_I='+CARA_I+' '+'typeof='+typeof(CARA_I)+''+'<br>'
++'CARA_I.length='+CARA_I.length+' '+'typeof='+typeof(CARA_I.length)+''+'<br>'
++''+''+'<br>'
++''+''+'<br>'
++'matrixeStringaArrayREVERSE='+'<br><br>'+'<span id="MTRXECOMP">'+matrixeStringaArrayREVERSE+'</span>'+' <br><br>'+'typeof='+typeof(matrixeStringaArrayREVERSE)+'<br>'
++'matrixeStringaArrayREVERSE.length='+matrixeStringaArrayREVERSE.length+' '+'typeof='+typeof(matrixeStringaArrayREVERSE.length)+'<br>'
+
++'<div style="text-align:center;">'+''+'<br>'
++'<button onclick="copyToClipboard(`#MTRXECOMP`)">'+'Copy TEXT'+'</button>'+'<br>'
++'</div>'+''+'<br>'
+
++''+''+'<br>'
++''+''+'<br>'
+
+
++''+''+'<br>'
++''+''+'<br>'
++''+''+'</blockquote>'
++''+''+'<br>'
++''+''+'<br>'
+
++''+''+'<br>'
++''+''+'<br>'
+
++''+''+'<br>'
++''+''+'<br>'
+
+
++''+''+'<br>';
+
+-->
+
+
+
+<!-- PURE HTML (4) 
+
+
+<details style="margin-top:2.5rem;margin-bottom:2.5rem;font-size:medium;text-align:right;border-top:solid 0.05rem rgb(15,45,15);"><summary style="font-size:medium;">Unicode</summary>
+<div style="padding:0.25rem;width:75%;margin-left:25%;border:solid 0.05rem purple;">
+<pre style="text-align:left;OVERFLOW:AUTO;">
+32     space
+33 !  exclamation mark
+34 "  quotation mark
+35 #  number sign
+36 $  dollar sign
+37 %  percent sign
+38 &#38;  ampersand
+39 '  apostrophe
+40 (  left parenthesis
+41 )  right parenthesis
+42 *  asterisk
+43 +  plus sign
+44 ,  comma
+45 -  hyphen-minus
+46 .  full stop
+47 /  solidus
+48 0  digit zero
+49 1  digit one
+50 2  digit two
+51 3  digit three
+52 4  digit four
+53 5  digit five
+54 6  digit six
+55 7  digit seven
+56 8  digit eight
+57 9  digit nine
+58 :  colon
+59 ;  semicolon
+60 &#60;  less-than sign
+61 =  equals sign
+62 >  greater-than sign
+63 ?  question mark
+64 @  commercial at
+65 A  Latin capital letter A
+66 B  Latin capital letter B
+67 C  Latin capital letter C
+68 D  Latin capital letter D
+69 E  Latin capital letter E
+70 F  Latin capital letter F
+71 G  Latin capital letter G
+72 H  Latin capital letter H
+73 I  Latin capital letter I
+74 J  Latin capital letter J
+75 K  Latin capital letter K
+76 L  Latin capital letter L
+77 M  Latin capital letter M
+78 N  Latin capital letter N
+79 O  Latin capital letter O
+80 P  Latin capital letter P
+81 Q  Latin capital letter Q
+82 R  Latin capital letter R
+83 S  Latin capital letter S
+84 T  Latin capital letter T
+85 U  Latin capital letter U
+86 V  Latin capital letter V
+87 W  Latin capital letter W
+88 X  Latin capital letter X
+89 Y  Latin capital letter Y
+90 Z  Latin capital letter Z
+91 [  left square bracket
+92 \  reverse solidus
+93 ]  right square bracket
+94 ^  circumflex accent
+95 _ low line
+96 ` grave accent
+97 a Latin small letter a
+98 b Latin small letter b
+99 c Latin small letter c
+100 d Latin small letter d
+101 e Latin small letter e
+102 f Latin small letter f
+103 g Latin small letter g
+104 h Latin small letter h
+105 i Latin small letter i
+106 j Latin small letter j
+107 k Latin small letter k
+108 l Latin small letter l
+109 m Latin small letter m
+110 n Latin small letter n
+111 o Latin small letter o
+112 p Latin small letter p
+113 q Latin small letter q
+114 r Latin small letter r
+115 s Latin small letter s
+116 t Latin small letter t
+117 u Latin small letter u
+118 v Latin small letter v
+119 w Latin small letter w
+120 x Latin small letter x
+121 y Latin small letter y
+122 z Latin small letter z
+123 { left curly bracket
+124 | vertical line
+125 } right curly bracket
+126 ~ tilde
+127 DEL       
+128 €     euro sign
+129    NOT USED
+130 ‚     single low-9 quotation mark
+131 ƒ     Latin small letter f with hook
+132 „     double low-9 quotation mark
+133 …     horizontal ellipsis
+134 †     dagger
+135 ‡     double dagger
+136 ˆ     modifier letter circumflex accent
+137 ‰     per mille sign
+138 Š     Latin capital letter S with caron
+139 ‹     single left-pointing angle quotation mark
+140 Œ     Latin capital ligature OE
+141    NOT USED
+142 Ž     Latin capital letter Z with caron
+143    NOT USED
+144    NOT USED
+145 ‘     left single quotation mark
+146 ’     right single quotation mark
+147 “     left double quotation mark
+148 ”     right double quotation mark
+149 •     bullet
+150 –     en dash
+151 —     em dash
+152 ˜     small tilde
+153 ™     trade mark sign
+154 š     Latin small letter s with caron
+155 ›     single right-pointing angle quotation mark
+156 œ     Latin small ligature oe
+157    NOT USED
+158 ž     Latin small letter z with caron
+159 Ÿ     Latin capital letter Y with diaeresis
+160       no-break space
+161 ¡  inverted exclamation mark
+162 ¢  cent sign
+163 £  pound sign
+164 ¤  currency sign
+165 ¥  yen sign
+166 ¦  broken bar
+167 §  section sign
+168 ¨  diaeresis
+169 ©  copyright sign
+170 ª  feminine ordinal indicator
+171 «  left-pointing double angle quotation mark
+172 ¬  not sign
+173 ­  soft hyphen
+174 ®  registered sign
+175 ¯  macron
+176 °  degree sign
+177 ±  plus-minus sign
+178 ²  superscript two
+179 ³  superscript three
+180 ´  acute accent
+181 µ  micro sign
+182 ¶  pilcrow sign
+183 ·  middle dot
+184 ¸  cedilla
+185 ¹  superscript one
+186 º  masculine ordinal indicator
+187 »  right-pointing double angle quotation mark
+188 ¼  vulgar fraction one quarter
+189 ½  vulgar fraction one half
+190 ¾  vulgar fraction three quarters
+191 ¿  inverted question mark
+192 À  Latin capital letter A with grave
+193 Á  Latin capital letter A with acute
+194 Â  Latin capital letter A with circumflex
+195 Ã  Latin capital letter A with tilde
+196 Ä  Latin capital letter A with diaeresis
+197 Å  Latin capital letter A with ring above
+198 Æ  Latin capital letter AE
+199 Ç  Latin capital letter C with cedilla
+200 È  Latin capital letter E with grave
+201 É  Latin capital letter E with acute
+202 Ê  Latin capital letter E with circumflex
+203 Ë  Latin capital letter E with diaeresis
+204 Ì  Latin capital letter I with grave
+205 Í  Latin capital letter I with acute
+206 Î  Latin capital letter I with circumflex
+207 Ï  Latin capital letter I with diaeresis
+208 Ð  Latin capital letter Eth
+209 Ñ  Latin capital letter N with tilde
+210 Ò  Latin capital letter O with grave
+211 Ó  Latin capital letter O with acute
+212 Ô  Latin capital letter O with circumflex
+213 Õ  Latin capital letter O with tilde
+214 Ö  Latin capital letter O with diaeresis
+215 ×  multiplication sign
+216 Ø  Latin capital letter O with stroke
+217 Ù  Latin capital letter U with grave
+218 Ú  Latin capital letter U with acute
+219 Û  Latin capital letter U with circumflex
+220 Ü  Latin capital letter U with diaeresis
+221 Ý  Latin capital letter Y with acute
+222 Þ  Latin capital letter Thorn
+223 ß  Latin small letter sharp s
+224 à  Latin small letter a with grave
+225 á  Latin small letter a with acute
+226 â  Latin small letter a with circumflex
+227 ã  Latin small letter a with tilde
+228 ä  Latin small letter a with diaeresis
+229 å  Latin small letter a with ring above
+230 æ  Latin small letter ae
+231 ç  Latin small letter c with cedilla
+232 è  Latin small letter e with grave
+233 é  Latin small letter e with acute
+234 ê  Latin small letter e with circumflex
+235 ë  Latin small letter e with diaeresis
+236 ì  Latin small letter i with grave
+237 í  Latin small letter i with acute
+238 î  Latin small letter i with circumflex
+239 ï  Latin small letter i with diaeresis
+240 ð  Latin small letter eth
+241 ñ  Latin small letter n with tilde
+242 ò  Latin small letter o with grave
+243 ó  Latin small letter o with acute
+244 ô  Latin small letter o with circumflex
+245 õ  Latin small letter o with tilde
+246 ö  Latin small letter o with diaeresis
+247 ÷  division sign
+248 ø  Latin small letter o with stroke
+249 ù  Latin small letter u with grave
+250 ú  Latin small letter u with acute
+251 û  Latin small letter with circumflex
+252 ü  Latin small letter u with diaeresis
+253 ý  Latin small letter y with acute
+254 þ  Latin small letter thorn
+255 ÿ  Latin small letter y with diaeresis
+
+</pre>
+</div>
+
+</details>
+
+
+<details><summary style="margin-top:2.5rem;margin-bottom:2.5rem;font-size:medium;text-align:right;">ghost in the machine</summary>
+<div style="margin-left:49%;width:50%;text-align:right;border:solid 0.00rem orange;">
+<div id="GHOST_IN_THE_MACHINE"> &#9940; GHOST_IN_THE_MACHINE </div>
+<script>
+digits=[""];
+digits[0] = String(Math.floor(Math.random() * 9000000000) + 1000000000);
+digits[1] = String(Math.floor(Math.random() * 9000000000) + 1000000000);
+digits[2] = String(Math.floor(Math.random() * 9000000000) + 1000000000);
+digits[3] = String(Math.floor(Math.random() * 9000000000) + 1000000000);
+digits[4] = String(Math.floor(Math.random() * 9000000000) + 1000000000);
+digits[5] = String(Math.floor(Math.random() * 9000000000) + 1000000000);
+digits[6] = String(Math.floor(Math.random() * 9000000000) + 1000000000);
+digits[7] = String(Math.floor(Math.random() * 9000000000) + 1000000000);
+digits[8] = String(Math.floor(Math.random() * 9000000000) + 1000000000);
+digits[9] = String(Math.floor(Math.random() * 9000000000) + 1000000000);
+var digits_L = digits.length;
+var contaDigits;
+/* concatena le dieci linee */
+digitsSquareMatrix="";
+contaDigits=0;
+for(contaDigits=0;contaDigits<digits_L;contaDigits++){
+digitsSquareMatrix=digitsSquareMatrix+digits[contaDigits]+"<br>";
+
+}
+document.getElementById("GHOST_IN_THE_MACHINE").innerHTML=''
++'<ARTICLE>'
++'<div>'+' '+'</div>'+digitsSquareMatrix +''
++''
++''
++''
++'</ARTICLE>';
+
+</script>
+</div>
+</details>
+
+
+<details style="margin-top:0.5rem;margin-bottom:0.5rem;font-size:medium;text-align:right;border-top:solid 0.00rem oldlace;"><summary style="font-size:medium;">alfabeto ascii</summary>
+<DIV ID="ALFABETO">&#9940; ALFABETO</DIV>
+<SCRIPT>
+document.getElementById("ALFABETO").innerHTML=alfabeto;
+</SCRIPT>
+</details>
+
+<details style="margin-top:2.5rem;margin-bottom:2.5rem;font-size:medium;text-align:left;border-top:solid 0.00rem rgb(15,45,15);"><summary style="font-size:medium;">Random 1)alfanumerico 2)alfabetico 3)numerico</summary>
+<input style="width:5rem;" id="QUANTICARATTERI" type="text" value="60" placeholder="" />
+<button onclick="CARAND()">&#8617;</button>
+
+
+
+
+<DIV STYLE="margin-top:2.5rem;margin-bottom:2.5rem;WIDTH:90%;OVERFLOW:AUTO;" ID="RANDOMCHAR_0"></DIV>
+<DIV STYLE="margin-top:2.5rem;margin-bottom:2.5rem;WIDTH:90%;OVERFLOW:AUTO;" ID="RANDOMCHAR_1"></DIV>
+<DIV STYLE="margin-top:2.5rem;margin-bottom:2.5rem;WIDTH:90%;OVERFLOW:AUTO;" ID="RANDOMCHAR_2"></DIV>
+
+
+<script>
+
+function CARAND() {
+QUANTICARATTERI=parseInt( document.getElementById("QUANTICARATTERI").value );
+
+RANDOMSTRINGA0='';CARATTERISELEZIONATI0= 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';CARATTERISELEZIONATI0_L=CARATTERISELEZIONATI0.length;for(conta=0;conta<QUANTICARATTERI;conta++){RANDOMSTRINGA0+=CARATTERISELEZIONATI0.charAt(Math.floor(Math.random() * CARATTERISELEZIONATI0_L));};conta=0;RANDOMSTRINGA0=RANDOMSTRINGA0.toUpperCase();document.getElementById("RANDOMCHAR_0").innerHTML=RANDOMSTRINGA0;
+RANDOMSTRINGA1='';CARATTERISELEZIONATI1= 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';/*------*/CARATTERISELEZIONATI1_L=CARATTERISELEZIONATI1.length;for(conta=0;conta<QUANTICARATTERI;conta++){RANDOMSTRINGA1+=CARATTERISELEZIONATI1.charAt(Math.floor(Math.random() * CARATTERISELEZIONATI1_L));};conta=0;RANDOMSTRINGA1=RANDOMSTRINGA1.toUpperCase();document.getElementById("RANDOMCHAR_1").innerHTML=RANDOMSTRINGA1;
+RANDOMSTRINGA2='';CARATTERISELEZIONATI2= '0123456789';/*------------------------------------------------*/CARATTERISELEZIONATI2_L=CARATTERISELEZIONATI2.length;for(conta=0;conta<QUANTICARATTERI;conta++){RANDOMSTRINGA2+=CARATTERISELEZIONATI2.charAt(Math.floor(Math.random() * CARATTERISELEZIONATI2_L));};conta=0;RANDOMSTRINGA2=RANDOMSTRINGA2.toUpperCase();document.getElementById("RANDOMCHAR_2").innerHTML=RANDOMSTRINGA2;
+
+}
+
+
+</script>
+</details>
+ 
+-->
+
+
+
+<!-- protocol (3) 
+<div style="font-size:small!IMPORTANT;" id="URL"></div>
+<script>
+ let PROTOCOL=window.location.protocol;
+ let HOST=window.location.host; 
+ let PATHNAME=location.pathname;
+ let URL=window.location.href;
+ document.getElementById("URL").innerHTML=''
+ +'PROTOCOL: '+PROTOCOL+'<br>'
+ +'HOST: '+HOST+'<br>'
+ +'PATHNAME: '+PATHNAME+'<br>'
+ +'URL: '+URL+'<br>'
+ +''
+ +'';
+</script>
+-->
+
+<!--DETECT S.O. E DEVICE (2)
+<section id="DETECTSOEDEVICE"></section>
+<section style="border-top:solid 0.05rem gray;visibility:visible;" class="mx-0 my-5">
+<article style="text-align:center;margin-top:2rem;">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/platform/1.3.5/platform.min.js"></script> 
+<script> console.log(platform); document.write("<div style='font-size:small;font-family:monospace;font-variant:small-caps;text-align:center;'>you are using " + platform.name + " v" + platform.version + " on " + platform.os); +"</div>" </script> 
+<script> if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){/* true for mobile device */ MOBILEDEVICE=1; document.write('<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16"> <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/> <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/> </svg>'); document.write("mobile device"); }else{/* false for not mobile device */ MOBILEDEVICE=0; document.write('<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-pc-display-horizontal" viewBox="0 0 16 16"> <path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v7A1.5 1.5 0 0 0 1.5 10H6v1H1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5v-1h4.5A1.5 1.5 0 0 0 16 8.5v-7A1.5 1.5 0 0 0 14.5 0h-13Zm0 1h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5ZM12 12.5a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0Zm2 0a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0ZM1.5 12h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1ZM1 14.25a.25.25 0 0 1 .25-.25h5.5a.25.25 0 1 1 0 .5h-5.5a.25.25 0 0 1-.25-.25Z"/></svg>'); document.write(" NOT MOBILE DEVICE "); } </script> 
+<blockquote class="border-top border-2 border-primary">
+<span id="resultONE" style="font-size:x-small;font-variant:small-caps;"></span> 
+<script>"use strict"; function displayWindowSize(){ var wWI = document.documentElement.clientWidth;var hHE = document.documentElement.clientHeight;var wWIFinestraWIDTH = document.documentElement.clientWidth;var hHEFinestraHEIGHT = document.documentElement.clientHeight;
+document.getElementById("resultONE").innerHTML = " " + wWIFinestraWIDTH + "x" + hHEFinestraHEIGHT +" <span style='font-size:medium;'>"+(wWIFinestraWIDTH/16)+"rem "+" x "+(hHEFinestraHEIGHT/16)+"rem </span>";}window.addEventListener("resize", displayWindowSize);displayWindowSize();</script>
+</blockquote>
+</article>
+<script>if(MOBILEDEVICE===1){/*alert("MOBILEDEVICE");*/
+document.getElementById("DETECTSOEDEVICE").innerHTML=''
++'<style> html * {font-size:1.75rem!important;font-size:1.65rem!important;}</style>'
++''
++'';
+
+}</script>
+-->
+
+
+ 
+<!-- ......backdoor.... (1)
+<blockquote STYLE="text-align:center;">
+<button onclick="siHEADER()" STYLE="border:solid 0rem;BORDER-RADIUS:0.25REM;">&#128578;</button>
+<button onclick="noHEADER()" STYLE="border:solid 0rem;BORDER-RADIUS:0.25REM;">&#128579;</button>
+<script>
+function noHEADER(){elemento=document.querySelector("#noHEADER");elemento.style.display="none";}
+function siHEADER(){elemento=document.querySelector("#noHEADER");elemento.style.display="block";}
+</script>
+</blockquote>
+
+-->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <!-- reference -->
+<!-- closePopUpTouchScreen  
+<script> 
+const TARGET = document.querySelector('#DIFFYES')
+document.addEventListener('click', (event) => {
+  const TOCCASCREEN = event.composedPath().includes(TARGET)
+  if (TOCCASCREEN) {} else {TARGET.style.display="none";} 
+})
+</script> 
+--> 
+ 
+ 
+
+
+
