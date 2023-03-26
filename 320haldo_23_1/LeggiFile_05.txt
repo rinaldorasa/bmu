@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+	
+Leggifile_05 am00 18:58 20/03/2023
+	
+	Vite + Svelte</title>
+	
+<!-- cronologia degli aggiornamenti javascript -->
+<!-- <script type="module" crossorigin src="./assets/index-b83f2ac8.js"></script> -->
+<!-- <script type="module" crossorigin src="./assets/index-2755f64a.js"></script> -->
+<!-- <script type="module" crossorigin src="./assets/index-86edb3e9.js"></script> -->
+<!-- <script type="module" crossorigin src="./assets/index-bdb23652.js"></script> -->
+<!-- <script type="module" crossorigin src="./assets/index-c5b5e5de.js"></script> -->
+<!-- <script type="module" crossorigin src="./assets/index-8bb33480.js"></script> -->
+<!-- <script type="module" crossorigin src="./assets/index-d0f728ee.js"></script> -->
+<!-- <script type="module" crossorigin src="./assets/index-0ed7b9e8.js"></script> -->
+<!-- <script type="module" crossorigin src="./assets/index-807937bb.js"></script> -->
+<!-- <script type="module" crossorigin src="./assets/index-9deb2893.js"></script> -->
+<!-- <script type="module" crossorigin src="./assets/index-952ef36c.js"></script> -->
+<!-- <script type="module" crossorigin src="./assets/index-67bf41c5.js"></script> -->
+<!-- <script type="module" crossorigin src="./assets/index-50cf380d.js"></script> -->
+<!-- <script type="module" crossorigin src="./assets/index-20da25fa.js"></script> -->
+<!-- <script type="module" crossorigin src="./assets/index-69fc32d1.js"></script> -->
+
+<!-- <script type="module" crossorigin src="./assets/index-af96cf7a.js"></script> -->
+
+
+	
+    <link rel="stylesheet" href="./assets/index-3a88ba9f.css">
+
+  </head>
+  <body>
+
+  
+
+  <script>
+
+
+	//	alert(new Date().getTime());
+
+
+  let NodoTextTest = "??? NodoTextTest";
+
+
+  let File_98="TextToDo317.txt"
+  let File_99="TextAggiuntivo.txt"
+
+
+  
+  File = File_99 ;
+  File = File +"?"+(new Date().getTime()) + (Math.random()) ;
+
+	alert(File);
+
+
+
+
+function LeggiQuestoFile(){  
+  
+  let Richiedo = new XMLHttpRequest();
+  
+		Richiedo.open("GET",File,false);
+		Richiedo.onreadystatechange = function(){
+		let Trovato = Richiedo.responseText;
+		//			alert(Trovato);
+		
+		// 
+		NodoTextTest =	Trovato;
+		
+		}
+		Richiedo.send();
+
+}; LeggiQuestoFile();
+
+
+  </script>
+
+
+<div id="FILE_LETTO"><span style="background-color:red;color:white;">???  id="FILE_LETTO" non attivo</span></div>
+
+  <script>
+  
+  document.getElementById("FILE_LETTO").innerHTML=
+  `
+  ${NodoTextTest}
+  
+  `;
+  
+  </script>  
+
+
+
+
+  </body>
+</html>
+
